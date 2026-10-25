@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3.2">
+  <link rel="stylesheet" href="styles.css?v=3.3">
 </head>
 <body class="dark-theme">
   <!-- Top Navigation & Live Header -->
@@ -314,12 +314,14 @@
           <!-- Sliding Riding Detail Inspector Panel -->
           <aside id="riding-drawer" class="riding-drawer">
             <div class="drawer-header">
-              <button class="drawer-close-btn" id="drawer-close" onclick="window.closeDrawer()" aria-label="Close riding details" title="Close riding details">
-                <span>&#10005;</span>
-                <span>Close</span>
-              </button>
-              <div class="drawer-title-group">
+              <div class="drawer-top-actions">
+                <button class="drawer-close-btn" id="drawer-close" onclick="window.closeDrawer()" aria-label="Close riding details" title="Close riding details">
+                  <span>&#10005;</span>
+                  <span>Close</span>
+                </button>
                 <span class="drawer-code" id="drawer-code">VAN</span>
+              </div>
+              <div class="drawer-title-group">
                 <h2 id="drawer-title">Select a Riding</h2>
               </div>
               <div class="drawer-status-tags" id="drawer-tags"></div>
@@ -514,6 +516,6 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js?v=3.2"></script>
+  <script src="app.js?v=3.3"></script>
 </body>
 </html>

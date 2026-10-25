@@ -1000,7 +1000,7 @@ a:hover {
   background-color: var(--bg-drawer);
   border-left: 1px solid var(--border-color);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
-  z-index: 900;
+  z-index: 1200;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -1012,29 +1012,34 @@ a:hover {
 }
 
 .drawer-header {
-  padding: 20px;
+  padding: 16px 20px;
   border-bottom: 1px solid var(--border-color);
   background-color: rgba(255, 255, 255, 0.02);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .drawer-close-btn {
-  position: absolute;
-  top: 14px;
-  right: 16px;
   background: #1e293b;
   border: 1px solid #475569;
   color: #f1f5f9;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all 0.15s ease;
-  z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
