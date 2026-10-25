@@ -6,7 +6,14 @@
     "votes_2024": 13053,
     "share_2024": "61.61%",
     "margin_votes_2024": 5599,
-    "margin_pct_2024": "26.43%"
+    "margin_pct_2024": "26.43%",
+    "ndp_votes_2024": 7454,
+    "ndp_pct_2024": 35.18,
+    "con_votes_2024": 13053,
+    "con_pct_2024": 61.61,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 21188
   },
   "abbotsford west": {
     "name": "Abbotsford West",
@@ -15,7 +22,14 @@
     "votes_2024": 11483,
     "share_2024": "58.35%",
     "margin_votes_2024": 4228,
-    "margin_pct_2024": "21.49%"
+    "margin_pct_2024": "21.49%",
+    "ndp_votes_2024": 7255,
+    "ndp_pct_2024": 36.87,
+    "con_votes_2024": 11483,
+    "con_pct_2024": 58.35,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 19678
   },
   "abbotsford-mission": {
     "name": "Abbotsford-Mission",
@@ -24,7 +38,14 @@
     "votes_2024": 13523,
     "share_2024": "55.38%",
     "margin_votes_2024": 2629,
-    "margin_pct_2024": "10.77%"
+    "margin_pct_2024": "10.77%",
+    "ndp_votes_2024": 10894,
+    "ndp_pct_2024": 44.62,
+    "con_votes_2024": 13523,
+    "con_pct_2024": 55.38,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 24417
   },
   "boundary-similkameen": {
     "name": "Boundary-Similkameen",
@@ -33,7 +54,14 @@
     "votes_2024": 11935,
     "share_2024": "48.39%",
     "margin_votes_2024": 1438,
-    "margin_pct_2024": "5.83%"
+    "margin_pct_2024": "5.83%",
+    "ndp_votes_2024": 10497,
+    "ndp_pct_2024": 42.56,
+    "con_votes_2024": 11935,
+    "con_pct_2024": 48.39,
+    "grn_votes_2024": 1454,
+    "grn_pct_2024": 5.89,
+    "total_votes_2024": 24665
   },
   "bulkley valley-stikine": {
     "name": "Bulkley Valley-Stikine",
@@ -42,7 +70,14 @@
     "votes_2024": 4992,
     "share_2024": "52.31%",
     "margin_votes_2024": 1283,
-    "margin_pct_2024": "13.44%"
+    "margin_pct_2024": "13.44%",
+    "ndp_votes_2024": 3709,
+    "ndp_pct_2024": 38.86,
+    "con_votes_2024": 4992,
+    "con_pct_2024": 52.31,
+    "grn_votes_2024": 604,
+    "grn_pct_2024": 6.33,
+    "total_votes_2024": 9544
   },
   "burnaby centre": {
     "name": "Burnaby Centre",
@@ -51,7 +86,14 @@
     "votes_2024": 9780,
     "share_2024": "57.28%",
     "margin_votes_2024": 2486,
-    "margin_pct_2024": "14.56%"
+    "margin_pct_2024": "14.56%",
+    "ndp_votes_2024": 9780,
+    "ndp_pct_2024": 57.28,
+    "con_votes_2024": 7294,
+    "con_pct_2024": 42.72,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 17074
   },
   "burnaby east": {
     "name": "Burnaby East",
@@ -60,7 +102,14 @@
     "votes_2024": 10490,
     "share_2024": "51.85%",
     "margin_votes_2024": 2292,
-    "margin_pct_2024": "11.33%"
+    "margin_pct_2024": "11.33%",
+    "ndp_votes_2024": 10490,
+    "ndp_pct_2024": 51.85,
+    "con_votes_2024": 8198,
+    "con_pct_2024": 40.52,
+    "grn_votes_2024": 1544,
+    "grn_pct_2024": 7.63,
+    "total_votes_2024": 20232
   },
   "burnaby north": {
     "name": "Burnaby North",
@@ -69,7 +118,14 @@
     "votes_2024": 10724,
     "share_2024": "53.26%",
     "margin_votes_2024": 2066,
-    "margin_pct_2024": "10.26%"
+    "margin_pct_2024": "10.26%",
+    "ndp_votes_2024": 10724,
+    "ndp_pct_2024": 53.26,
+    "con_votes_2024": 8658,
+    "con_pct_2024": 43.0,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 20136
   },
   "burnaby south-metrotown": {
     "name": "Burnaby South-Metrotown",
@@ -78,7 +134,14 @@
     "votes_2024": 7560,
     "share_2024": "49.33%",
     "margin_votes_2024": 1182,
-    "margin_pct_2024": "7.74%"
+    "margin_pct_2024": "7.74%",
+    "ndp_votes_2024": 7560,
+    "ndp_pct_2024": 49.33,
+    "con_votes_2024": 6373,
+    "con_pct_2024": 41.59,
+    "grn_votes_2024": 960,
+    "grn_pct_2024": 6.26,
+    "total_votes_2024": 15325
   },
   "burnaby-new westminster": {
     "name": "Burnaby-New Westminster",
@@ -87,7 +150,14 @@
     "votes_2024": 10647,
     "share_2024": "59.99%",
     "margin_votes_2024": 4486,
-    "margin_pct_2024": "25.28%"
+    "margin_pct_2024": "25.28%",
+    "ndp_votes_2024": 10647,
+    "ndp_pct_2024": 59.99,
+    "con_votes_2024": 6161,
+    "con_pct_2024": 34.71,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 17748
   },
   "cariboo-chilcotin": {
     "name": "Cariboo-Chilcotin",
@@ -96,7 +166,14 @@
     "votes_2024": 13714,
     "share_2024": "69.59%",
     "margin_votes_2024": 7722,
-    "margin_pct_2024": "39.19%"
+    "margin_pct_2024": "39.19%",
+    "ndp_votes_2024": 5992,
+    "ndp_pct_2024": 30.41,
+    "con_votes_2024": 13714,
+    "con_pct_2024": 69.59,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 19706
   },
   "chilliwack north": {
     "name": "Chilliwack North",
@@ -105,7 +182,14 @@
     "votes_2024": 11776,
     "share_2024": "54.58%",
     "margin_votes_2024": 3651,
-    "margin_pct_2024": "16.92%"
+    "margin_pct_2024": "16.92%",
+    "ndp_votes_2024": 8125,
+    "ndp_pct_2024": 37.66,
+    "con_votes_2024": 11776,
+    "con_pct_2024": 54.58,
+    "grn_votes_2024": 1187,
+    "grn_pct_2024": 5.5,
+    "total_votes_2024": 21575
   },
   "chilliwack-cultus lake": {
     "name": "Chilliwack-Cultus Lake",
@@ -114,7 +198,14 @@
     "votes_2024": 13656,
     "share_2024": "54.58%",
     "margin_votes_2024": 2290,
-    "margin_pct_2024": "9.15%"
+    "margin_pct_2024": "9.15%",
+    "ndp_votes_2024": 11366,
+    "ndp_pct_2024": 45.42,
+    "con_votes_2024": 13656,
+    "con_pct_2024": 54.58,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 25022
   },
   "columbia river-revelstoke": {
     "name": "Columbia River-Revelstoke",
@@ -123,7 +214,14 @@
     "votes_2024": 8768,
     "share_2024": "47.92%",
     "margin_votes_2024": 670,
-    "margin_pct_2024": "3.66%"
+    "margin_pct_2024": "3.66%",
+    "ndp_votes_2024": 8098,
+    "ndp_pct_2024": 44.26,
+    "con_votes_2024": 8768,
+    "con_pct_2024": 47.93,
+    "grn_votes_2024": 1430,
+    "grn_pct_2024": 7.82,
+    "total_votes_2024": 18295
   },
   "coquitlam-burke mountain": {
     "name": "Coquitlam-Burke Mountain",
@@ -132,7 +230,14 @@
     "votes_2024": 11020,
     "share_2024": "50.85%",
     "margin_votes_2024": 368,
-    "margin_pct_2024": "1.70%"
+    "margin_pct_2024": "1.70%",
+    "ndp_votes_2024": 11020,
+    "ndp_pct_2024": 50.85,
+    "con_votes_2024": 10652,
+    "con_pct_2024": 49.15,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 21672
   },
   "coquitlam-maillardville": {
     "name": "Coquitlam-Maillardville",
@@ -141,7 +246,14 @@
     "votes_2024": 11972,
     "share_2024": "51.80%",
     "margin_votes_2024": 2826,
-    "margin_pct_2024": "12.23%"
+    "margin_pct_2024": "12.23%",
+    "ndp_votes_2024": 11972,
+    "ndp_pct_2024": 51.8,
+    "con_votes_2024": 9146,
+    "con_pct_2024": 39.57,
+    "grn_votes_2024": 1461,
+    "grn_pct_2024": 6.32,
+    "total_votes_2024": 23114
   },
   "courtenay-comox": {
     "name": "Courtenay-Comox",
@@ -150,7 +262,14 @@
     "votes_2024": 13481,
     "share_2024": "38.83%",
     "margin_votes_2024": 93,
-    "margin_pct_2024": "0.27%"
+    "margin_pct_2024": "0.27%",
+    "ndp_votes_2024": 13388,
+    "ndp_pct_2024": 38.56,
+    "con_votes_2024": 13481,
+    "con_pct_2024": 38.83,
+    "grn_votes_2024": 7202,
+    "grn_pct_2024": 20.74,
+    "total_votes_2024": 34718
   },
   "cowichan valley": {
     "name": "Cowichan Valley",
@@ -159,7 +278,14 @@
     "votes_2024": 11795,
     "share_2024": "40.51%",
     "margin_votes_2024": 849,
-    "margin_pct_2024": "2.92%"
+    "margin_pct_2024": "2.92%",
+    "ndp_votes_2024": 11795,
+    "ndp_pct_2024": 40.51,
+    "con_votes_2024": 10946,
+    "con_pct_2024": 37.59,
+    "grn_votes_2024": 5773,
+    "grn_pct_2024": 19.83,
+    "total_votes_2024": 29118
   },
   "delta north": {
     "name": "Delta North",
@@ -168,7 +294,14 @@
     "votes_2024": 10988,
     "share_2024": "52.73%",
     "margin_votes_2024": 2607,
-    "margin_pct_2024": "12.51%"
+    "margin_pct_2024": "12.51%",
+    "ndp_votes_2024": 10988,
+    "ndp_pct_2024": 52.73,
+    "con_votes_2024": 8381,
+    "con_pct_2024": 40.22,
+    "grn_votes_2024": 1292,
+    "grn_pct_2024": 6.2,
+    "total_votes_2024": 20838
   },
   "delta south": {
     "name": "Delta South",
@@ -177,7 +310,14 @@
     "votes_2024": 14491,
     "share_2024": "55.07%",
     "margin_votes_2024": 2669,
-    "margin_pct_2024": "10.14%"
+    "margin_pct_2024": "10.14%",
+    "ndp_votes_2024": 11822,
+    "ndp_pct_2024": 44.93,
+    "con_votes_2024": 14491,
+    "con_pct_2024": 55.07,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 26313
   },
   "esquimalt-colwood": {
     "name": "Esquimalt-Colwood",
@@ -186,7 +326,14 @@
     "votes_2024": 15238,
     "share_2024": "51.47%",
     "margin_votes_2024": 6586,
-    "margin_pct_2024": "22.25%"
+    "margin_pct_2024": "22.25%",
+    "ndp_votes_2024": 15238,
+    "ndp_pct_2024": 51.47,
+    "con_votes_2024": 8652,
+    "con_pct_2024": 29.22,
+    "grn_votes_2024": 5716,
+    "grn_pct_2024": 19.31,
+    "total_votes_2024": 29606
   },
   "fraser-nicola": {
     "name": "Fraser-Nicola",
@@ -195,7 +342,14 @@
     "votes_2024": 10326,
     "share_2024": "54.34%",
     "margin_votes_2024": 3409,
-    "margin_pct_2024": "17.94%"
+    "margin_pct_2024": "17.94%",
+    "ndp_votes_2024": 6917,
+    "ndp_pct_2024": 36.4,
+    "con_votes_2024": 10326,
+    "con_pct_2024": 54.34,
+    "grn_votes_2024": 1761,
+    "grn_pct_2024": 9.27,
+    "total_votes_2024": 19004
   },
   "juan de fuca-malahat": {
     "name": "Juan de Fuca-Malahat",
@@ -204,7 +358,14 @@
     "votes_2024": 9308,
     "share_2024": "38.79%",
     "margin_votes_2024": 141,
-    "margin_pct_2024": "0.59%"
+    "margin_pct_2024": "0.59%",
+    "ndp_votes_2024": 9308,
+    "ndp_pct_2024": 38.79,
+    "con_votes_2024": 9167,
+    "con_pct_2024": 38.2,
+    "grn_votes_2024": 5522,
+    "grn_pct_2024": 23.01,
+    "total_votes_2024": 23997
   },
   "kamloops centre": {
     "name": "Kamloops Centre",
@@ -213,7 +374,14 @@
     "votes_2024": 12372,
     "share_2024": "48.83%",
     "margin_votes_2024": 2003,
-    "margin_pct_2024": "7.91%"
+    "margin_pct_2024": "7.91%",
+    "ndp_votes_2024": 10369,
+    "ndp_pct_2024": 40.92,
+    "con_votes_2024": 12372,
+    "con_pct_2024": 48.83,
+    "grn_votes_2024": 2597,
+    "grn_pct_2024": 10.25,
+    "total_votes_2024": 25338
   },
   "kamloops-north thompson": {
     "name": "Kamloops-North Thompson",
@@ -222,7 +390,14 @@
     "votes_2024": 17930,
     "share_2024": "59.74%",
     "margin_votes_2024": 8056,
-    "margin_pct_2024": "26.84%"
+    "margin_pct_2024": "26.84%",
+    "ndp_votes_2024": 9874,
+    "ndp_pct_2024": 32.9,
+    "con_votes_2024": 17930,
+    "con_pct_2024": 59.74,
+    "grn_votes_2024": 2209,
+    "grn_pct_2024": 7.36,
+    "total_votes_2024": 30013
   },
   "kelowna centre": {
     "name": "Kelowna Centre",
@@ -231,7 +406,14 @@
     "votes_2024": 11033,
     "share_2024": "42.85%",
     "margin_votes_2024": 40,
-    "margin_pct_2024": "0.16%"
+    "margin_pct_2024": "0.16%",
+    "ndp_votes_2024": 10993,
+    "ndp_pct_2024": 42.69,
+    "con_votes_2024": 11033,
+    "con_pct_2024": 42.85,
+    "grn_votes_2024": 1111,
+    "grn_pct_2024": 4.31,
+    "total_votes_2024": 25750
   },
   "kelowna-lake country-coldstream": {
     "name": "Kelowna-Lake Country-Coldstream",
@@ -240,7 +422,14 @@
     "votes_2024": 14303,
     "share_2024": "53.92%",
     "margin_votes_2024": 4953,
-    "margin_pct_2024": "18.67%"
+    "margin_pct_2024": "18.67%",
+    "ndp_votes_2024": 9350,
+    "ndp_pct_2024": 35.25,
+    "con_votes_2024": 14303,
+    "con_pct_2024": 53.92,
+    "grn_votes_2024": 1151,
+    "grn_pct_2024": 4.34,
+    "total_votes_2024": 26528
   },
   "kelowna-mission": {
     "name": "Kelowna-Mission",
@@ -249,7 +438,14 @@
     "votes_2024": 14071,
     "share_2024": "51.49%",
     "margin_votes_2024": 5158,
-    "margin_pct_2024": "18.87%"
+    "margin_pct_2024": "18.87%",
+    "ndp_votes_2024": 8913,
+    "ndp_pct_2024": 32.61,
+    "con_votes_2024": 14071,
+    "con_pct_2024": 51.49,
+    "grn_votes_2024": 1349,
+    "grn_pct_2024": 4.94,
+    "total_votes_2024": 27329
   },
   "kootenay central": {
     "name": "Kootenay Central",
@@ -258,7 +454,14 @@
     "votes_2024": 8716,
     "share_2024": "39.63%",
     "margin_votes_2024": 1749,
-    "margin_pct_2024": "7.95%"
+    "margin_pct_2024": "7.95%",
+    "ndp_votes_2024": 8716,
+    "ndp_pct_2024": 39.63,
+    "con_votes_2024": 6967,
+    "con_pct_2024": 31.67,
+    "grn_votes_2024": 4123,
+    "grn_pct_2024": 18.74,
+    "total_votes_2024": 21996
   },
   "kootenay-monashee": {
     "name": "Kootenay-Monashee",
@@ -267,7 +470,14 @@
     "votes_2024": 10202,
     "share_2024": "52.04%",
     "margin_votes_2024": 2586,
-    "margin_pct_2024": "13.19%"
+    "margin_pct_2024": "13.19%",
+    "ndp_votes_2024": 10202,
+    "ndp_pct_2024": 52.04,
+    "con_votes_2024": 7616,
+    "con_pct_2024": 38.85,
+    "grn_votes_2024": 1785,
+    "grn_pct_2024": 9.11,
+    "total_votes_2024": 19603
   },
   "kootenay-rockies": {
     "name": "Kootenay-Rockies",
@@ -276,7 +486,14 @@
     "votes_2024": 8217,
     "share_2024": "42.71%",
     "margin_votes_2024": 2373,
-    "margin_pct_2024": "12.34%"
+    "margin_pct_2024": "12.34%",
+    "ndp_votes_2024": 4184,
+    "ndp_pct_2024": 21.75,
+    "con_votes_2024": 8217,
+    "con_pct_2024": 42.71,
+    "grn_votes_2024": 996,
+    "grn_pct_2024": 5.18,
+    "total_votes_2024": 19241
   },
   "ladysmith-oceanside": {
     "name": "Ladysmith-Oceanside",
@@ -285,7 +502,14 @@
     "votes_2024": 14144,
     "share_2024": "41.49%",
     "margin_votes_2024": 2047,
-    "margin_pct_2024": "6.00%"
+    "margin_pct_2024": "6.00%",
+    "ndp_votes_2024": 14144,
+    "ndp_pct_2024": 41.49,
+    "con_votes_2024": 12097,
+    "con_pct_2024": 35.48,
+    "grn_votes_2024": 2292,
+    "grn_pct_2024": 6.72,
+    "total_votes_2024": 34092
   },
   "langford-highlands": {
     "name": "Langford-Highlands",
@@ -294,7 +518,14 @@
     "votes_2024": 11444,
     "share_2024": "51.87%",
     "margin_votes_2024": 3193,
-    "margin_pct_2024": "14.47%"
+    "margin_pct_2024": "14.47%",
+    "ndp_votes_2024": 11444,
+    "ndp_pct_2024": 51.87,
+    "con_votes_2024": 8251,
+    "con_pct_2024": 37.4,
+    "grn_votes_2024": 2368,
+    "grn_pct_2024": 10.73,
+    "total_votes_2024": 22063
   },
   "langley-abbotsford": {
     "name": "Langley-Abbotsford",
@@ -303,7 +534,14 @@
     "votes_2024": 14341,
     "share_2024": "55.65%",
     "margin_votes_2024": 5650,
-    "margin_pct_2024": "21.92%"
+    "margin_pct_2024": "21.92%",
+    "ndp_votes_2024": 8691,
+    "ndp_pct_2024": 33.73,
+    "con_votes_2024": 14341,
+    "con_pct_2024": 55.65,
+    "grn_votes_2024": 1434,
+    "grn_pct_2024": 5.56,
+    "total_votes_2024": 25770
   },
   "langley-walnut grove": {
     "name": "Langley-Walnut Grove",
@@ -312,7 +550,14 @@
     "votes_2024": 12121,
     "share_2024": "49.56%",
     "margin_votes_2024": 1172,
-    "margin_pct_2024": "4.79%"
+    "margin_pct_2024": "4.79%",
+    "ndp_votes_2024": 10949,
+    "ndp_pct_2024": 44.77,
+    "con_votes_2024": 12121,
+    "con_pct_2024": 49.56,
+    "grn_votes_2024": 1254,
+    "grn_pct_2024": 5.13,
+    "total_votes_2024": 24458
   },
   "langley-willowbrook": {
     "name": "Langley-Willowbrook",
@@ -321,7 +566,14 @@
     "votes_2024": 10979,
     "share_2024": "48.24%",
     "margin_votes_2024": 867,
-    "margin_pct_2024": "3.81%"
+    "margin_pct_2024": "3.81%",
+    "ndp_votes_2024": 10112,
+    "ndp_pct_2024": 44.43,
+    "con_votes_2024": 10979,
+    "con_pct_2024": 48.24,
+    "grn_votes_2024": 1670,
+    "grn_pct_2024": 7.34,
+    "total_votes_2024": 22761
   },
   "maple ridge east": {
     "name": "Maple Ridge East",
@@ -330,7 +582,14 @@
     "votes_2024": 12058,
     "share_2024": "47.02%",
     "margin_votes_2024": 97,
-    "margin_pct_2024": "0.38%"
+    "margin_pct_2024": "0.38%",
+    "ndp_votes_2024": 11961,
+    "ndp_pct_2024": 46.64,
+    "con_votes_2024": 12058,
+    "con_pct_2024": 47.02,
+    "grn_votes_2024": 1626,
+    "grn_pct_2024": 6.34,
+    "total_votes_2024": 25645
   },
   "maple ridge-pitt meadows": {
     "name": "Maple Ridge-Pitt Meadows",
@@ -339,7 +598,14 @@
     "votes_2024": 14480,
     "share_2024": "54.89%",
     "margin_votes_2024": 2579,
-    "margin_pct_2024": "9.78%"
+    "margin_pct_2024": "9.78%",
+    "ndp_votes_2024": 14480,
+    "ndp_pct_2024": 54.89,
+    "con_votes_2024": 11901,
+    "con_pct_2024": 45.11,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 26381
   },
   "mid island-pacific rim": {
     "name": "Mid Island-Pacific Rim",
@@ -348,7 +614,14 @@
     "votes_2024": 14042,
     "share_2024": "48.74%",
     "margin_votes_2024": 2676,
-    "margin_pct_2024": "9.29%"
+    "margin_pct_2024": "9.29%",
+    "ndp_votes_2024": 14042,
+    "ndp_pct_2024": 48.74,
+    "con_votes_2024": 11366,
+    "con_pct_2024": 39.45,
+    "grn_votes_2024": 3402,
+    "grn_pct_2024": 11.81,
+    "total_votes_2024": 28810
   },
   "nanaimo-gabriola island": {
     "name": "Nanaimo-Gabriola Island",
@@ -357,7 +630,14 @@
     "votes_2024": 14663,
     "share_2024": "52.75%",
     "margin_votes_2024": 5030,
-    "margin_pct_2024": "18.09%"
+    "margin_pct_2024": "18.09%",
+    "ndp_votes_2024": 14663,
+    "ndp_pct_2024": 52.75,
+    "con_votes_2024": 9633,
+    "con_pct_2024": 34.65,
+    "grn_votes_2024": 3502,
+    "grn_pct_2024": 12.6,
+    "total_votes_2024": 27798
   },
   "nanaimo-lantzville": {
     "name": "Nanaimo-Lantzville",
@@ -366,7 +646,14 @@
     "votes_2024": 15307,
     "share_2024": "51.75%",
     "margin_votes_2024": 3620,
-    "margin_pct_2024": "12.24%"
+    "margin_pct_2024": "12.24%",
+    "ndp_votes_2024": 15307,
+    "ndp_pct_2024": 51.75,
+    "con_votes_2024": 11687,
+    "con_pct_2024": 39.51,
+    "grn_votes_2024": 2586,
+    "grn_pct_2024": 8.74,
+    "total_votes_2024": 29580
   },
   "nechako lakes": {
     "name": "Nechako Lakes",
@@ -375,7 +662,14 @@
     "votes_2024": 7851,
     "share_2024": "67.45%",
     "margin_votes_2024": 4684,
-    "margin_pct_2024": "40.24%"
+    "margin_pct_2024": "40.24%",
+    "ndp_votes_2024": 3167,
+    "ndp_pct_2024": 27.21,
+    "con_votes_2024": 7851,
+    "con_pct_2024": 67.45,
+    "grn_votes_2024": 622,
+    "grn_pct_2024": 5.34,
+    "total_votes_2024": 11640
   },
   "new westminster-coquitlam": {
     "name": "New Westminster-Coquitlam",
@@ -384,7 +678,14 @@
     "votes_2024": 12757,
     "share_2024": "59.13%",
     "margin_votes_2024": 6319,
-    "margin_pct_2024": "29.29%"
+    "margin_pct_2024": "29.29%",
+    "ndp_votes_2024": 12757,
+    "ndp_pct_2024": 59.13,
+    "con_votes_2024": 6438,
+    "con_pct_2024": 29.84,
+    "grn_votes_2024": 2380,
+    "grn_pct_2024": 11.03,
+    "total_votes_2024": 21575
   },
   "north coast-haida gwaii": {
     "name": "North Coast-Haida Gwaii",
@@ -393,7 +694,14 @@
     "votes_2024": 4863,
     "share_2024": "64.92%",
     "margin_votes_2024": 2235,
-    "margin_pct_2024": "29.84%"
+    "margin_pct_2024": "29.84%",
+    "ndp_votes_2024": 4863,
+    "ndp_pct_2024": 64.92,
+    "con_votes_2024": 2628,
+    "con_pct_2024": 35.08,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 7491
   },
   "north island": {
     "name": "North Island",
@@ -402,7 +710,14 @@
     "votes_2024": 14100,
     "share_2024": "47.07%",
     "margin_votes_2024": 639,
-    "margin_pct_2024": "2.14%"
+    "margin_pct_2024": "2.14%",
+    "ndp_votes_2024": 13461,
+    "ndp_pct_2024": 44.93,
+    "con_votes_2024": 14100,
+    "con_pct_2024": 47.07,
+    "grn_votes_2024": 2397,
+    "grn_pct_2024": 8.0,
+    "total_votes_2024": 29958
   },
   "north vancouver-lonsdale": {
     "name": "North Vancouver-Lonsdale",
@@ -411,7 +726,14 @@
     "votes_2024": 16759,
     "share_2024": "64.88%",
     "margin_votes_2024": 7686,
-    "margin_pct_2024": "29.75%"
+    "margin_pct_2024": "29.75%",
+    "ndp_votes_2024": 16759,
+    "ndp_pct_2024": 64.88,
+    "con_votes_2024": 9073,
+    "con_pct_2024": 35.12,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 25832
   },
   "north vancouver-seymour": {
     "name": "North Vancouver-Seymour",
@@ -420,7 +742,14 @@
     "votes_2024": 16210,
     "share_2024": "52.77%",
     "margin_votes_2024": 5215,
-    "margin_pct_2024": "16.98%"
+    "margin_pct_2024": "16.98%",
+    "ndp_votes_2024": 16210,
+    "ndp_pct_2024": 52.77,
+    "con_votes_2024": 10995,
+    "con_pct_2024": 35.79,
+    "grn_votes_2024": 1722,
+    "grn_pct_2024": 5.61,
+    "total_votes_2024": 30721
   },
   "oak bay-gordon head": {
     "name": "Oak Bay-Gordon Head",
@@ -429,7 +758,14 @@
     "votes_2024": 14519,
     "share_2024": "49.10%",
     "margin_votes_2024": 5977,
-    "margin_pct_2024": "20.21%"
+    "margin_pct_2024": "20.21%",
+    "ndp_votes_2024": 14519,
+    "ndp_pct_2024": 49.1,
+    "con_votes_2024": 8542,
+    "con_pct_2024": 28.89,
+    "grn_votes_2024": 6509,
+    "grn_pct_2024": 22.01,
+    "total_votes_2024": 29570
   },
   "peace river north": {
     "name": "Peace River North",
@@ -438,7 +774,14 @@
     "votes_2024": 11213,
     "share_2024": "74.36%",
     "margin_votes_2024": 8175,
-    "margin_pct_2024": "54.21%"
+    "margin_pct_2024": "54.21%",
+    "ndp_votes_2024": 828,
+    "ndp_pct_2024": 5.49,
+    "con_votes_2024": 11213,
+    "con_pct_2024": 74.36,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 15079
   },
   "peace river south": {
     "name": "Peace River South",
@@ -447,7 +790,14 @@
     "votes_2024": 7182,
     "share_2024": "69.84%",
     "margin_votes_2024": 4657,
-    "margin_pct_2024": "45.29%"
+    "margin_pct_2024": "45.29%",
+    "ndp_votes_2024": 576,
+    "ndp_pct_2024": 5.6,
+    "con_votes_2024": 7182,
+    "con_pct_2024": 69.84,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 10283
   },
   "penticton-summerland": {
     "name": "Penticton-Summerland",
@@ -456,7 +806,14 @@
     "votes_2024": 11615,
     "share_2024": "41.37%",
     "margin_votes_2024": 317,
-    "margin_pct_2024": "1.13%"
+    "margin_pct_2024": "1.13%",
+    "ndp_votes_2024": 11298,
+    "ndp_pct_2024": 40.24,
+    "con_votes_2024": 11615,
+    "con_pct_2024": 41.37,
+    "grn_votes_2024": 1472,
+    "grn_pct_2024": 5.24,
+    "total_votes_2024": 28076
   },
   "port coquitlam": {
     "name": "Port Coquitlam",
@@ -465,7 +822,14 @@
     "votes_2024": 13843,
     "share_2024": "53.87%",
     "margin_votes_2024": 3876,
-    "margin_pct_2024": "15.08%"
+    "margin_pct_2024": "15.08%",
+    "ndp_votes_2024": 13843,
+    "ndp_pct_2024": 53.87,
+    "con_votes_2024": 9967,
+    "con_pct_2024": 38.79,
+    "grn_votes_2024": 1644,
+    "grn_pct_2024": 6.4,
+    "total_votes_2024": 25698
   },
   "port moody-burquitlam": {
     "name": "Port Moody-Burquitlam",
@@ -474,7 +838,14 @@
     "votes_2024": 13488,
     "share_2024": "52.06%",
     "margin_votes_2024": 2995,
-    "margin_pct_2024": "11.56%"
+    "margin_pct_2024": "11.56%",
+    "ndp_votes_2024": 13488,
+    "ndp_pct_2024": 52.06,
+    "con_votes_2024": 10493,
+    "con_pct_2024": 40.5,
+    "grn_votes_2024": 1927,
+    "grn_pct_2024": 7.44,
+    "total_votes_2024": 25908
   },
   "powell river-sunshine coast": {
     "name": "Powell River-Sunshine Coast",
@@ -483,7 +854,14 @@
     "votes_2024": 14474,
     "share_2024": "49.62%",
     "margin_votes_2024": 4065,
-    "margin_pct_2024": "13.94%"
+    "margin_pct_2024": "13.94%",
+    "ndp_votes_2024": 14474,
+    "ndp_pct_2024": 49.62,
+    "con_votes_2024": 10409,
+    "con_pct_2024": 35.68,
+    "grn_votes_2024": 3932,
+    "grn_pct_2024": 13.48,
+    "total_votes_2024": 29171
   },
   "prince george-mackenzie": {
     "name": "Prince George-Mackenzie",
@@ -492,7 +870,14 @@
     "votes_2024": 11307,
     "share_2024": "60.92%",
     "margin_votes_2024": 6065,
-    "margin_pct_2024": "32.68%"
+    "margin_pct_2024": "32.68%",
+    "ndp_votes_2024": 5242,
+    "ndp_pct_2024": 28.24,
+    "con_votes_2024": 11307,
+    "con_pct_2024": 60.92,
+    "grn_votes_2024": 1576,
+    "grn_pct_2024": 8.49,
+    "total_votes_2024": 18560
   },
   "prince george-north cariboo": {
     "name": "Prince George-North Cariboo",
@@ -501,7 +886,14 @@
     "votes_2024": 11430,
     "share_2024": "56.82%",
     "margin_votes_2024": 7036,
-    "margin_pct_2024": "34.98%"
+    "margin_pct_2024": "34.98%",
+    "ndp_votes_2024": 3426,
+    "ndp_pct_2024": 17.03,
+    "con_votes_2024": 11430,
+    "con_pct_2024": 56.82,
+    "grn_votes_2024": 866,
+    "grn_pct_2024": 4.31,
+    "total_votes_2024": 20116
   },
   "prince george-valemount": {
     "name": "Prince George-Valemount",
@@ -510,7 +902,14 @@
     "votes_2024": 9018,
     "share_2024": "55.19%",
     "margin_votes_2024": 3309,
-    "margin_pct_2024": "20.25%"
+    "margin_pct_2024": "20.25%",
+    "ndp_votes_2024": 5709,
+    "ndp_pct_2024": 34.94,
+    "con_votes_2024": 9018,
+    "con_pct_2024": 55.19,
+    "grn_votes_2024": 1612,
+    "grn_pct_2024": 9.87,
+    "total_votes_2024": 16339
   },
   "richmond centre": {
     "name": "Richmond Centre",
@@ -519,7 +918,14 @@
     "votes_2024": 8426,
     "share_2024": "51.99%",
     "margin_votes_2024": 2465,
-    "margin_pct_2024": "15.21%"
+    "margin_pct_2024": "15.21%",
+    "ndp_votes_2024": 5961,
+    "ndp_pct_2024": 36.78,
+    "con_votes_2024": 8426,
+    "con_pct_2024": 51.99,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 16208
   },
   "richmond-bridgeport": {
     "name": "Richmond-Bridgeport",
@@ -528,7 +934,14 @@
     "votes_2024": 9908,
     "share_2024": "58.19%",
     "margin_votes_2024": 3987,
-    "margin_pct_2024": "23.42%"
+    "margin_pct_2024": "23.42%",
+    "ndp_votes_2024": 5921,
+    "ndp_pct_2024": 34.77,
+    "con_votes_2024": 9908,
+    "con_pct_2024": 58.19,
+    "grn_votes_2024": 547,
+    "grn_pct_2024": 3.21,
+    "total_votes_2024": 17027
   },
   "richmond-queensborough": {
     "name": "Richmond-Queensborough",
@@ -537,7 +950,14 @@
     "votes_2024": 10052,
     "share_2024": "50.91%",
     "margin_votes_2024": 1338,
-    "margin_pct_2024": "6.78%"
+    "margin_pct_2024": "6.78%",
+    "ndp_votes_2024": 8713,
+    "ndp_pct_2024": 44.13,
+    "con_votes_2024": 10052,
+    "con_pct_2024": 50.91,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 19744
   },
   "richmond-steveston": {
     "name": "Richmond-Steveston",
@@ -546,7 +966,14 @@
     "votes_2024": 10332,
     "share_2024": "44.27%",
     "margin_votes_2024": 484,
-    "margin_pct_2024": "2.07%"
+    "margin_pct_2024": "2.07%",
+    "ndp_votes_2024": 10332,
+    "ndp_pct_2024": 44.27,
+    "con_votes_2024": 9848,
+    "con_pct_2024": 42.2,
+    "grn_votes_2024": 803,
+    "grn_pct_2024": 3.44,
+    "total_votes_2024": 23337
   },
   "saanich north and the islands": {
     "name": "Saanich North and the Islands",
@@ -555,7 +982,14 @@
     "votes_2024": 12308,
     "share_2024": "36.15%",
     "margin_votes_2024": 1349,
-    "margin_pct_2024": "3.96%"
+    "margin_pct_2024": "3.96%",
+    "ndp_votes_2024": 10958,
+    "ndp_pct_2024": 32.19,
+    "con_votes_2024": 10145,
+    "con_pct_2024": 29.8,
+    "grn_votes_2024": 12308,
+    "grn_pct_2024": 36.15,
+    "total_votes_2024": 34046
   },
   "saanich south": {
     "name": "Saanich South",
@@ -564,7 +998,14 @@
     "votes_2024": 15338,
     "share_2024": "49.76%",
     "margin_votes_2024": 5335,
-    "margin_pct_2024": "17.31%"
+    "margin_pct_2024": "17.31%",
+    "ndp_votes_2024": 15338,
+    "ndp_pct_2024": 49.76,
+    "con_votes_2024": 10003,
+    "con_pct_2024": 32.45,
+    "grn_votes_2024": 5485,
+    "grn_pct_2024": 17.79,
+    "total_votes_2024": 30826
   },
   "salmon arm-shuswap": {
     "name": "Salmon Arm-Shuswap",
@@ -573,7 +1014,14 @@
     "votes_2024": 16566,
     "share_2024": "52.11%",
     "margin_votes_2024": 6888,
-    "margin_pct_2024": "21.67%"
+    "margin_pct_2024": "21.67%",
+    "ndp_votes_2024": 9677,
+    "ndp_pct_2024": 30.44,
+    "con_votes_2024": 16566,
+    "con_pct_2024": 52.11,
+    "grn_votes_2024": 2250,
+    "grn_pct_2024": 7.08,
+    "total_votes_2024": 31788
   },
   "skeena": {
     "name": "Skeena",
@@ -582,7 +1030,14 @@
     "votes_2024": 6243,
     "share_2024": "51.20%",
     "margin_votes_2024": 824,
-    "margin_pct_2024": "6.76%"
+    "margin_pct_2024": "6.76%",
+    "ndp_votes_2024": 5419,
+    "ndp_pct_2024": 44.44,
+    "con_votes_2024": 6243,
+    "con_pct_2024": 51.2,
+    "grn_votes_2024": 406,
+    "grn_pct_2024": 3.33,
+    "total_votes_2024": 12194
   },
   "surrey city centre": {
     "name": "Surrey City Centre",
@@ -591,7 +1046,14 @@
     "votes_2024": 6727,
     "share_2024": "46.71%",
     "margin_votes_2024": 236,
-    "margin_pct_2024": "1.64%"
+    "margin_pct_2024": "1.64%",
+    "ndp_votes_2024": 6727,
+    "ndp_pct_2024": 46.71,
+    "con_votes_2024": 6491,
+    "con_pct_2024": 45.07,
+    "grn_votes_2024": 878,
+    "grn_pct_2024": 6.1,
+    "total_votes_2024": 14403
   },
   "surrey north": {
     "name": "Surrey North",
@@ -600,7 +1062,14 @@
     "votes_2024": 7954,
     "share_2024": "50.67%",
     "margin_votes_2024": 1160,
-    "margin_pct_2024": "7.39%"
+    "margin_pct_2024": "7.39%",
+    "ndp_votes_2024": 6794,
+    "ndp_pct_2024": 43.28,
+    "con_votes_2024": 7954,
+    "con_pct_2024": 50.67,
+    "grn_votes_2024": 662,
+    "grn_pct_2024": 4.22,
+    "total_votes_2024": 15697
   },
   "surrey south": {
     "name": "Surrey South",
@@ -609,7 +1078,14 @@
     "votes_2024": 13056,
     "share_2024": "58.83%",
     "margin_votes_2024": 3920,
-    "margin_pct_2024": "17.66%"
+    "margin_pct_2024": "17.66%",
+    "ndp_votes_2024": 9136,
+    "ndp_pct_2024": 41.17,
+    "con_votes_2024": 13056,
+    "con_pct_2024": 58.83,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 22192
   },
   "surrey-cloverdale": {
     "name": "Surrey-Cloverdale",
@@ -618,7 +1094,14 @@
     "votes_2024": 10268,
     "share_2024": "48.32%",
     "margin_votes_2024": 587,
-    "margin_pct_2024": "2.77%"
+    "margin_pct_2024": "2.77%",
+    "ndp_votes_2024": 9681,
+    "ndp_pct_2024": 45.55,
+    "con_votes_2024": 10268,
+    "con_pct_2024": 48.32,
+    "grn_votes_2024": 1150,
+    "grn_pct_2024": 5.41,
+    "total_votes_2024": 21252
   },
   "surrey-fleetwood": {
     "name": "Surrey-Fleetwood",
@@ -627,7 +1110,14 @@
     "votes_2024": 9923,
     "share_2024": "48.60%",
     "margin_votes_2024": 751,
-    "margin_pct_2024": "3.67%"
+    "margin_pct_2024": "3.67%",
+    "ndp_votes_2024": 9923,
+    "ndp_pct_2024": 48.6,
+    "con_votes_2024": 9172,
+    "con_pct_2024": 44.93,
+    "grn_votes_2024": 1321,
+    "grn_pct_2024": 6.47,
+    "total_votes_2024": 20416
   },
   "surrey-guildford": {
     "name": "Surrey-Guildford",
@@ -636,7 +1126,14 @@
     "votes_2024": 8947,
     "share_2024": "46.93%",
     "margin_votes_2024": 22,
-    "margin_pct_2024": "0.12%"
+    "margin_pct_2024": "0.12%",
+    "ndp_votes_2024": 8947,
+    "ndp_pct_2024": 46.93,
+    "con_votes_2024": 8925,
+    "con_pct_2024": 46.81,
+    "grn_votes_2024": 824,
+    "grn_pct_2024": 4.32,
+    "total_votes_2024": 19066
   },
   "surrey-newton": {
     "name": "Surrey-Newton",
@@ -645,7 +1142,14 @@
     "votes_2024": 7924,
     "share_2024": "51.17%",
     "margin_votes_2024": 1266,
-    "margin_pct_2024": "8.18%"
+    "margin_pct_2024": "8.18%",
+    "ndp_votes_2024": 7924,
+    "ndp_pct_2024": 51.17,
+    "con_votes_2024": 6658,
+    "con_pct_2024": 42.99,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 15486
   },
   "surrey-panorama": {
     "name": "Surrey-Panorama",
@@ -654,7 +1158,14 @@
     "votes_2024": 8735,
     "share_2024": "49.60%",
     "margin_votes_2024": 263,
-    "margin_pct_2024": "1.49%"
+    "margin_pct_2024": "1.49%",
+    "ndp_votes_2024": 8472,
+    "ndp_pct_2024": 48.11,
+    "con_votes_2024": 8735,
+    "con_pct_2024": 49.6,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 17611
   },
   "surrey-serpentine river": {
     "name": "Surrey-Serpentine River",
@@ -663,7 +1174,14 @@
     "votes_2024": 9782,
     "share_2024": "49.70%",
     "margin_votes_2024": 435,
-    "margin_pct_2024": "2.21%"
+    "margin_pct_2024": "2.21%",
+    "ndp_votes_2024": 9347,
+    "ndp_pct_2024": 47.49,
+    "con_votes_2024": 9782,
+    "con_pct_2024": 49.7,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 19683
   },
   "surrey-white rock": {
     "name": "Surrey-White Rock",
@@ -672,7 +1190,14 @@
     "votes_2024": 14667,
     "share_2024": "52.31%",
     "margin_votes_2024": 1968,
-    "margin_pct_2024": "7.02%"
+    "margin_pct_2024": "7.02%",
+    "ndp_votes_2024": 12699,
+    "ndp_pct_2024": 45.29,
+    "con_votes_2024": 14667,
+    "con_pct_2024": 52.31,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 28037
   },
   "vancouver-fraserview": {
     "name": "Vancouver-Fraserview",
@@ -681,7 +1206,14 @@
     "votes_2024": 11896,
     "share_2024": "57.18%",
     "margin_votes_2024": 4278,
-    "margin_pct_2024": "20.56%"
+    "margin_pct_2024": "20.56%",
+    "ndp_votes_2024": 11896,
+    "ndp_pct_2024": 57.18,
+    "con_votes_2024": 7618,
+    "con_pct_2024": 36.62,
+    "grn_votes_2024": 1291,
+    "grn_pct_2024": 6.21,
+    "total_votes_2024": 20805
   },
   "vancouver-hastings": {
     "name": "Vancouver-Hastings",
@@ -690,7 +1222,14 @@
     "votes_2024": 14237,
     "share_2024": "64.15%",
     "margin_votes_2024": 8846,
-    "margin_pct_2024": "39.86%"
+    "margin_pct_2024": "39.86%",
+    "ndp_votes_2024": 14237,
+    "ndp_pct_2024": 64.15,
+    "con_votes_2024": 5391,
+    "con_pct_2024": 24.29,
+    "grn_votes_2024": 2409,
+    "grn_pct_2024": 10.85,
+    "total_votes_2024": 22194
   },
   "vancouver-kensington": {
     "name": "Vancouver-Kensington",
@@ -699,7 +1238,14 @@
     "votes_2024": 11713,
     "share_2024": "60.90%",
     "margin_votes_2024": 5652,
-    "margin_pct_2024": "29.38%"
+    "margin_pct_2024": "29.38%",
+    "ndp_votes_2024": 11713,
+    "ndp_pct_2024": 60.9,
+    "con_votes_2024": 6061,
+    "con_pct_2024": 31.52,
+    "grn_votes_2024": 1458,
+    "grn_pct_2024": 7.58,
+    "total_votes_2024": 19232
   },
   "vancouver-langara": {
     "name": "Vancouver-Langara",
@@ -708,7 +1254,14 @@
     "votes_2024": 8506,
     "share_2024": "48.43%",
     "margin_votes_2024": 419,
-    "margin_pct_2024": "2.38%"
+    "margin_pct_2024": "2.38%",
+    "ndp_votes_2024": 8506,
+    "ndp_pct_2024": 48.43,
+    "con_votes_2024": 8087,
+    "con_pct_2024": 46.05,
+    "grn_votes_2024": 969,
+    "grn_pct_2024": 5.52,
+    "total_votes_2024": 17562
   },
   "vancouver-little mountain": {
     "name": "Vancouver-Little Mountain",
@@ -717,7 +1270,14 @@
     "votes_2024": 15636,
     "share_2024": "62.11%",
     "margin_votes_2024": 7931,
-    "margin_pct_2024": "31.50%"
+    "margin_pct_2024": "31.50%",
+    "ndp_votes_2024": 15636,
+    "ndp_pct_2024": 62.11,
+    "con_votes_2024": 7705,
+    "con_pct_2024": 30.61,
+    "grn_votes_2024": 1833,
+    "grn_pct_2024": 7.28,
+    "total_votes_2024": 25174
   },
   "vancouver-point grey": {
     "name": "Vancouver-Point Grey",
@@ -726,7 +1286,14 @@
     "votes_2024": 12538,
     "share_2024": "56.77%",
     "margin_votes_2024": 4916,
-    "margin_pct_2024": "22.26%"
+    "margin_pct_2024": "22.26%",
+    "ndp_votes_2024": 12538,
+    "ndp_pct_2024": 56.77,
+    "con_votes_2024": 7622,
+    "con_pct_2024": 34.51,
+    "grn_votes_2024": 1925,
+    "grn_pct_2024": 8.72,
+    "total_votes_2024": 22085
   },
   "vancouver-quilchena": {
     "name": "Vancouver-Quilchena",
@@ -735,7 +1302,14 @@
     "votes_2024": 11464,
     "share_2024": "51.58%",
     "margin_votes_2024": 2815,
-    "margin_pct_2024": "12.68%"
+    "margin_pct_2024": "12.68%",
+    "ndp_votes_2024": 8649,
+    "ndp_pct_2024": 38.91,
+    "con_votes_2024": 11464,
+    "con_pct_2024": 51.58,
+    "grn_votes_2024": 1729,
+    "grn_pct_2024": 7.78,
+    "total_votes_2024": 22227
   },
   "vancouver-renfrew": {
     "name": "Vancouver-Renfrew",
@@ -744,7 +1318,14 @@
     "votes_2024": 10983,
     "share_2024": "63.22%",
     "margin_votes_2024": 5656,
-    "margin_pct_2024": "32.56%"
+    "margin_pct_2024": "32.56%",
+    "ndp_votes_2024": 10983,
+    "ndp_pct_2024": 63.22,
+    "con_votes_2024": 5327,
+    "con_pct_2024": 30.66,
+    "grn_votes_2024": 1064,
+    "grn_pct_2024": 6.12,
+    "total_votes_2024": 17374
   },
   "vancouver-south granville": {
     "name": "Vancouver-South Granville",
@@ -753,7 +1334,14 @@
     "votes_2024": 17208,
     "share_2024": "64.31%",
     "margin_votes_2024": 10530,
-    "margin_pct_2024": "39.35%"
+    "margin_pct_2024": "39.35%",
+    "ndp_votes_2024": 17208,
+    "ndp_pct_2024": 64.31,
+    "con_votes_2024": 6678,
+    "con_pct_2024": 24.96,
+    "grn_votes_2024": 2872,
+    "grn_pct_2024": 10.73,
+    "total_votes_2024": 26758
   },
   "vancouver-strathcona": {
     "name": "Vancouver-Strathcona",
@@ -762,7 +1350,14 @@
     "votes_2024": 13563,
     "share_2024": "67.62%",
     "margin_votes_2024": 10136,
-    "margin_pct_2024": "50.53%"
+    "margin_pct_2024": "50.53%",
+    "ndp_votes_2024": 13563,
+    "ndp_pct_2024": 67.62,
+    "con_votes_2024": 3427,
+    "con_pct_2024": 17.09,
+    "grn_votes_2024": 2731,
+    "grn_pct_2024": 13.62,
+    "total_votes_2024": 20057
   },
   "vancouver-west end": {
     "name": "Vancouver-West End",
@@ -771,7 +1366,14 @@
     "votes_2024": 13143,
     "share_2024": "63.01%",
     "margin_votes_2024": 7466,
-    "margin_pct_2024": "34.79%"
+    "margin_pct_2024": "34.79%",
+    "ndp_votes_2024": 13143,
+    "ndp_pct_2024": 63.01,
+    "con_votes_2024": 5677,
+    "con_pct_2024": 27.22,
+    "grn_votes_2024": 1893,
+    "grn_pct_2024": 9.08,
+    "total_votes_2024": 20857
   },
   "vancouver-yaletown": {
     "name": "Vancouver-Yaletown",
@@ -780,7 +1382,14 @@
     "votes_2024": 9018,
     "share_2024": "49.76%",
     "margin_votes_2024": 1160,
-    "margin_pct_2024": "6.40%"
+    "margin_pct_2024": "6.40%",
+    "ndp_votes_2024": 9018,
+    "ndp_pct_2024": 49.76,
+    "con_votes_2024": 7858,
+    "con_pct_2024": 43.36,
+    "grn_votes_2024": 1248,
+    "grn_pct_2024": 6.89,
+    "total_votes_2024": 18124
   },
   "vernon-lumby": {
     "name": "Vernon-Lumby",
@@ -789,7 +1398,14 @@
     "votes_2024": 11837,
     "share_2024": "42.69%",
     "margin_votes_2024": 476,
-    "margin_pct_2024": "1.72%"
+    "margin_pct_2024": "1.72%",
+    "ndp_votes_2024": 11837,
+    "ndp_pct_2024": 42.69,
+    "con_votes_2024": 11361,
+    "con_pct_2024": 40.97,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 27729
   },
   "victoria-beacon hill": {
     "name": "Victoria-Beacon Hill",
@@ -798,7 +1414,14 @@
     "votes_2024": 13634,
     "share_2024": "47.35%",
     "margin_votes_2024": 3989,
-    "margin_pct_2024": "13.85%"
+    "margin_pct_2024": "13.85%",
+    "ndp_votes_2024": 13634,
+    "ndp_pct_2024": 47.35,
+    "con_votes_2024": 5514,
+    "con_pct_2024": 19.15,
+    "grn_votes_2024": 9645,
+    "grn_pct_2024": 33.5,
+    "total_votes_2024": 28793
   },
   "victoria-swan lake": {
     "name": "Victoria-Swan Lake",
@@ -807,7 +1430,14 @@
     "votes_2024": 14273,
     "share_2024": "56.03%",
     "margin_votes_2024": 8373,
-    "margin_pct_2024": "32.87%"
+    "margin_pct_2024": "32.87%",
+    "ndp_votes_2024": 14273,
+    "ndp_pct_2024": 56.03,
+    "con_votes_2024": 5146,
+    "con_pct_2024": 20.2,
+    "grn_votes_2024": 5900,
+    "grn_pct_2024": 23.16,
+    "total_votes_2024": 25475
   },
   "west kelowna-peachland": {
     "name": "West Kelowna-Peachland",
@@ -816,7 +1446,14 @@
     "votes_2024": 13475,
     "share_2024": "50.85%",
     "margin_votes_2024": 6081,
-    "margin_pct_2024": "22.95%"
+    "margin_pct_2024": "22.95%",
+    "ndp_votes_2024": 7394,
+    "ndp_pct_2024": 27.9,
+    "con_votes_2024": 13475,
+    "con_pct_2024": 50.85,
+    "grn_votes_2024": 0,
+    "grn_pct_2024": 0.0,
+    "total_votes_2024": 26499
   },
   "west vancouver-capilano": {
     "name": "West Vancouver-Capilano",
@@ -825,7 +1462,14 @@
     "votes_2024": 12050,
     "share_2024": "46.68%",
     "margin_votes_2024": 5045,
-    "margin_pct_2024": "19.55%"
+    "margin_pct_2024": "19.55%",
+    "ndp_votes_2024": 7005,
+    "ndp_pct_2024": 27.13,
+    "con_votes_2024": 12050,
+    "con_pct_2024": 46.68,
+    "grn_votes_2024": 1435,
+    "grn_pct_2024": 5.56,
+    "total_votes_2024": 25816
   },
   "west vancouver-sea to sky": {
     "name": "West Vancouver-Sea to Sky",
@@ -834,6 +1478,13 @@
     "votes_2024": 10438,
     "share_2024": "38.08%",
     "margin_votes_2024": 676,
-    "margin_pct_2024": "2.47%"
+    "margin_pct_2024": "2.47%",
+    "ndp_votes_2024": 7212,
+    "ndp_pct_2024": 26.31,
+    "con_votes_2024": 9762,
+    "con_pct_2024": 35.61,
+    "grn_votes_2024": 10438,
+    "grn_pct_2024": 38.08,
+    "total_votes_2024": 27412
   }
 }

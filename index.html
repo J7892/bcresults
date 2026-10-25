@@ -253,6 +253,12 @@
       <div class="map-view-container">
         <!-- Map Controls Toolbar -->
         <div class="map-toolbar">
+          <div class="toolbar-group map-mode-group">
+            <span class="toolbar-label">Map Mode:</span>
+            <button class="mode-pill active" data-mode="party">🗳️ Leading Party</button>
+            <button class="mode-pill" data-mode="swing">📈 Swing vs. 2024</button>
+          </div>
+
           <div class="toolbar-group">
             <span class="toolbar-label">Quick Views:</span>
             <button class="zoom-pill active" data-zoom="bc">All British Columbia</button>
@@ -262,14 +268,23 @@
             <button class="zoom-pill" data-zoom="north">Northern BC</button>
           </div>
 
-          <div class="toolbar-group">
+          <div class="toolbar-group" id="party-filters-group">
             <span class="toolbar-label">Filter:</span>
             <button class="filter-pill active" data-filter="all">All (93)</button>
-            <button class="filter-pill filter-ndp" data-filter="BC NDP">NDP (47)</button>
-            <button class="filter-pill filter-con" data-filter="BC Conservative">Con (44)</button>
-            <button class="filter-pill filter-grn" data-filter="BC Green">Green (2)</button>
+            <button class="filter-pill filter-ndp" data-filter="BC NDP">NDP</button>
+            <button class="filter-pill filter-con" data-filter="BC Conservative">Con</button>
+            <button class="filter-pill filter-grn" data-filter="BC Green">Green</button>
             <button class="filter-pill filter-battleground" data-filter="battlegrounds">Close Races (&lt;3.5%)</button>
             <button class="filter-pill filter-flips" data-filter="flips">Flips</button>
+          </div>
+
+          <div class="toolbar-group hidden" id="swing-filters-group">
+            <span class="toolbar-label">Swing Filter:</span>
+            <button class="filter-pill active" data-swing-filter="all">All</button>
+            <button class="filter-pill" data-swing-filter="con-strong">&gt;10% Con Swing</button>
+            <button class="filter-pill" data-swing-filter="con-mod">5-10% Con Swing</button>
+            <button class="filter-pill" data-swing-filter="neutral">Neutral (±2%)</button>
+            <button class="filter-pill" data-swing-filter="ndp-swing">NDP Swing</button>
           </div>
         </div>
 

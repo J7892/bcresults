@@ -648,7 +648,7 @@ a:hover {
   margin-right: 4px;
 }
 
-.zoom-pill, .filter-pill {
+.zoom-pill, .filter-pill, .mode-pill {
   padding: 4px 10px;
   border-radius: 9999px;
   font-size: 0.78rem;
@@ -660,15 +660,107 @@ a:hover {
   transition: all 0.15s ease;
 }
 
-.zoom-pill:hover, .filter-pill:hover {
+.zoom-pill:hover, .filter-pill:hover, .mode-pill:hover {
   color: var(--text-main);
   border-color: #3b5072;
 }
 
-.zoom-pill.active, .filter-pill.active {
+.zoom-pill.active, .filter-pill.active, .mode-pill.active {
   background-color: #2563eb;
   color: #fff;
   border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+.mode-pill {
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  font-size: 0.8rem;
+}
+
+.map-mode-group {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Swing Legend Styles */
+.swing-legend-bar {
+  display: flex;
+  height: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0 4px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.swing-stop {
+  flex: 1;
+  height: 100%;
+}
+
+.swing-legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+/* Swing Drawer Styles */
+.swing-breakdown-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.swing-header-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swing-delta-pill {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.swing-con-bg {
+  background-color: rgba(30, 96, 184, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(30, 96, 184, 0.4);
+}
+
+.swing-ndp-bg {
+  background-color: rgba(245, 130, 32, 0.2);
+  color: #ffaa5c;
+  border: 1px solid rgba(245, 130, 32, 0.4);
+}
+
+.swing-neutral-bg {
+  background-color: rgba(100, 116, 139, 0.2);
+  color: #94a3b8;
+  border: 1px solid rgba(100, 116, 139, 0.4);
+}
+
+.swing-party-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.82rem;
+}
+
+.swing-row-meta {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-pill.filter-ndp.active { background-color: var(--ndp-color); border-color: var(--ndp-color); }

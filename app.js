@@ -1,6 +1,7 @@
 /**
  * British Columbia Election Results - Cloud Dashboard Engine
- * Handles GIS mapping, live data polling, candidate inspections, and battleground analysis.
+ * Handles GIS mapping, live data polling, candidate inspections, battleground analysis,
+ * and 2024 partisan swing visualization.
  */
 
 (function () {
@@ -14,6 +15,8 @@
   let districtLayersMap = {};
   let currentActiveDistrict = null;
   let currentMapFilter = 'all';
+  let currentSwingFilter = 'all';
+  let mapViewMode = 'party'; // 'party' or 'swing'
   let tableSortField = 'name';
   let tableSortAsc = true;
 
@@ -107,6 +110,7 @@
         renderAllViews();
         if (geojsonLayer) {
           geojsonLayer.setStyle(getDistrictStyle);
+          updateTooltips();
         }
       } else {
         updateTimeDisplay();
@@ -161,10 +165,8 @@
       maxZoom: 18
     });
 
-    // Add Esri Dark by default
     esriDark.addTo(map);
 
-    // Optional layer control to switch between free basemaps
     const baseMaps = {
       "Dark Canvas (Esri)": esriDark,
       "Street Map (OSM)": osmStandard,
@@ -174,12 +176,27 @@
 
     renderGeoJsonLayer();
     setupMapControls();
+    updateMapLegend();
   }
 
   function getDistrictResult(nameOrCode) {
     if (!electionData || !electionData.ridings) return null;
     const q = nameOrCode.toLowerCase().trim();
     return electionData.ridings.find(r => r.name.toLowerCase() === q || (r.code && r.code.toLowerCase() === q));
+  }
+
+  // Diverging color scale for 2024 swing
+  function getSwingColor(netConSwing) {
+    if (netConSwing === undefined || netConSwing === null) return '#475569';
+    if (netConSwing > 15) return '#084081';  // Deep Conservative Blue (>15%)
+    if (netConSwing > 10) return '#2171b5';  // Strong Conservative Blue (10-15%)
+    if (netConSwing > 5)  return '#4eb3d3';  // Medium Conservative Blue (5-10%)
+    if (netConSwing > 1.5) return '#7bccc4'; // Soft Conservative Teal (1.5-5%)
+    if (netConSwing >= -1.5) return '#475569'; // Neutral (±1.5%)
+    if (netConSwing >= -5) return '#fdbb84'; // Soft NDP Orange (1.5-5%)
+    if (netConSwing >= -10) return '#fc8d59'; // Medium NDP Orange (5-10%)
+    if (netConSwing >= -15) return '#e34a33'; // Strong NDP Orange (10-15%)
+    return '#b30000'; // Deep NDP Crimson (>15%)
   }
 
   function getDistrictStyle(feature) {
@@ -196,7 +213,39 @@
       };
     }
 
-    // Apply Filter visibility
+    const isSelected = currentActiveDistrict && currentActiveDistrict.name === res.name;
+
+    // --- SWING MODE ---
+    if (mapViewMode === 'swing') {
+      const netSwing = res.swing ? res.swing.net_con_swing : 0;
+      const fillColor = getSwingColor(netSwing);
+
+      // Swing filter visibility
+      if (currentSwingFilter !== 'all') {
+        if (currentSwingFilter === 'con-strong' && netSwing <= 10) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+        if (currentSwingFilter === 'con-mod' && (netSwing < 5 || netSwing > 10)) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+        if (currentSwingFilter === 'neutral' && Math.abs(netSwing) > 1.5) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+        if (currentSwingFilter === 'ndp-swing' && netSwing >= -1.5) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+      }
+
+      return {
+        fillColor: fillColor,
+        weight: isSelected ? 3 : 1.2,
+        opacity: 1,
+        color: isSelected ? '#ffffff' : '#0a0e17',
+        fillOpacity: 0.85
+      };
+    }
+
+    // --- PARTY WINNER MODE ---
     if (currentMapFilter !== 'all') {
       if (currentMapFilter === 'battlegrounds' && !res.is_battleground) {
         return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
@@ -210,15 +259,114 @@
     }
 
     const partyColor = PARTY_COLORS[res.winner_party] || '#8b949e';
-    const isSelected = currentActiveDistrict && currentActiveDistrict.name === res.name;
 
     return {
       fillColor: partyColor,
       weight: isSelected ? 3 : 1.2,
       opacity: 1,
       color: isSelected ? '#ffffff' : '#0a0e17',
-      fillOpacity: res.is_battleground && currentMapFilter === 'all' ? 0.95 : 0.78
+      fillOpacity: res.is_battleground && currentMapFilter === 'all' ? 0.95 : 0.82
     };
+  }
+
+  function getTooltipHtml(res) {
+    if (!res) return '';
+
+    if (mapViewMode === 'swing' && res.swing) {
+      const s = res.swing;
+      const net = s.net_con_swing;
+      const sign = net > 0 ? '+' : '';
+      const swingBadgeColor = net > 1.5 ? '#60a5fa' : (net < -1.5 ? '#ffaa5c' : '#94a3b8');
+      const swingTitle = net > 1.5 ? 'Conservative Swing' : (net < -1.5 ? 'NDP Swing' : 'Neutral Shift');
+
+      return `
+        <div class="map-tooltip-content">
+          <div class="tooltip-title">${res.name}</div>
+          <div style="font-size:0.85rem; font-weight:700; color:${swingBadgeColor}; margin-bottom:6px;">
+            ${sign}${net.toFixed(1)}% ${swingTitle}
+          </div>
+          <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.45;">
+            <div><strong>Con:</strong> ${s.cur_con_pct}% <span style="color:${s.con_shift >= 0 ? '#60a5fa' : '#ef4444'};">(${s.con_shift >= 0 ? '+' : ''}${s.con_shift}%)</span> [2024: ${s.base_con_pct}%]</div>
+            <div><strong>NDP:</strong> ${s.cur_ndp_pct}% <span style="color:${s.ndp_shift >= 0 ? '#ffaa5c' : '#ef4444'};">(${s.ndp_shift >= 0 ? '+' : ''}${s.ndp_shift}%)</span> [2024: ${s.base_ndp_pct}%]</div>
+            ${s.base_grn_pct > 0 || s.cur_grn_pct > 0 ? `<div><strong>Grn:</strong> ${s.cur_grn_pct}% <span style="color:#86efac;">(${s.grn_shift >= 0 ? '+' : ''}${s.grn_shift}%)</span> [2024: ${s.base_grn_pct}%]</div>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // Party mode tooltip
+    return `
+      <div class="map-tooltip-content">
+        <div class="tooltip-title">${res.name}</div>
+        <div class="tooltip-winner">
+          <span class="legend-chip" style="background:${PARTY_COLORS[res.winner_party]};"></span>
+          <span>${res.winner_party} (${res.winner_share}%)</span>
+        </div>
+        <div class="tooltip-margin">Margin: ${res.margin_votes.toLocaleString()} votes (${res.margin_pct}%)</div>
+        <div style="font-size:0.72rem;color:var(--text-dim);margin-top:2px;">Polls: ${res.status}</div>
+      </div>
+    `;
+  }
+
+  function updateTooltips() {
+    if (!geojsonLayer) return;
+    geojsonLayer.eachLayer(layer => {
+      const name = layer.feature?.properties?.name;
+      if (!name) return;
+      const res = getDistrictResult(name);
+      if (res) {
+        layer.setTooltipContent(getTooltipHtml(res));
+      }
+    });
+  }
+
+  function updateMapLegend() {
+    const legendEl = document.querySelector('.map-legend');
+    if (!legendEl) return;
+
+    if (mapViewMode === 'swing') {
+      legendEl.innerHTML = `
+        <h4>Partisan Swing vs. 2024</h4>
+        <div class="legend-note" style="margin-bottom:6px;">Net margin shift (NDP &harr; Conservative)</div>
+        <div class="swing-legend-bar">
+          <div class="swing-stop" style="background:#b30000;" title=">15% NDP Swing"></div>
+          <div class="swing-stop" style="background:#e34a33;" title="10-15% NDP Swing"></div>
+          <div class="swing-stop" style="background:#fc8d59;" title="5-10% NDP Swing"></div>
+          <div class="swing-stop" style="background:#fdbb84;" title="1.5-5% NDP Swing"></div>
+          <div class="swing-stop" style="background:#475569;" title="Neutral (±1.5%)"></div>
+          <div class="swing-stop" style="background:#7bccc4;" title="1.5-5% Con Swing"></div>
+          <div class="swing-stop" style="background:#4eb3d3;" title="5-10% Con Swing"></div>
+          <div class="swing-stop" style="background:#2171b5;" title="10-15% Con Swing"></div>
+          <div class="swing-stop" style="background:#084081;" title=">15% Con Swing"></div>
+        </div>
+        <div class="swing-legend-labels">
+          <span style="color:#ffaa5c;">&larr; NDP Swing</span>
+          <span style="color:#94a3b8;">Neutral</span>
+          <span style="color:#60a5fa;">Con Swing &rarr;</span>
+        </div>
+        <div class="legend-divider"></div>
+        <div class="legend-note">Click district for before/after comparison.</div>
+      `;
+    } else {
+      const p = electionData?.parties || {};
+      legendEl.innerHTML = `
+        <h4>Electoral Legend</h4>
+        <div class="legend-row">
+          <span class="legend-chip ndp-bg"></span>
+          <span>BC NDP (${p['BC NDP']?.seats || 28})</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-chip con-bg"></span>
+          <span>BC Conservative (${p['BC Conservative']?.seats || 63})</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-chip grn-bg"></span>
+          <span>BC Green Party (${p['BC Green']?.seats || 2})</span>
+        </div>
+        <div class="legend-divider"></div>
+        <div class="legend-note">Click any district for candidate details.</div>
+      `;
+    }
   }
 
   function renderGeoJsonLayer() {
@@ -235,26 +383,14 @@
 
         const res = getDistrictResult(districtName);
 
-        // Hover tooltip
         if (res) {
-          const tooltipContent = `
-            <div class="map-tooltip-content">
-              <div class="tooltip-title">${res.name}</div>
-              <div class="tooltip-winner">
-                <span class="legend-chip" style="background:${PARTY_COLORS[res.winner_party]};"></span>
-                <span>${res.winner_party} (${res.winner_share}%)</span>
-              </div>
-              <div class="tooltip-margin">Margin: ${res.margin_votes.toLocaleString()} votes (${res.margin_pct}%)</div>
-            </div>
-          `;
-          layer.bindTooltip(tooltipContent, {
+          layer.bindTooltip(getTooltipHtml(res), {
             sticky: true,
             className: 'custom-map-tooltip',
             direction: 'auto'
           });
         }
 
-        // Layer event listeners
         layer.on({
           mouseover: (e) => {
             const l = e.target;
@@ -283,6 +419,32 @@
   }
 
   function setupMapControls() {
+    // Mode toggle (Party vs Swing)
+    document.querySelectorAll('.mode-pill').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.mode-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        mapViewMode = btn.dataset.mode;
+
+        const partyFilters = document.getElementById('party-filters-group');
+        const swingFilters = document.getElementById('swing-filters-group');
+
+        if (mapViewMode === 'swing') {
+          if (partyFilters) partyFilters.classList.add('hidden');
+          if (swingFilters) swingFilters.classList.remove('hidden');
+        } else {
+          if (partyFilters) partyFilters.classList.remove('hidden');
+          if (swingFilters) swingFilters.classList.add('hidden');
+        }
+
+        if (geojsonLayer) {
+          geojsonLayer.setStyle(getDistrictStyle);
+          updateTooltips();
+        }
+        updateMapLegend();
+      });
+    });
+
     // Zoom region pills
     document.querySelectorAll('.zoom-pill').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -295,12 +457,24 @@
       });
     });
 
-    // Filter pills
-    document.querySelectorAll('.filter-pill').forEach(btn => {
+    // Party Filter pills
+    document.querySelectorAll('.filter-pill[data-filter]').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentMapFilter = btn.dataset.filter;
+        if (geojsonLayer) {
+          geojsonLayer.setStyle(getDistrictStyle);
+        }
+      });
+    });
+
+    // Swing Filter pills
+    document.querySelectorAll('.filter-pill[data-swing-filter]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.filter-pill[data-swing-filter]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentSwingFilter = btn.dataset.swingFilter;
         if (geojsonLayer) {
           geojsonLayer.setStyle(getDistrictStyle);
         }
@@ -317,7 +491,6 @@
 
     currentActiveDistrict = res;
 
-    // Reset style on all, highlight current
     if (geojsonLayer) {
       geojsonLayer.setStyle(getDistrictStyle);
     }
@@ -342,7 +515,6 @@
     titleEl.textContent = res.name;
     codeEl.textContent = res.code || 'ED';
 
-    // Tags
     tagsEl.innerHTML = '';
     if (res.is_battleground) {
       const bTag = document.createElement('span');
@@ -353,24 +525,30 @@
     if (res.is_flip) {
       const fTag = document.createElement('span');
       fTag.className = 'drawer-tag tag-flip';
-      fTag.textContent = 'Seat Flipped';
+      fTag.textContent = res.flip_badge || 'Seat Flipped';
       tagsEl.appendChild(fTag);
     }
 
     const partyColor = PARTY_COLORS[res.winner_party] || '#8b949e';
     const borderClass = res.winner_party === 'BC NDP' ? 'ndp-border' : (res.winner_party === 'BC Conservative' ? 'con-border' : 'grn-border');
 
+    const s = res.swing || {};
+    const net = s.net_con_swing || 0;
+    const sign = net > 0 ? '+' : '';
+    const swingBgClass = net > 1.5 ? 'swing-con-bg' : (net < -1.5 ? 'swing-ndp-bg' : 'swing-neutral-bg');
+    const swingText = net > 1.5 ? `${sign}${net.toFixed(1)}% to Conservative` : (net < -1.5 ? `${sign}${net.toFixed(1)}% to NDP` : 'Neutral (±1.5%)');
+
     let html = `
       <div class="winner-spotlight ${borderClass}">
         <div class="winner-top-row">
-          <span class="winner-elected-badge">Elected Candidate</span>
+          <span class="winner-elected-badge">${res.status.includes('Declared') ? 'Elected Candidate' : 'Currently Leading'}</span>
           <span class="party-tag" style="color:${partyColor}; font-weight:700;">${res.winner_party}</span>
         </div>
         <div class="winner-candidate-name">${res.winning_candidate}</div>
         <div class="winner-party-name" style="color:var(--text-muted);">${res.winner_party}</div>
         <div class="winner-stats-row">
           <div class="kpi-stat">
-            <span class="stat-label">Votes Won</span>
+            <span class="stat-label">Votes Counted</span>
             <span class="stat-val">${res.winner_votes.toLocaleString()}</span>
           </div>
           <div class="kpi-stat">
@@ -378,14 +556,53 @@
             <span class="stat-val" style="color:${partyColor};">${res.winner_share}%</span>
           </div>
           <div class="kpi-stat">
-            <span class="stat-label">Victory Margin</span>
+            <span class="stat-label">Current Margin</span>
             <span class="stat-val">+${res.margin_votes.toLocaleString()}</span>
           </div>
         </div>
       </div>
 
+      <!-- 2024 Swing Comparison Card -->
+      <div class="swing-breakdown-card">
+        <div class="swing-header-badge">
+          <div>
+            <h3 style="font-size:0.95rem; font-weight:700; color:#fff;">Swing vs. 2024 Baseline</h3>
+            <div style="font-size:0.75rem; color:var(--text-muted);">Net margin shift between top parties</div>
+          </div>
+          <span class="swing-delta-pill ${swingBgClass}">${swingText}</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="swing-party-row">
+            <div class="swing-row-meta">
+              <span><strong>Conservative Party</strong></span>
+              <span><strong>${s.cur_con_pct || 0}%</strong> (was ${s.base_con_pct || 0}%, <span style="color:${s.con_shift >= 0 ? '#60a5fa' : '#ef4444'};">${s.con_shift >= 0 ? '+' : ''}${s.con_shift || 0}%</span>)</span>
+            </div>
+            <div class="cand-bar-bg"><div class="cand-bar-fill" style="width:${s.cur_con_pct || 0}%; background-color:var(--con-color);"></div></div>
+          </div>
+
+          <div class="swing-party-row">
+            <div class="swing-row-meta">
+              <span><strong>BC NDP</strong></span>
+              <span><strong>${s.cur_ndp_pct || 0}%</strong> (was ${s.base_ndp_pct || 0}%, <span style="color:${s.ndp_shift >= 0 ? '#ffaa5c' : '#ef4444'};">${s.ndp_shift >= 0 ? '+' : ''}${s.ndp_shift || 0}%</span>)</span>
+            </div>
+            <div class="cand-bar-bg"><div class="cand-bar-fill" style="width:${s.cur_ndp_pct || 0}%; background-color:var(--ndp-color);"></div></div>
+          </div>
+
+          ${(s.base_grn_pct > 0 || s.cur_grn_pct > 0) ? `
+          <div class="swing-party-row">
+            <div class="swing-row-meta">
+              <span><strong>BC Green Party</strong></span>
+              <span><strong>${s.cur_grn_pct || 0}%</strong> (was ${s.base_grn_pct || 0}%, <span style="color:#86efac;">${s.grn_shift >= 0 ? '+' : ''}${s.grn_shift || 0}%</span>)</span>
+            </div>
+            <div class="cand-bar-bg"><div class="cand-bar-fill" style="width:${s.cur_grn_pct || 0}%; background-color:var(--grn-color);"></div></div>
+          </div>
+          ` : ''}
+        </div>
+      </div>
+
       <div class="candidates-breakdown-card">
-        <h3>Candidate Vote Breakdown</h3>
+        <h3>Live Candidate Tallies</h3>
     `;
 
     (res.candidates || []).forEach(c => {
@@ -395,7 +612,7 @@
           <div class="cand-meta">
             <div class="cand-name-party">
               <span>${c.name}</span>
-              <span class="cand-party-code">(${c.party})</span>
+              <span class="cand-party-code">(${c.raw_affiliation || c.party})</span>
               ${c.elected ? '<span style="color:#4ade80;font-size:0.75rem;margin-left:4px;">&#10003;</span>' : ''}
             </div>
             <div class="cand-numbers">
@@ -427,7 +644,7 @@
           <div class="drawer-meta-val">${res.party_2024 || res.prev_party}</div>
         </div>
         <div class="drawer-meta-item">
-          <div class="drawer-meta-label">Seat Shift</div>
+          <div class="drawer-meta-label">Seat Shift vs 2024</div>
           <div class="drawer-meta-val" style="font-size:0.8rem;">${res.flip_description}</div>
         </div>
         <div class="drawer-meta-item">
@@ -538,7 +755,7 @@
     setText('kpi-grn-votes', (p['BC Green']?.votes || 0).toLocaleString());
 
     if (meta?.total_boxes_count) {
-      setText('kpi-turnout-pct', `${meta.overall_poll_progress}% (${(meta.total_boxes_reported || 0).toLocaleString()}/${meta.total_boxes_count.toLocaleString()})`);
+      setText('kpi-turnout-pct', `${meta.overall_poll_progress}% (${(meta.total_boxes_reported || 0).toLocaleString()} / ${meta.total_boxes_count.toLocaleString()})`);
     } else {
       setText('kpi-turnout-pct', `${meta?.provincial_turnout_pct || 58.45}%`);
     }
@@ -561,6 +778,7 @@
     container.innerHTML = battlegrounds.map(r => {
       const winnerColor = PARTY_COLORS[r.winner_party] || '#8b949e';
       const runnerColor = PARTY_COLORS[r.runner_up_party] || '#8b949e';
+      const s = r.swing || {};
 
       return `
         <div class="battleground-card" onclick="window.selectRiding('${r.name.replace(/'/g, "\\'")}')">
@@ -583,7 +801,7 @@
           </div>
           <div style="font-size:0.75rem; color:var(--text-dim); display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.05); padding-top:8px;">
             <span>${r.flip_description}</span>
-            <span>Turnout: ${r.turnout_pct}%</span>
+            <span style="color:${s.net_con_swing > 0 ? '#60a5fa' : '#ffaa5c'};font-weight:600;">${s.label || ''}</span>
           </div>
         </div>
       `;
@@ -600,16 +818,20 @@
 
     tbody.innerHTML = flips.map(r => {
       const winnerColor = PARTY_COLORS[r.winner_party] || '#8b949e';
+      const s = r.swing || {};
+      const net = s.net_con_swing || 0;
+      const sign = net > 0 ? '+' : '';
+
       return `
         <tr>
           <td><span class="riding-table-name" onclick="window.selectRiding('${r.name.replace(/'/g, "\\'")}')">${r.name}</span></td>
-          <td><span class="party-badge-inline" style="background:rgba(255,255,255,0.06);color:var(--text-muted);">${r.prev_party}</span></td>
+          <td><span class="party-badge-inline" style="background:rgba(255,255,255,0.06);color:var(--text-muted);">${r.party_2024 || r.prev_party}</span></td>
           <td><span style="color:var(--accent-blue);font-weight:700;">&rarr;</span></td>
           <td><span class="party-badge-inline" style="background:${winnerColor}25;color:${winnerColor};border:1px solid ${winnerColor}50;">${r.winner_party}</span></td>
           <td><strong>${r.winning_candidate}</strong></td>
           <td style="font-family:var(--font-mono);">${r.winner_votes.toLocaleString()} (${r.winner_share}%)</td>
           <td style="font-family:var(--font-mono);color:${r.is_battleground ? 'var(--accent-amber)' : 'inherit'};">+${r.margin_votes.toLocaleString()} (${r.margin_pct}%)</td>
-          <td style="font-family:var(--font-mono);">${r.turnout_pct}%</td>
+          <td style="font-family:var(--font-mono);color:${net > 0 ? '#60a5fa' : '#ffaa5c'};">${sign}${net.toFixed(1)}%</td>
         </tr>
       `;
     }).join('');
@@ -626,7 +848,6 @@
       ridings = ridings.filter(r => r.winner_party === filterVal);
     }
 
-    // Sort
     ridings.sort((a, b) => {
       let valA = a[tableSortField];
       let valB = b[tableSortField];
@@ -638,6 +859,10 @@
 
     tbody.innerHTML = ridings.map(r => {
       const partyColor = PARTY_COLORS[r.winner_party] || '#8b949e';
+      const s = r.swing || {};
+      const net = s.net_con_swing || 0;
+      const sign = net > 0 ? '+' : '';
+
       return `
         <tr>
           <td><span class="riding-table-name" onclick="window.selectRiding('${r.name.replace(/'/g, "\\'")}')">${r.name}</span></td>
@@ -646,9 +871,9 @@
           <td style="font-family:var(--font-mono);">${r.winner_votes.toLocaleString()}</td>
           <td style="font-family:var(--font-mono);">${r.winner_share}%</td>
           <td style="font-family:var(--font-mono);color:${r.is_battleground ? 'var(--accent-amber)' : 'inherit'};">+${r.margin_votes.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono);color:${r.is_battleground ? 'var(--accent-amber)' : 'inherit'};">${r.margin_pct}%</td>
+          <td style="font-family:var(--font-mono);color:${net > 0 ? '#60a5fa' : '#ffaa5c'};">${sign}${net.toFixed(1)}%</td>
           <td>${r.runner_up_candidate ? `${r.runner_up_candidate} (${r.runner_up_party})` : '—'}</td>
-          <td style="font-family:var(--font-mono);">${r.turnout_pct}%</td>
+          <td style="font-family:var(--font-mono);">${r.status}</td>
           <td style="font-family:var(--font-mono);">${r.total_votes.toLocaleString()}</td>
         </tr>
       `;
@@ -678,7 +903,7 @@
     const container = document.getElementById('comparison-bars');
     if (!container || !electionData?.parties) return;
 
-    const parties = ['BC NDP', 'BC Conservative', 'BC Green'];
+    const parties = ['BC Conservative', 'BC NDP', 'BC Green'];
     const totalSeats = electionData.metadata?.total_seats || 93;
 
     container.innerHTML = parties.map(pKey => {
@@ -691,7 +916,7 @@
       return `
         <div class="comp-party-item">
           <div class="comp-party-header">
-            <span style="color:${color};font-weight:700;">${p.name}</span>
+            <span style="color:${color};font-weight:700;">${p.name} (${p.net_seat_change_str} vs 2024)</span>
             <span style="font-family:var(--font-mono);">${p.seats} Seats (${seatPct}%)</span>
           </div>
           <div class="comp-bar-container">
@@ -728,7 +953,6 @@
         const targetTab = document.getElementById(btn.dataset.tab);
         if (targetTab) targetTab.classList.add('active');
 
-        // Trigger map resize if switching to map
         if (btn.dataset.tab === 'tab-map' && map) {
           setTimeout(() => { map.invalidateSize(); }, 150);
         }
@@ -761,11 +985,12 @@
 
       searchDropdown.innerHTML = matches.map(r => {
         const partyColor = PARTY_COLORS[r.winner_party] || '#8b949e';
+        const s = r.swing || {};
         return `
           <div class="search-item" onclick="window.selectRiding('${r.name.replace(/'/g, "\\'")}')">
             <div>
               <div style="font-weight:700;">${r.name}</div>
-              <div style="font-size:0.75rem;color:var(--text-muted);">${r.winning_candidate}</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);">${r.winning_candidate} (${s.label || ''})</div>
             </div>
             <span class="search-item-party" style="background:${partyColor}25;color:${partyColor};border:1px solid ${partyColor}50;">
               ${r.winner_party}
@@ -811,9 +1036,7 @@
     }
   }
 
-  // Global window handler for riding click
   window.selectRiding = function (name) {
-    // Switch to map tab if not active
     const mapTabBtn = document.querySelector('.tab-btn[data-tab="tab-map"]');
     if (mapTabBtn && !mapTabBtn.classList.contains('active')) {
       mapTabBtn.click();
@@ -826,6 +1049,5 @@
     }, 150);
   };
 
-  // Launch on DOM ready
   document.addEventListener('DOMContentLoaded', init);
 })();

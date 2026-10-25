@@ -267,6 +267,31 @@ def scrape_elections_bc():
         b_info = baseline_2024.get(norm_key, {})
         party_2024 = b_info.get("party_2024", "Unknown")
 
+        base_con_pct = b_info.get("con_pct_2024", 0)
+        base_ndp_pct = b_info.get("ndp_pct_2024", 0)
+        base_grn_pct = b_info.get("grn_pct_2024", 0)
+
+        cur_con_pct = round((con_votes / tot_valid * 100), 2) if tot_valid > 0 else 0
+        cur_ndp_pct = round((ndp_votes / tot_valid * 100), 2) if tot_valid > 0 else 0
+        cur_grn_pct = round((grn_votes / tot_valid * 100), 2) if tot_valid > 0 else 0
+
+        con_shift = round(cur_con_pct - base_con_pct, 2)
+        ndp_shift = round(cur_ndp_pct - base_ndp_pct, 2)
+        grn_shift = round(cur_grn_pct - base_grn_pct, 2)
+
+        # Net two-party margin swing (positive = swung to Con, negative = swung to NDP)
+        net_con_swing = round((cur_con_pct - cur_ndp_pct) - (base_con_pct - base_ndp_pct), 2)
+
+        if abs(net_con_swing) < 1.5:
+            swing_direction = "Neutral"
+            swing_label = "Neutral (±1.5%)"
+        elif net_con_swing > 0:
+            swing_direction = "BC Conservative"
+            swing_label = f"+{net_con_swing:.1f}% to Conservative"
+        else:
+            swing_direction = "BC NDP"
+            swing_label = f"+{abs(net_con_swing):.1f}% to NDP"
+
         if winner_votes > 0 and party_2024 != "Unknown" and winner_party != party_2024:
             is_flip = True
             flip_description = f"Flipped from {party_2024} to {winner_party}"
@@ -305,6 +330,20 @@ def scrape_elections_bc():
             "flip_badge": flip_badge,
             "party_2024": party_2024,
             "prev_party": party_2024,
+            "swing": {
+                "net_con_swing": net_con_swing,
+                "direction": swing_direction,
+                "label": swing_label,
+                "con_shift": con_shift,
+                "ndp_shift": ndp_shift,
+                "grn_shift": grn_shift,
+                "base_con_pct": base_con_pct,
+                "base_ndp_pct": base_ndp_pct,
+                "base_grn_pct": base_grn_pct,
+                "cur_con_pct": cur_con_pct,
+                "cur_ndp_pct": cur_ndp_pct,
+                "cur_grn_pct": cur_grn_pct
+            },
             "turnout_pct": round((tot_valid / 38000 * 100), 1),
             "total_votes": tot_valid,
             "rejected_ballots": rejected,
