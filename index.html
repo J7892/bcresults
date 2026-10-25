@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BC Election Results Tracker | 43rd General Election</title>
+  <meta name="description" content="Live Cloud Dashboard for the British Columbia Provincial Election Results, featuring interactive GIS mapping, battleground analysis, and real-time candidate data.">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Top Navigation & Live Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-left">
+        <div class="header-brand">
+          <div class="brand-badge">BC 2024</div>
+          <div class="brand-text">
+            <h1>British Columbia Election Results</h1>
+            <p class="subtitle">43rd Provincial General Election • 93 Electoral Districts</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="live-status-pill" id="live-indicator">
+          <span class="live-dot pulse"></span>
+          <span class="live-text" id="status-label">OFFICIAL RESULTS</span>
+          <span class="time-sep">•</span>
+          <span class="updated-time" id="last-updated-text">Updating...</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button id="refresh-btn" class="btn btn-secondary" title="Check for fresh data">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+          </svg>
+          <span>Refresh</span>
+        </button>
+        <a href="#about-modal" class="btn btn-outline" id="about-btn">About & Cloud Setup</a>
+      </div>
+    </div>
+
+    <!-- Majority Tracker Banner -->
+    <div class="majority-tracker-wrapper">
+      <div class="majority-container">
+        <div class="party-majority-badge ndp-badge">
+          <span class="party-tag">BC NDP</span>
+          <span class="seat-count" id="tracker-ndp-seats">47</span>
+          <span class="status-sub">Majority Won</span>
+        </div>
+
+        <div class="tracker-bar-container">
+          <div class="tracker-meter">
+            <div class="meter-segment ndp-bg" id="meter-ndp" style="width: 50.54%;"></div>
+            <div class="meter-segment grn-bg" id="meter-grn" style="width: 2.15%;"></div>
+            <div class="meter-segment oth-bg" id="meter-oth" style="width: 0%;"></div>
+            <div class="meter-segment con-bg" id="meter-con" style="width: 47.31%;"></div>
+          </div>
+          <div class="majority-marker" style="left: 50.54%;">
+            <div class="marker-pin"></div>
+            <div class="marker-label">47 TO FORM MAJORITY (93 SEATS)</div>
+          </div>
+        </div>
+
+        <div class="party-majority-badge con-badge">
+          <span class="party-tag">BC CONSERVATIVE</span>
+          <span class="seat-count" id="tracker-con-seats">44</span>
+          <span class="status-sub">Official Opposition</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Key Metric Overview Cards -->
+    <section class="kpi-cards-grid">
+      <!-- BC NDP Card -->
+      <div class="kpi-card party-card ndp-card">
+        <div class="kpi-card-header">
+          <span class="party-stripe ndp-bg"></span>
+          <div>
+            <div class="kpi-party-name">BC NDP</div>
+            <div class="kpi-party-leader">David Eby</div>
+          </div>
+          <span class="outcome-tag majority-won">Majority</span>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-seats" id="kpi-ndp-seats">47</div>
+          <div class="kpi-subtext">Seats Elected</div>
+        </div>
+        <div class="kpi-footer">
+          <div class="kpi-stat">
+            <span class="stat-label">Popular Vote</span>
+            <span class="stat-val" id="kpi-ndp-pct">44.86%</span>
+          </div>
+          <div class="kpi-stat">
+            <span class="stat-label">Total Votes</span>
+            <span class="stat-val" id="kpi-ndp-votes">944,467</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BC Conservative Card -->
+      <div class="kpi-card party-card con-card">
+        <div class="kpi-card-header">
+          <span class="party-stripe con-bg"></span>
+          <div>
+            <div class="kpi-party-name">BC Conservative</div>
+            <div class="kpi-party-leader">John Rustad</div>
+          </div>
+          <span class="outcome-tag opposition">Official Opp.</span>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-seats" id="kpi-con-seats">44</div>
+          <div class="kpi-subtext">Seats Elected</div>
+        </div>
+        <div class="kpi-footer">
+          <div class="kpi-stat">
+            <span class="stat-label">Popular Vote</span>
+            <span class="stat-val" id="kpi-con-pct">43.28%</span>
+          </div>
+          <div class="kpi-stat">
+            <span class="stat-label">Total Votes</span>
+            <span class="stat-val" id="kpi-con-votes">911,152</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BC Green Card -->
+      <div class="kpi-card party-card grn-card">
+        <div class="kpi-card-header">
+          <span class="party-stripe grn-bg"></span>
+          <div>
+            <div class="kpi-party-name">BC Green Party</div>
+            <div class="kpi-party-leader">Sonia Furstenau</div>
+          </div>
+          <span class="outcome-tag party-status">Official Party</span>
+        </div>
+        <div class="kpi-body">
+          <div class="kpi-seats" id="kpi-grn-seats">2</div>
+          <div class="kpi-subtext">Seats Elected</div>
+        </div>
+        <div class="kpi-footer">
+          <div class="kpi-stat">
+            <span class="stat-label">Popular Vote</span>
+            <span class="stat-val" id="kpi-grn-pct">8.24%</span>
+          </div>
+          <div class="kpi-stat">
+            <span class="stat-label">Total Votes</span>
+            <span class="stat-val" id="kpi-grn-votes">173,494</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Election Turnout & Key Stats -->
+      <div class="kpi-card meta-kpi-card">
+        <div class="kpi-card-header">
+          <div>
+            <div class="kpi-party-name">Election Overview</div>
+            <div class="kpi-party-leader">Province of British Columbia</div>
+          </div>
+        </div>
+        <div class="kpi-stats-list">
+          <div class="meta-row">
+            <span class="meta-name">Voter Turnout:</span>
+            <span class="meta-val highlight" id="kpi-turnout-pct">58.45%</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-name">Total Ballots Cast:</span>
+            <span class="meta-val" id="kpi-total-votes">2,105,344</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-name">Battlegrounds (&lt; 3.5%):</span>
+            <span class="meta-val highlight-amber" id="kpi-battlegrounds">17</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-name">Seat Flips:</span>
+            <span class="meta-val highlight-blue" id="kpi-flips">45</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav-bar">
+      <div class="tabs-group">
+        <button class="tab-btn active" data-tab="tab-map">
+          <svg class="tab-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+            <line x1="8" y1="2" x2="8" y2="18"/>
+            <line x1="16" y1="6" x2="16" y2="22"/>
+          </svg>
+          <span>Electoral Map</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-battlegrounds">
+          <svg class="tab-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <span>Battleground Ridings (<span id="tab-badge-battleground">17</span>)</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-flips">
+          <svg class="tab-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"/>
+            <polyline points="1 20 1 14 7 14"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+          <span>Seat Flips & Pickups</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-table">
+          <svg class="tab-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"/>
+            <line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/>
+            <line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+          <span>All 93 Ridings Table</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-analysis">
+          <svg class="tab-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+          <span>Vote Analysis</span>
+        </button>
+      </div>
+
+      <div class="tabs-actions">
+        <div class="riding-search-container">
+          <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="global-riding-search" placeholder="Search riding or candidate..." autocomplete="off">
+          <div id="search-dropdown" class="search-results-dropdown hidden"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1: INTERACTIVE MAP -->
+    <section id="tab-map" class="tab-content active">
+      <div class="map-view-container">
+        <!-- Map Controls Toolbar -->
+        <div class="map-toolbar">
+          <div class="toolbar-group">
+            <span class="toolbar-label">Quick Views:</span>
+            <button class="zoom-pill active" data-zoom="bc">All British Columbia</button>
+            <button class="zoom-pill" data-zoom="vancouver">Metro Vancouver</button>
+            <button class="zoom-pill" data-zoom="victoria">Greater Victoria</button>
+            <button class="zoom-pill" data-zoom="interior">Interior / Okanagan</button>
+            <button class="zoom-pill" data-zoom="north">Northern BC</button>
+          </div>
+
+          <div class="toolbar-group">
+            <span class="toolbar-label">Filter:</span>
+            <button class="filter-pill active" data-filter="all">All (93)</button>
+            <button class="filter-pill filter-ndp" data-filter="BC NDP">NDP (47)</button>
+            <button class="filter-pill filter-con" data-filter="BC Conservative">Con (44)</button>
+            <button class="filter-pill filter-grn" data-filter="BC Green">Green (2)</button>
+            <button class="filter-pill filter-battleground" data-filter="battlegrounds">Close Races (&lt;3.5%)</button>
+            <button class="filter-pill filter-flips" data-filter="flips">Flips</button>
+          </div>
+        </div>
+
+        <div class="map-workspace">
+          <!-- The Leaflet Map Container -->
+          <div id="bc-map" class="map-canvas"></div>
+
+          <!-- Floating Map Legend -->
+          <div class="map-legend">
+            <h4>Electoral Legend</h4>
+            <div class="legend-row">
+              <span class="legend-chip ndp-bg"></span>
+              <span>BC NDP (47)</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-chip con-bg"></span>
+              <span>BC Conservative (44)</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-chip grn-bg"></span>
+              <span>BC Green Party (2)</span>
+            </div>
+            <div class="legend-divider"></div>
+            <div class="legend-note">
+              Click any district for in-depth candidate results.
+            </div>
+          </div>
+
+          <!-- Sliding Riding Detail Inspector Panel -->
+          <aside id="riding-drawer" class="riding-drawer">
+            <div class="drawer-header">
+              <button class="drawer-close-btn" id="drawer-close">&times;</button>
+              <div class="drawer-title-group">
+                <span class="drawer-code" id="drawer-code">VAN</span>
+                <h2 id="drawer-title">Select a Riding</h2>
+              </div>
+              <div class="drawer-status-tags" id="drawer-tags"></div>
+            </div>
+
+            <div class="drawer-content" id="drawer-content">
+              <div class="drawer-placeholder">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                  <line x1="8" y1="2" x2="8" y2="18"/>
+                  <line x1="16" y1="6" x2="16" y2="22"/>
+                </svg>
+                <p>Click on any electoral district on the map or search above to view detailed candidate vote shares, margins, and historical changes.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: BATTLEGROUNDS -->
+    <section id="tab-battlegrounds" class="tab-content">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2>Razor-Thin Battlegrounds</h2>
+            <p class="subtitle">Electoral districts decided by less than 3.5% of total votes cast.</p>
+          </div>
+          <div class="section-badge">17 Key Contests</div>
+        </div>
+
+        <div class="battlegrounds-grid" id="battlegrounds-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: SEAT FLIPS -->
+    <section id="tab-flips" class="tab-content">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2>Seat Flips & Historic Shifts</h2>
+            <p class="subtitle">Districts that changed political representation in the 2024 general election.</p>
+          </div>
+        </div>
+
+        <div class="flips-table-wrapper">
+          <table class="data-table" id="flips-table">
+            <thead>
+              <tr>
+                <th>Electoral District</th>
+                <th>Previous (2020)</th>
+                <th>Shift</th>
+                <th>2024 Winner</th>
+                <th>Winning Candidate</th>
+                <th>Votes</th>
+                <th>Margin</th>
+                <th>Turnout</th>
+              </tr>
+            </thead>
+            <tbody id="flips-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: ALL 93 RIDINGS TABLE -->
+    <section id="tab-table" class="tab-content">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2>Complete Electoral District Results</h2>
+            <p class="subtitle">All 93 British Columbia provincial electoral districts.</p>
+          </div>
+          <div class="table-filters">
+            <select id="party-table-filter" class="form-select">
+              <option value="all">All Parties</option>
+              <option value="BC NDP">BC NDP Wins</option>
+              <option value="BC Conservative">BC Conservative Wins</option>
+              <option value="BC Green">BC Green Wins</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table" id="all-ridings-table">
+            <thead>
+              <tr>
+                <th class="sortable" data-sort="name">District Name <span class="sort-arrow">↕</span></th>
+                <th class="sortable" data-sort="winner_party">Winning Party <span class="sort-arrow">↕</span></th>
+                <th>Winning Candidate</th>
+                <th class="sortable" data-sort="winner_votes">Winner Votes <span class="sort-arrow">↕</span></th>
+                <th class="sortable" data-sort="winner_share">Share % <span class="sort-arrow">↕</span></th>
+                <th class="sortable" data-sort="margin_votes">Margin (Votes) <span class="sort-arrow">↕</span></th>
+                <th class="sortable" data-sort="margin_pct">Margin % <span class="sort-arrow">↕</span></th>
+                <th>Runner-up</th>
+                <th class="sortable" data-sort="turnout_pct">Turnout <span class="sort-arrow">↕</span></th>
+                <th class="sortable" data-sort="total_votes">Total Ballots <span class="sort-arrow">↕</span></th>
+              </tr>
+            </thead>
+            <tbody id="all-ridings-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: VOTE ANALYSIS -->
+    <section id="tab-analysis" class="tab-content">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2>Provincial Vote Share vs. Seats</h2>
+            <p class="subtitle">Disproportionality analysis and electoral seat efficiency.</p>
+          </div>
+        </div>
+
+        <div class="analysis-cards-grid">
+          <div class="analysis-card">
+            <h3>Seat Distribution vs. Popular Vote</h3>
+            <div class="comparison-bars-list" id="comparison-bars">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h3>Key Electoral Insights</h3>
+            <ul class="insights-list">
+              <li>
+                <strong>Razor-Thin Majority:</strong> The BC NDP won exactly 47 seats, the minimum required for a majority in the expanded 93-seat assembly.
+              </li>
+              <li>
+                <strong>Conservative Surge:</strong> The Conservative Party surged from 0 elected seats in 2020 to 44 seats, capturing 43.28% of the popular vote.
+              </li>
+              <li>
+                <strong>Vote Efficiency:</strong> The BC NDP gained 47 seats (50.5% of legislature) on 44.86% of the popular vote, while the Conservatives secured 44 seats (47.3% of legislature) on 43.28% of the vote.
+              </li>
+              <li>
+                <strong>2023 Electoral Redistribution:</strong> 6 brand new electoral districts were contested for the first time following the 2023 boundary commission redistribution.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- About & Cloud Architecture Modal -->
+  <div id="about-modal" class="modal-backdrop hidden">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Cloud Architecture & Data Sources</h3>
+        <button class="modal-close-btn" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>This election monitor runs <strong>100% serverless in the cloud</strong> using GitHub's native ecosystem:</p>
+        <div class="arch-flow">
+          <div class="arch-step">
+            <span class="step-num">1</span>
+            <strong>Elections BC & DataBC GIS</strong>
+            <p>Official electoral boundary shapefiles & live voting results published by Elections BC.</p>
+          </div>
+          <div class="arch-step">
+            <span class="step-num">2</span>
+            <strong>GitHub Actions Cron</strong>
+            <p>Python updater executes on a scheduled cron throughout election night, scraping & parsing district results.</p>
+          </div>
+          <div class="arch-step">
+            <span class="step-num">3</span>
+            <strong>Git Repo Storage</strong>
+            <p>Results committed directly to <code>data/results.json</code> with automated timestamps.</p>
+          </div>
+          <div class="arch-step">
+            <span class="step-num">4</span>
+            <strong>GitHub Pages Hosting</strong>
+            <p>Static dashboard served with zero hosting costs, high availability, and instant global CDN delivery.</p>
+          </div>
+        </div>
+        <h4>Official Sources</h4>
+        <ul>
+          <li><a href="https://elections.bc.ca/resources/maps/gis-spatial-data/" target="_blank" rel="noopener">Elections BC GIS Spatial Data</a></li>
+          <li><a href="https://catalogue.data.gov.bc.ca/dataset/1cba4b16-263f-4d42-8d84-f5fecaa03d1a" target="_blank" rel="noopener">BC Geographic Data Warehouse (Provincial Electoral Districts)</a></li>
+          <li><a href="https://elections.bc.ca" target="_blank" rel="noopener">Elections BC Official Results</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

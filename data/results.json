@@ -1,0 +1,4255 @@
+{
+  "metadata": {
+    "title": "2024 British Columbia General Election Results",
+    "legislature": "43rd Parliament of British Columbia",
+    "total_seats": 93,
+    "majority_threshold": 47,
+    "ridings_reporting": 93,
+    "total_ridings": 93,
+    "total_votes_cast": 2105344,
+    "provincial_turnout_pct": 58.45,
+    "last_updated": "2026-10-25T03:37:00.071318+00:00",
+    "status": "Final Official Count"
+  },
+  "parties": {
+    "BC NDP": {
+      "name": "BC New Democratic Party",
+      "short": "NDP",
+      "leader": "David Eby",
+      "color": "#f58220",
+      "secondary_color": "#ffb066",
+      "seats": 47,
+      "votes": 944467,
+      "vote_share_pct": 44.86,
+      "majority": true
+    },
+    "BC Conservative": {
+      "name": "Conservative Party of BC",
+      "short": "CON",
+      "leader": "John Rustad",
+      "color": "#0c499c",
+      "secondary_color": "#4d82cb",
+      "seats": 44,
+      "votes": 911152,
+      "vote_share_pct": 43.28,
+      "majority": false
+    },
+    "BC Green": {
+      "name": "BC Green Party",
+      "short": "GRN",
+      "leader": "Sonia Furstenau",
+      "color": "#2e8b57",
+      "secondary_color": "#66bb6a",
+      "seats": 2,
+      "votes": 173494,
+      "vote_share_pct": 8.24,
+      "majority": false
+    },
+    "Independent": {
+      "name": "Independent / Other",
+      "short": "IND",
+      "leader": "Various",
+      "color": "#78909c",
+      "secondary_color": "#b0bec5",
+      "seats": 0,
+      "votes": 72581,
+      "vote_share_pct": 3.45,
+      "majority": false
+    }
+  },
+  "summary": {
+    "total_battlegrounds": 17,
+    "total_flips": 37,
+    "leading_party": "BC NDP"
+  },
+  "ridings": [
+    {
+      "name": "Abbotsford South",
+      "code": "ABS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Bruce Banman",
+      "winner_votes": 13053,
+      "winner_share": 61.61,
+      "margin_votes": 5599,
+      "margin_pct": 26.43,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 51.72,
+      "total_votes": 21188,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Sarah Kooner",
+      "runner_up_votes": 7454,
+      "candidates": [
+        {
+          "name": "Bruce Banman",
+          "party": "BC Conservative",
+          "votes": 13053,
+          "pct": 61.61,
+          "elected": true
+        },
+        {
+          "name": "Sarah Kooner",
+          "party": "BC NDP",
+          "votes": 7454,
+          "pct": 35.18,
+          "elected": false
+        },
+        {
+          "name": "Amandeep Singh (ind.)",
+          "party": "Independent",
+          "votes": 681,
+          "pct": 3.21,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Abbotsford West",
+      "code": "ABW",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Korky Neufeld",
+      "winner_votes": 11483,
+      "winner_share": 58.35,
+      "margin_votes": 4228,
+      "margin_pct": 21.49,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 52.14,
+      "total_votes": 19678,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Graeme Hutchison",
+      "runner_up_votes": 7255,
+      "candidates": [
+        {
+          "name": "Korky Neufeld",
+          "party": "BC Conservative",
+          "votes": 11483,
+          "pct": 58.35,
+          "elected": true
+        },
+        {
+          "name": "Graeme Hutchison",
+          "party": "BC NDP",
+          "votes": 7255,
+          "pct": 36.87,
+          "elected": false
+        },
+        {
+          "name": "James Davison (ind.)",
+          "party": "Independent",
+          "votes": 940,
+          "pct": 4.78,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Abbotsford-Mission",
+      "code": "ABM",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Reann Gasper",
+      "winner_votes": 13523,
+      "winner_share": 55.38,
+      "margin_votes": 2629,
+      "margin_pct": 10.77,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 57.42,
+      "total_votes": 24417,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Pam Alexis",
+      "runner_up_votes": 10894,
+      "candidates": [
+        {
+          "name": "Reann Gasper",
+          "party": "BC Conservative",
+          "votes": 13523,
+          "pct": 55.38,
+          "elected": true
+        },
+        {
+          "name": "Pam Alexis",
+          "party": "BC NDP",
+          "votes": 10894,
+          "pct": 44.62,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Boundary-Similkameen",
+      "code": "BDS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Donegal Wilson",
+      "winner_votes": 11935,
+      "winner_share": 48.39,
+      "margin_votes": 1438,
+      "margin_pct": 5.83,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 62.74,
+      "total_votes": 24665,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Roly Russell",
+      "runner_up_votes": 10497,
+      "candidates": [
+        {
+          "name": "Donegal Wilson",
+          "party": "BC Conservative",
+          "votes": 11935,
+          "pct": 48.39,
+          "elected": true
+        },
+        {
+          "name": "Roly Russell",
+          "party": "BC NDP",
+          "votes": 10497,
+          "pct": 42.56,
+          "elected": false
+        },
+        {
+          "name": "Kevin Eastwood",
+          "party": "BC Green",
+          "votes": 1454,
+          "pct": 5.89,
+          "elected": false
+        },
+        {
+          "name": "Sean Taylor (ind.)",
+          "party": "Independent",
+          "votes": 779,
+          "pct": 3.16,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Bulkley Valley-Stikine",
+      "code": "BLS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Sharon L. Hartwell",
+      "winner_votes": 4992,
+      "winner_share": 52.31,
+      "margin_votes": 1283,
+      "margin_pct": 13.44,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 64.24,
+      "total_votes": 9544,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Nathan Cullen",
+      "runner_up_votes": 3709,
+      "candidates": [
+        {
+          "name": "Sharon L. Hartwell",
+          "party": "BC Conservative",
+          "votes": 4992,
+          "pct": 52.31,
+          "elected": true
+        },
+        {
+          "name": "Nathan Cullen",
+          "party": "BC NDP",
+          "votes": 3709,
+          "pct": 38.86,
+          "elected": false
+        },
+        {
+          "name": "Gamlakyeltxw Wilhelm Marsden",
+          "party": "BC Green",
+          "votes": 604,
+          "pct": 6.33,
+          "elected": false
+        },
+        {
+          "name": "Rod Taylor(CHP)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Burnaby Centre",
+      "code": "BNC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Anne Kang",
+      "winner_votes": 9780,
+      "winner_share": 57.28,
+      "margin_votes": 2486,
+      "margin_pct": 14.56,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 50.11,
+      "total_votes": 17074,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Dharam Kajal",
+      "runner_up_votes": 7294,
+      "candidates": [
+        {
+          "name": "Anne Kang",
+          "party": "BC NDP",
+          "votes": 9780,
+          "pct": 57.28,
+          "elected": true
+        },
+        {
+          "name": "Dharam Kajal",
+          "party": "BC Conservative",
+          "votes": 7294,
+          "pct": 42.72,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Burnaby East",
+      "code": "BNE",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Rohini Arora",
+      "winner_votes": 10490,
+      "winner_share": 51.85,
+      "margin_votes": 2292,
+      "margin_pct": 11.33,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 54.95,
+      "total_votes": 20232,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Simon Chandler",
+      "runner_up_votes": 8198,
+      "candidates": [
+        {
+          "name": "Rohini Arora",
+          "party": "BC NDP",
+          "votes": 10490,
+          "pct": 51.85,
+          "elected": true
+        },
+        {
+          "name": "Simon Chandler",
+          "party": "BC Conservative",
+          "votes": 8198,
+          "pct": 40.52,
+          "elected": false
+        },
+        {
+          "name": "Tara Shushtarian",
+          "party": "BC Green",
+          "votes": 1544,
+          "pct": 7.63,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Burnaby North",
+      "code": "BNO",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Janet Routledge",
+      "winner_votes": 10724,
+      "winner_share": 53.26,
+      "margin_votes": 2066,
+      "margin_pct": 10.26,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 53.42,
+      "total_votes": 20136,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Michael Wu\u2020\u2020",
+      "runner_up_votes": 8658,
+      "candidates": [
+        {
+          "name": "Janet Routledge",
+          "party": "BC NDP",
+          "votes": 10724,
+          "pct": 53.26,
+          "elected": true
+        },
+        {
+          "name": "Michael Wu\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 8658,
+          "pct": 43.0,
+          "elected": false
+        },
+        {
+          "name": "Martin Kendell (ind.)",
+          "party": "Independent",
+          "votes": 754,
+          "pct": 3.74,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Burnaby South-Metrotown",
+      "code": "BNS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Paul Choi",
+      "winner_votes": 7560,
+      "winner_share": 49.33,
+      "margin_votes": 1182,
+      "margin_pct": 7.74,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 48.85,
+      "total_votes": 15325,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Han Lee",
+      "runner_up_votes": 6373,
+      "candidates": [
+        {
+          "name": "Paul Choi",
+          "party": "BC NDP",
+          "votes": 7560,
+          "pct": 49.33,
+          "elected": true
+        },
+        {
+          "name": "Han Lee",
+          "party": "BC Conservative",
+          "votes": 6373,
+          "pct": 41.59,
+          "elected": false
+        },
+        {
+          "name": "Carrie McLaren",
+          "party": "BC Green",
+          "votes": 960,
+          "pct": 6.26,
+          "elected": false
+        },
+        {
+          "name": "MichaelAngelo Abc RobinHood (ind.)",
+          "party": "Independent",
+          "votes": 432,
+          "pct": 2.82,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Burnaby-New Westminster",
+      "code": "BNN",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Raj Chouhan",
+      "winner_votes": 10647,
+      "winner_share": 59.99,
+      "margin_votes": 4486,
+      "margin_pct": 25.28,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 51.26,
+      "total_votes": 17748,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Deepak Suri",
+      "runner_up_votes": 6161,
+      "candidates": [
+        {
+          "name": "Raj Chouhan",
+          "party": "BC NDP",
+          "votes": 10647,
+          "pct": 59.99,
+          "elected": true
+        },
+        {
+          "name": "Deepak Suri",
+          "party": "BC Conservative",
+          "votes": 6161,
+          "pct": 34.71,
+          "elected": false
+        },
+        {
+          "name": "Daniel Kofi Ampong (ind.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 940,
+          "pct": 5.3,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Cariboo-Chilcotin",
+      "code": "CBC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Lorne Doerkson",
+      "winner_votes": 13714,
+      "winner_share": 69.59,
+      "margin_votes": 7722,
+      "margin_pct": 39.19,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 60.04,
+      "total_votes": 19706,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Michael Moses",
+      "runner_up_votes": 5992,
+      "candidates": [
+        {
+          "name": "Lorne Doerkson",
+          "party": "BC Conservative",
+          "votes": 13714,
+          "pct": 69.59,
+          "elected": true
+        },
+        {
+          "name": "Michael Moses",
+          "party": "BC NDP",
+          "votes": 5992,
+          "pct": 30.41,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Chilliwack North",
+      "code": "CHN",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Heather Maahs",
+      "winner_votes": 11776,
+      "winner_share": 54.58,
+      "margin_votes": 3651,
+      "margin_pct": 16.92,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 55.07,
+      "total_votes": 21575,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Dan Coulter",
+      "runner_up_votes": 8125,
+      "candidates": [
+        {
+          "name": "Heather Maahs",
+          "party": "BC Conservative",
+          "votes": 11776,
+          "pct": 54.58,
+          "elected": true
+        },
+        {
+          "name": "Dan Coulter",
+          "party": "BC NDP",
+          "votes": 8125,
+          "pct": 37.66,
+          "elected": false
+        },
+        {
+          "name": "Tim Cooper",
+          "party": "BC Green",
+          "votes": 1187,
+          "pct": 5.5,
+          "elected": false
+        },
+        {
+          "name": "Dan Grice (ind.)",
+          "party": "Independent",
+          "votes": 487,
+          "pct": 2.26,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Chilliwack-Cultus Lake",
+      "code": "CHC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "\u00c1'a:l\u00edya Warbus",
+      "winner_votes": 13656,
+      "winner_share": 54.58,
+      "margin_votes": 2290,
+      "margin_pct": 9.15,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 60.37,
+      "total_votes": 25022,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Kelli Paddon",
+      "runner_up_votes": 11366,
+      "candidates": [
+        {
+          "name": "\u00c1'a:l\u00edya Warbus",
+          "party": "BC Conservative",
+          "votes": 13656,
+          "pct": 54.58,
+          "elected": true
+        },
+        {
+          "name": "Kelli Paddon",
+          "party": "BC NDP",
+          "votes": 11366,
+          "pct": 45.42,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Columbia River-Revelstoke",
+      "code": "CLR",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Scott McInnis\u2020\u2020",
+      "winner_votes": 8768,
+      "winner_share": 47.92,
+      "margin_votes": 670,
+      "margin_pct": 3.66,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 58.46,
+      "total_votes": 18295,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Andrea Dunlop",
+      "runner_up_votes": 8098,
+      "candidates": [
+        {
+          "name": "Scott McInnis\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 8768,
+          "pct": 47.93,
+          "elected": true
+        },
+        {
+          "name": "Andrea Dunlop",
+          "party": "BC NDP",
+          "votes": 8098,
+          "pct": 44.26,
+          "elected": false
+        },
+        {
+          "name": "Calvin Beauchesne",
+          "party": "BC Green",
+          "votes": 1430,
+          "pct": 7.82,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Coquitlam-Burke Mountain",
+      "code": "CQB",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Jodie Wickens",
+      "winner_votes": 11020,
+      "winner_share": 50.85,
+      "margin_votes": 368,
+      "margin_pct": 1.7,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 54.69,
+      "total_votes": 21672,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Stephen Frolek",
+      "runner_up_votes": 10652,
+      "candidates": [
+        {
+          "name": "Jodie Wickens",
+          "party": "BC NDP",
+          "votes": 11020,
+          "pct": 50.85,
+          "elected": true
+        },
+        {
+          "name": "Stephen Frolek",
+          "party": "BC Conservative",
+          "votes": 10652,
+          "pct": 49.15,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Coquitlam-Maillardville",
+      "code": "CQM",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Jennifer Blatherwick",
+      "winner_votes": 11972,
+      "winner_share": 51.8,
+      "margin_votes": 2826,
+      "margin_pct": 12.23,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 56.9,
+      "total_votes": 23114,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Hamed Najafi",
+      "runner_up_votes": 9146,
+      "candidates": [
+        {
+          "name": "Jennifer Blatherwick",
+          "party": "BC NDP",
+          "votes": 11972,
+          "pct": 51.8,
+          "elected": true
+        },
+        {
+          "name": "Hamed Najafi",
+          "party": "BC Conservative",
+          "votes": 9146,
+          "pct": 39.57,
+          "elected": false
+        },
+        {
+          "name": "Nicola Spurling",
+          "party": "BC Green",
+          "votes": 1461,
+          "pct": 6.32,
+          "elected": false
+        },
+        {
+          "name": "Ken Holowanky (ind.)",
+          "party": "Independent",
+          "votes": 535,
+          "pct": 2.31,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Courtenay-Comox",
+      "code": "CRC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Brennan Day",
+      "winner_votes": 13481,
+      "winner_share": 38.83,
+      "margin_votes": 93,
+      "margin_pct": 0.27,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 68.71,
+      "total_votes": 34718,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Ronna-Rae Leonard",
+      "runner_up_votes": 13388,
+      "candidates": [
+        {
+          "name": "Brennan Day",
+          "party": "BC Conservative",
+          "votes": 13481,
+          "pct": 38.83,
+          "elected": true
+        },
+        {
+          "name": "Ronna-Rae Leonard",
+          "party": "BC NDP",
+          "votes": 13388,
+          "pct": 38.56,
+          "elected": false
+        },
+        {
+          "name": "Arzeena Hamir",
+          "party": "BC Green",
+          "votes": 7202,
+          "pct": 20.74,
+          "elected": false
+        },
+        {
+          "name": "John Hedican (ind.)",
+          "party": "Independent",
+          "votes": 647,
+          "pct": 1.86,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Cowichan Valley",
+      "code": "CWV",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Debra Toporowski",
+      "winner_votes": 11795,
+      "winner_share": 40.51,
+      "margin_votes": 849,
+      "margin_pct": 2.92,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Green to BC NDP",
+      "prev_party": "Green",
+      "turnout_pct": 63.52,
+      "total_votes": 29118,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "John Koury",
+      "runner_up_votes": 10946,
+      "candidates": [
+        {
+          "name": "Debra Toporowski",
+          "party": "BC NDP",
+          "votes": 11795,
+          "pct": 40.51,
+          "elected": true
+        },
+        {
+          "name": "John Koury",
+          "party": "BC Conservative",
+          "votes": 10946,
+          "pct": 37.59,
+          "elected": false
+        },
+        {
+          "name": "Cammy Lockwood",
+          "party": "BC Green",
+          "votes": 5773,
+          "pct": 19.83,
+          "elected": false
+        },
+        {
+          "name": "Eden Haythornthwaite (ind.)",
+          "party": "Independent",
+          "votes": 604,
+          "pct": 2.07,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Delta North",
+      "code": "DLN",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Ravi Kahlon",
+      "winner_votes": 10988,
+      "winner_share": 52.73,
+      "margin_votes": 2607,
+      "margin_pct": 12.51,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 57.89,
+      "total_votes": 20838,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Raj Veauli",
+      "runner_up_votes": 8381,
+      "candidates": [
+        {
+          "name": "Ravi Kahlon",
+          "party": "BC NDP",
+          "votes": 10988,
+          "pct": 52.73,
+          "elected": true
+        },
+        {
+          "name": "Raj Veauli",
+          "party": "BC Conservative",
+          "votes": 8381,
+          "pct": 40.22,
+          "elected": false
+        },
+        {
+          "name": "Nick Dickinson-Wilde",
+          "party": "BC Green",
+          "votes": 1292,
+          "pct": 6.2,
+          "elected": false
+        },
+        {
+          "name": "Manqoosh Khan (Freedom)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Delta South",
+      "code": "DLS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Ian Paton\u2020\u2020",
+      "winner_votes": 14491,
+      "winner_share": 55.07,
+      "margin_votes": 2669,
+      "margin_pct": 10.14,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 65.04,
+      "total_votes": 26313,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Jason McCormick",
+      "runner_up_votes": 11822,
+      "candidates": [
+        {
+          "name": "Ian Paton\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 14491,
+          "pct": 55.07,
+          "elected": true
+        },
+        {
+          "name": "Jason McCormick",
+          "party": "BC NDP",
+          "votes": 11822,
+          "pct": 44.93,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Esquimalt-Colwood",
+      "code": "ESC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Darlene Rotchford",
+      "winner_votes": 15238,
+      "winner_share": 51.47,
+      "margin_votes": 6586,
+      "margin_pct": 22.25,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 63.34,
+      "total_votes": 29606,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "John Wilson",
+      "runner_up_votes": 8652,
+      "candidates": [
+        {
+          "name": "Darlene Rotchford",
+          "party": "BC NDP",
+          "votes": 15238,
+          "pct": 51.47,
+          "elected": true
+        },
+        {
+          "name": "John Wilson",
+          "party": "BC Conservative",
+          "votes": 8652,
+          "pct": 29.22,
+          "elected": false
+        },
+        {
+          "name": "Camille Currie",
+          "party": "BC Green",
+          "votes": 5716,
+          "pct": 19.31,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Fraser-Nicola",
+      "code": "FRN",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Tony Luck",
+      "winner_votes": 10326,
+      "winner_share": 54.34,
+      "margin_votes": 3409,
+      "margin_pct": 17.94,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 56.74,
+      "total_votes": 19004,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Francyne Joe",
+      "runner_up_votes": 6917,
+      "candidates": [
+        {
+          "name": "Tony Luck",
+          "party": "BC Conservative",
+          "votes": 10326,
+          "pct": 54.34,
+          "elected": true
+        },
+        {
+          "name": "Francyne Joe",
+          "party": "BC NDP",
+          "votes": 6917,
+          "pct": 36.4,
+          "elected": false
+        },
+        {
+          "name": "Jonah Timms",
+          "party": "BC Green",
+          "votes": 1761,
+          "pct": 9.27,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Juan de Fuca-Malahat",
+      "code": "JFM",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Dana Lajeunesse",
+      "winner_votes": 9308,
+      "winner_share": 38.79,
+      "margin_votes": 141,
+      "margin_pct": 0.59,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 64.81,
+      "total_votes": 23997,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Marina Sapozhnikov",
+      "runner_up_votes": 9167,
+      "candidates": [
+        {
+          "name": "Dana Lajeunesse",
+          "party": "BC NDP",
+          "votes": 9308,
+          "pct": 38.79,
+          "elected": true
+        },
+        {
+          "name": "Marina Sapozhnikov",
+          "party": "BC Conservative",
+          "votes": 9167,
+          "pct": 38.2,
+          "elected": false
+        },
+        {
+          "name": "David Evans",
+          "party": "BC Green",
+          "votes": 5522,
+          "pct": 23.01,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kamloops Centre",
+      "code": "KAC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Peter Milobar\u2020\u2020",
+      "winner_votes": 12372,
+      "winner_share": 48.83,
+      "margin_votes": 2003,
+      "margin_pct": 7.91,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 57.59,
+      "total_votes": 25338,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Kamal Grewal",
+      "runner_up_votes": 10369,
+      "candidates": [
+        {
+          "name": "Peter Milobar\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 12372,
+          "pct": 48.83,
+          "elected": true
+        },
+        {
+          "name": "Kamal Grewal",
+          "party": "BC NDP",
+          "votes": 10369,
+          "pct": 40.92,
+          "elected": false
+        },
+        {
+          "name": "Randy Sunderman",
+          "party": "BC Green",
+          "votes": 2597,
+          "pct": 10.25,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kamloops-North Thompson",
+      "code": "KAN",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Ward Stamer",
+      "winner_votes": 17930,
+      "winner_share": 59.74,
+      "margin_votes": 8056,
+      "margin_pct": 26.84,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 61.86,
+      "total_votes": 30013,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Maddi Genn",
+      "runner_up_votes": 9874,
+      "candidates": [
+        {
+          "name": "Ward Stamer",
+          "party": "BC Conservative",
+          "votes": 17930,
+          "pct": 59.74,
+          "elected": true
+        },
+        {
+          "name": "Maddi Genn",
+          "party": "BC NDP",
+          "votes": 9874,
+          "pct": 32.9,
+          "elected": false
+        },
+        {
+          "name": "Tristan Cavers",
+          "party": "BC Green",
+          "votes": 2209,
+          "pct": 7.36,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kelowna Centre",
+      "code": "KEC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Kristina Loewen",
+      "winner_votes": 11033,
+      "winner_share": 42.85,
+      "margin_votes": 40,
+      "margin_pct": 0.16,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 56.49,
+      "total_votes": 25750,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Loyal Wooldridge",
+      "runner_up_votes": 10993,
+      "candidates": [
+        {
+          "name": "Kristina Loewen",
+          "party": "BC Conservative",
+          "votes": 11033,
+          "pct": 42.85,
+          "elected": true
+        },
+        {
+          "name": "Loyal Wooldridge",
+          "party": "BC NDP",
+          "votes": 10993,
+          "pct": 42.69,
+          "elected": false
+        },
+        {
+          "name": "Michael Humer (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 2613,
+          "pct": 10.15,
+          "elected": false
+        },
+        {
+          "name": "Bryce Tippe",
+          "party": "BC Green",
+          "votes": 1111,
+          "pct": 4.31,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kelowna-Lake Country-Coldstream",
+      "code": "KLC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Tara Armstrong",
+      "winner_votes": 14303,
+      "winner_share": 53.92,
+      "margin_votes": 4953,
+      "margin_pct": 18.67,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 58.25,
+      "total_votes": 26528,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Anna Warwick Sears",
+      "runner_up_votes": 9350,
+      "candidates": [
+        {
+          "name": "Tara Armstrong",
+          "party": "BC Conservative",
+          "votes": 14303,
+          "pct": 53.92,
+          "elected": true
+        },
+        {
+          "name": "Anna Warwick Sears",
+          "party": "BC NDP",
+          "votes": 9350,
+          "pct": 35.25,
+          "elected": false
+        },
+        {
+          "name": "Kevin Kraft (ind.)",
+          "party": "Independent",
+          "votes": 1724,
+          "pct": 6.5,
+          "elected": false
+        },
+        {
+          "name": "Andrew Rose",
+          "party": "BC Green",
+          "votes": 1151,
+          "pct": 4.34,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kelowna-Mission",
+      "code": "KLM",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Gavin Dew",
+      "winner_votes": 14071,
+      "winner_share": 51.49,
+      "margin_votes": 5158,
+      "margin_pct": 18.87,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 60.0,
+      "total_votes": 27329,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Harpreet Badohal",
+      "runner_up_votes": 8913,
+      "candidates": [
+        {
+          "name": "Gavin Dew",
+          "party": "BC Conservative",
+          "votes": 14071,
+          "pct": 51.49,
+          "elected": true
+        },
+        {
+          "name": "Harpreet Badohal",
+          "party": "BC NDP",
+          "votes": 8913,
+          "pct": 32.61,
+          "elected": false
+        },
+        {
+          "name": "Ashley Ramsay (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 2996,
+          "pct": 10.96,
+          "elected": false
+        },
+        {
+          "name": "Billy Young",
+          "party": "BC Green",
+          "votes": 1349,
+          "pct": 4.94,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kootenay Central",
+      "code": "KOC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Brittny Anderson",
+      "winner_votes": 8716,
+      "winner_share": 39.63,
+      "margin_votes": 1749,
+      "margin_pct": 7.95,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 64.28,
+      "total_votes": 21996,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Kelly Vandenberghe",
+      "runner_up_votes": 6967,
+      "candidates": [
+        {
+          "name": "Brittny Anderson",
+          "party": "BC NDP",
+          "votes": 8716,
+          "pct": 39.63,
+          "elected": true
+        },
+        {
+          "name": "Kelly Vandenberghe",
+          "party": "BC Conservative",
+          "votes": 6967,
+          "pct": 31.67,
+          "elected": false
+        },
+        {
+          "name": "Nicole Charlwood",
+          "party": "BC Green",
+          "votes": 4123,
+          "pct": 18.74,
+          "elected": false
+        },
+        {
+          "name": "Corinne Mori",
+          "party": "Independent",
+          "votes": 2190,
+          "pct": 9.96,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kootenay-Monashee",
+      "code": "KOM",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Steve Morissette",
+      "winner_votes": 10202,
+      "winner_share": 52.04,
+      "margin_votes": 2586,
+      "margin_pct": 13.19,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 60.02,
+      "total_votes": 19603,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Glen Byle",
+      "runner_up_votes": 7616,
+      "candidates": [
+        {
+          "name": "Steve Morissette",
+          "party": "BC NDP",
+          "votes": 10202,
+          "pct": 52.04,
+          "elected": true
+        },
+        {
+          "name": "Glen Byle",
+          "party": "BC Conservative",
+          "votes": 7616,
+          "pct": 38.85,
+          "elected": false
+        },
+        {
+          "name": "Donovan Cavers",
+          "party": "BC Green",
+          "votes": 1785,
+          "pct": 9.11,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Kootenay-Rockies",
+      "code": "KOR",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Pete Davis",
+      "winner_votes": 8217,
+      "winner_share": 42.71,
+      "margin_votes": 2373,
+      "margin_pct": 12.34,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 60.79,
+      "total_votes": 19241,
+      "runner_up_party": "Independent",
+      "runner_up_candidate": "Tom Shypitka\u2020\u2020",
+      "runner_up_votes": 5844,
+      "candidates": [
+        {
+          "name": "Pete Davis",
+          "party": "BC Conservative",
+          "votes": 8217,
+          "pct": 42.71,
+          "elected": true
+        },
+        {
+          "name": "Tom Shypitka\u2020\u2020",
+          "party": "Independent",
+          "votes": 5844,
+          "pct": 30.37,
+          "elected": false
+        },
+        {
+          "name": "Sam Atwal",
+          "party": "BC NDP",
+          "votes": 4184,
+          "pct": 21.75,
+          "elected": false
+        },
+        {
+          "name": "Kerri Wall",
+          "party": "BC Green",
+          "votes": 996,
+          "pct": 5.18,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Ladysmith-Oceanside",
+      "code": "LAO",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Stephanie Higginson",
+      "winner_votes": 14144,
+      "winner_share": 41.49,
+      "margin_votes": 2047,
+      "margin_pct": 6.0,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 69.08,
+      "total_votes": 34092,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Brett Fee",
+      "runner_up_votes": 12097,
+      "candidates": [
+        {
+          "name": "Stephanie Higginson",
+          "party": "BC NDP",
+          "votes": 14144,
+          "pct": 41.49,
+          "elected": true
+        },
+        {
+          "name": "Brett Fee",
+          "party": "BC Conservative",
+          "votes": 12097,
+          "pct": 35.48,
+          "elected": false
+        },
+        {
+          "name": "Adam Walker(ind.)",
+          "party": "Independent",
+          "votes": 5559,
+          "pct": 16.31,
+          "elected": false
+        },
+        {
+          "name": "Laura Ferreira",
+          "party": "BC Green",
+          "votes": 2292,
+          "pct": 6.72,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Langford-Highlands",
+      "code": "LFH",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Ravi Parmar",
+      "winner_votes": 11444,
+      "winner_share": 51.87,
+      "margin_votes": 3193,
+      "margin_pct": 14.47,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 59.08,
+      "total_votes": 22063,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Mike Harris",
+      "runner_up_votes": 8251,
+      "candidates": [
+        {
+          "name": "Ravi Parmar",
+          "party": "BC NDP",
+          "votes": 11444,
+          "pct": 51.87,
+          "elected": true
+        },
+        {
+          "name": "Mike Harris",
+          "party": "BC Conservative",
+          "votes": 8251,
+          "pct": 37.4,
+          "elected": false
+        },
+        {
+          "name": "Erin Cassels",
+          "party": "BC Green",
+          "votes": 2368,
+          "pct": 10.73,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Langley-Abbotsford",
+      "code": "LLA",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Harman Bhangu",
+      "winner_votes": 14341,
+      "winner_share": 55.65,
+      "margin_votes": 5650,
+      "margin_pct": 21.92,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 59.46,
+      "total_votes": 25770,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "John Aldag",
+      "runner_up_votes": 8691,
+      "candidates": [
+        {
+          "name": "Harman Bhangu",
+          "party": "BC Conservative",
+          "votes": 14341,
+          "pct": 55.65,
+          "elected": true
+        },
+        {
+          "name": "John Aldag",
+          "party": "BC NDP",
+          "votes": 8691,
+          "pct": 33.73,
+          "elected": false
+        },
+        {
+          "name": "Melissa Snazell",
+          "party": "BC Green",
+          "votes": 1434,
+          "pct": 5.56,
+          "elected": false
+        },
+        {
+          "name": "Alex Joehl(Ltn.)",
+          "party": "Independent",
+          "votes": 1104,
+          "pct": 4.28,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Langley-Walnut Grove",
+      "code": "LWG",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Misty Van Popta",
+      "winner_votes": 12121,
+      "winner_share": 49.56,
+      "margin_votes": 1172,
+      "margin_pct": 4.79,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 58.0,
+      "total_votes": 24458,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Megan Dykeman",
+      "runner_up_votes": 10949,
+      "candidates": [
+        {
+          "name": "Misty Van Popta",
+          "party": "BC Conservative",
+          "votes": 12121,
+          "pct": 49.56,
+          "elected": true
+        },
+        {
+          "name": "Megan Dykeman",
+          "party": "BC NDP",
+          "votes": 10949,
+          "pct": 44.77,
+          "elected": false
+        },
+        {
+          "name": "Rylee Mac Lean",
+          "party": "BC Green",
+          "votes": 1254,
+          "pct": 5.13,
+          "elected": false
+        },
+        {
+          "name": "Carlos Suarez Rubio (ind.)",
+          "party": "Independent",
+          "votes": 134,
+          "pct": 0.55,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Langley-Willowbrook",
+      "code": "LWI",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Jody Toor",
+      "winner_votes": 10979,
+      "winner_share": 48.24,
+      "margin_votes": 867,
+      "margin_pct": 3.81,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 55.44,
+      "total_votes": 22761,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Andrew Mercier",
+      "runner_up_votes": 10112,
+      "candidates": [
+        {
+          "name": "Jody Toor",
+          "party": "BC Conservative",
+          "votes": 10979,
+          "pct": 48.24,
+          "elected": true
+        },
+        {
+          "name": "Andrew Mercier",
+          "party": "BC NDP",
+          "votes": 10112,
+          "pct": 44.43,
+          "elected": false
+        },
+        {
+          "name": "Petrina Arnason",
+          "party": "BC Green",
+          "votes": 1670,
+          "pct": 7.34,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Maple Ridge East",
+      "code": "MAE",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Lawrence Mok",
+      "winner_votes": 12058,
+      "winner_share": 47.02,
+      "margin_votes": 97,
+      "margin_pct": 0.38,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 57.95,
+      "total_votes": 25645,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Bob D'Eith",
+      "runner_up_votes": 11961,
+      "candidates": [
+        {
+          "name": "Lawrence Mok",
+          "party": "BC Conservative",
+          "votes": 12058,
+          "pct": 47.02,
+          "elected": true
+        },
+        {
+          "name": "Bob D'Eith",
+          "party": "BC NDP",
+          "votes": 11961,
+          "pct": 46.64,
+          "elected": false
+        },
+        {
+          "name": "Kylee Williams",
+          "party": "BC Green",
+          "votes": 1626,
+          "pct": 6.34,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Maple Ridge-Pitt Meadows",
+      "code": "MAP",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Lisa Beare",
+      "winner_votes": 14480,
+      "winner_share": 54.89,
+      "margin_votes": 2579,
+      "margin_pct": 9.78,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 59.03,
+      "total_votes": 26381,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Mike Morden",
+      "runner_up_votes": 11901,
+      "candidates": [
+        {
+          "name": "Lisa Beare",
+          "party": "BC NDP",
+          "votes": 14480,
+          "pct": 54.89,
+          "elected": true
+        },
+        {
+          "name": "Mike Morden",
+          "party": "BC Conservative",
+          "votes": 11901,
+          "pct": 45.11,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Mid Island-Pacific Rim",
+      "code": "MPR",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Josie Osborne",
+      "winner_votes": 14042,
+      "winner_share": 48.74,
+      "margin_votes": 2676,
+      "margin_pct": 9.29,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 60.37,
+      "total_votes": 28810,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Adam Hayduk",
+      "runner_up_votes": 11366,
+      "candidates": [
+        {
+          "name": "Josie Osborne",
+          "party": "BC NDP",
+          "votes": 14042,
+          "pct": 48.74,
+          "elected": true
+        },
+        {
+          "name": "Adam Hayduk",
+          "party": "BC Conservative",
+          "votes": 11366,
+          "pct": 39.45,
+          "elected": false
+        },
+        {
+          "name": "Ross Reid",
+          "party": "BC Green",
+          "votes": 3402,
+          "pct": 11.81,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Nanaimo-Gabriola Island",
+      "code": "NAI",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Sheila Malcolmson",
+      "winner_votes": 14663,
+      "winner_share": 52.75,
+      "margin_votes": 5030,
+      "margin_pct": 18.09,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 59.96,
+      "total_votes": 27798,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Dale Parker\u2020\u2020",
+      "runner_up_votes": 9633,
+      "candidates": [
+        {
+          "name": "Sheila Malcolmson",
+          "party": "BC NDP",
+          "votes": 14663,
+          "pct": 52.75,
+          "elected": true
+        },
+        {
+          "name": "Dale Parker\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 9633,
+          "pct": 34.65,
+          "elected": false
+        },
+        {
+          "name": "Shirley Lambrecht",
+          "party": "BC Green",
+          "votes": 3502,
+          "pct": 12.6,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Nanaimo-Lantzville",
+      "code": "NAL",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "George Anderson",
+      "winner_votes": 15307,
+      "winner_share": 51.75,
+      "margin_votes": 3620,
+      "margin_pct": 12.24,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 66.0,
+      "total_votes": 29580,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Gwen O'Mahony",
+      "runner_up_votes": 11687,
+      "candidates": [
+        {
+          "name": "George Anderson",
+          "party": "BC NDP",
+          "votes": 15307,
+          "pct": 51.75,
+          "elected": true
+        },
+        {
+          "name": "Gwen O'Mahony",
+          "party": "BC Conservative",
+          "votes": 11687,
+          "pct": 39.51,
+          "elected": false
+        },
+        {
+          "name": "Lia Versaevel",
+          "party": "BC Green",
+          "votes": 2586,
+          "pct": 8.74,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Nechako Lakes",
+      "code": "NEC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "John Rustad",
+      "winner_votes": 7851,
+      "winner_share": 67.45,
+      "margin_votes": 4684,
+      "margin_pct": 40.24,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 63.37,
+      "total_votes": 11640,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Murphy Abraham",
+      "runner_up_votes": 3167,
+      "candidates": [
+        {
+          "name": "John Rustad",
+          "party": "BC Conservative",
+          "votes": 7851,
+          "pct": 67.45,
+          "elected": true
+        },
+        {
+          "name": "Murphy Abraham",
+          "party": "BC NDP",
+          "votes": 3167,
+          "pct": 27.21,
+          "elected": false
+        },
+        {
+          "name": "Douglas Gook",
+          "party": "BC Green",
+          "votes": 622,
+          "pct": 5.34,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "New Westminster-Coquitlam",
+      "code": "NMC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Jennifer Whiteside",
+      "winner_votes": 12757,
+      "winner_share": 59.13,
+      "margin_votes": 6319,
+      "margin_pct": 29.29,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 54.05,
+      "total_votes": 21575,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Ndellie Massey",
+      "runner_up_votes": 6438,
+      "candidates": [
+        {
+          "name": "Jennifer Whiteside",
+          "party": "BC NDP",
+          "votes": 12757,
+          "pct": 59.13,
+          "elected": true
+        },
+        {
+          "name": "Ndellie Massey",
+          "party": "BC Conservative",
+          "votes": 6438,
+          "pct": 29.84,
+          "elected": false
+        },
+        {
+          "name": "Maureen Curran",
+          "party": "BC Green",
+          "votes": 2380,
+          "pct": 11.03,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "North Coast-Haida Gwaii",
+      "code": "NOH",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Tamara Davidson",
+      "winner_votes": 4863,
+      "winner_share": 64.92,
+      "margin_votes": 2235,
+      "margin_pct": 29.84,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 48.6,
+      "total_votes": 7491,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Christopher Jason Sankey",
+      "runner_up_votes": 2628,
+      "candidates": [
+        {
+          "name": "Tamara Davidson",
+          "party": "BC NDP",
+          "votes": 4863,
+          "pct": 64.92,
+          "elected": true
+        },
+        {
+          "name": "Christopher Jason Sankey",
+          "party": "BC Conservative",
+          "votes": 2628,
+          "pct": 35.08,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "North Island",
+      "code": "NOI",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Anna Kindy",
+      "winner_votes": 14100,
+      "winner_share": 47.07,
+      "margin_votes": 639,
+      "margin_pct": 2.14,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 62.15,
+      "total_votes": 29958,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Michele Babchuk",
+      "runner_up_votes": 13461,
+      "candidates": [
+        {
+          "name": "Anna Kindy",
+          "party": "BC Conservative",
+          "votes": 14100,
+          "pct": 47.07,
+          "elected": true
+        },
+        {
+          "name": "Michele Babchuk",
+          "party": "BC NDP",
+          "votes": 13461,
+          "pct": 44.93,
+          "elected": false
+        },
+        {
+          "name": "Nic Dedeluk",
+          "party": "BC Green",
+          "votes": 2397,
+          "pct": 8.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "North Vancouver-Lonsdale",
+      "code": "NVL",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Bowinn Ma",
+      "winner_votes": 16759,
+      "winner_share": 64.88,
+      "margin_votes": 7686,
+      "margin_pct": 29.75,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 58.91,
+      "total_votes": 25832,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "David Splett",
+      "runner_up_votes": 9073,
+      "candidates": [
+        {
+          "name": "Bowinn Ma",
+          "party": "BC NDP",
+          "votes": 16759,
+          "pct": 64.88,
+          "elected": true
+        },
+        {
+          "name": "David Splett",
+          "party": "BC Conservative",
+          "votes": 9073,
+          "pct": 35.12,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "North Vancouver-Seymour",
+      "code": "NVS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Susie Chant",
+      "winner_votes": 16210,
+      "winner_share": 52.77,
+      "margin_votes": 5215,
+      "margin_pct": 16.98,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 66.64,
+      "total_votes": 30721,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Sam Chandola",
+      "runner_up_votes": 10995,
+      "candidates": [
+        {
+          "name": "Susie Chant",
+          "party": "BC NDP",
+          "votes": 16210,
+          "pct": 52.77,
+          "elected": true
+        },
+        {
+          "name": "Sam Chandola",
+          "party": "BC Conservative",
+          "votes": 10995,
+          "pct": 35.79,
+          "elected": false
+        },
+        {
+          "name": "Mitchell Baker",
+          "party": "Independent",
+          "votes": 1794,
+          "pct": 5.84,
+          "elected": false
+        },
+        {
+          "name": "Subhadarshi Tripathy",
+          "party": "BC Green",
+          "votes": 1722,
+          "pct": 5.61,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Oak Bay-Gordon Head",
+      "code": "OBG",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Diana Gibson",
+      "winner_votes": 14519,
+      "winner_share": 49.1,
+      "margin_votes": 5977,
+      "margin_pct": 20.21,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 69.8,
+      "total_votes": 29570,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Stephen Andrew",
+      "runner_up_votes": 8542,
+      "candidates": [
+        {
+          "name": "Diana Gibson",
+          "party": "BC NDP",
+          "votes": 14519,
+          "pct": 49.1,
+          "elected": true
+        },
+        {
+          "name": "Stephen Andrew",
+          "party": "BC Conservative",
+          "votes": 8542,
+          "pct": 28.89,
+          "elected": false
+        },
+        {
+          "name": "Lisa Gunderson",
+          "party": "BC Green",
+          "votes": 6509,
+          "pct": 22.01,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Peace River North",
+      "code": "PCN",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Jordan Kealy",
+      "winner_votes": 11213,
+      "winner_share": 74.36,
+      "margin_votes": 8175,
+      "margin_pct": 54.21,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 57.16,
+      "total_votes": 15079,
+      "runner_up_party": "Independent",
+      "runner_up_candidate": "Dan Davies(ind.)\u2020\u2020",
+      "runner_up_votes": 3038,
+      "candidates": [
+        {
+          "name": "Jordan Kealy",
+          "party": "BC Conservative",
+          "votes": 11213,
+          "pct": 74.36,
+          "elected": true
+        },
+        {
+          "name": "Dan Davies(ind.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 3038,
+          "pct": 20.15,
+          "elected": false
+        },
+        {
+          "name": "Ian McMahon",
+          "party": "BC NDP",
+          "votes": 828,
+          "pct": 5.49,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Peace River South",
+      "code": "PCS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Larry Neufeld",
+      "winner_votes": 7182,
+      "winner_share": 69.84,
+      "margin_votes": 4657,
+      "margin_pct": 45.29,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 56.56,
+      "total_votes": 10283,
+      "runner_up_party": "Independent",
+      "runner_up_candidate": "Mike Bernier(Un.)\u2020\u2020",
+      "runner_up_votes": 2525,
+      "candidates": [
+        {
+          "name": "Larry Neufeld",
+          "party": "BC Conservative",
+          "votes": 7182,
+          "pct": 69.84,
+          "elected": true
+        },
+        {
+          "name": "Mike Bernier(Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 2525,
+          "pct": 24.56,
+          "elected": false
+        },
+        {
+          "name": "Marshall Bigsby",
+          "party": "BC NDP",
+          "votes": 576,
+          "pct": 5.6,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Penticton-Summerland",
+      "code": "PES",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Amelia Boultbee",
+      "winner_votes": 11615,
+      "winner_share": 41.37,
+      "margin_votes": 317,
+      "margin_pct": 1.13,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 61.49,
+      "total_votes": 28076,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Tina Lee",
+      "runner_up_votes": 11298,
+      "candidates": [
+        {
+          "name": "Amelia Boultbee",
+          "party": "BC Conservative",
+          "votes": 11615,
+          "pct": 41.37,
+          "elected": true
+        },
+        {
+          "name": "Tina Lee",
+          "party": "BC NDP",
+          "votes": 11298,
+          "pct": 40.24,
+          "elected": false
+        },
+        {
+          "name": "Roger Harrington (ind.)",
+          "party": "Independent",
+          "votes": 3691,
+          "pct": 13.15,
+          "elected": false
+        },
+        {
+          "name": "Bradley Bartsch",
+          "party": "BC Green",
+          "votes": 1472,
+          "pct": 5.24,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Port Coquitlam",
+      "code": "POC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Mike Farnworth",
+      "winner_votes": 13843,
+      "winner_share": 53.87,
+      "margin_votes": 3876,
+      "margin_pct": 15.08,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 57.7,
+      "total_votes": 25698,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Keenan Adams\u2020\u2020",
+      "runner_up_votes": 9967,
+      "candidates": [
+        {
+          "name": "Mike Farnworth",
+          "party": "BC NDP",
+          "votes": 13843,
+          "pct": 53.87,
+          "elected": true
+        },
+        {
+          "name": "Keenan Adams\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 9967,
+          "pct": 38.79,
+          "elected": false
+        },
+        {
+          "name": "Adam Bremner-Akins",
+          "party": "BC Green",
+          "votes": 1644,
+          "pct": 6.4,
+          "elected": false
+        },
+        {
+          "name": "Lewis Dahlby (Ltn.)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Port Moody-Burquitlam",
+      "code": "POM",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Rick Glumac",
+      "winner_votes": 13488,
+      "winner_share": 52.06,
+      "margin_votes": 2995,
+      "margin_pct": 11.56,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 58.72,
+      "total_votes": 25908,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Kerry van Aswegen",
+      "runner_up_votes": 10493,
+      "candidates": [
+        {
+          "name": "Rick Glumac",
+          "party": "BC NDP",
+          "votes": 13488,
+          "pct": 52.06,
+          "elected": true
+        },
+        {
+          "name": "Kerry van Aswegen",
+          "party": "BC Conservative",
+          "votes": 10493,
+          "pct": 40.5,
+          "elected": false
+        },
+        {
+          "name": "Samantha Agtarap",
+          "party": "BC Green",
+          "votes": 1927,
+          "pct": 7.44,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Powell River-Sunshine Coast",
+      "code": "POR",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Randene Neill",
+      "winner_votes": 14474,
+      "winner_share": 49.62,
+      "margin_votes": 4065,
+      "margin_pct": 13.94,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 66.35,
+      "total_votes": 29171,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Chris Moore",
+      "runner_up_votes": 10409,
+      "candidates": [
+        {
+          "name": "Randene Neill",
+          "party": "BC NDP",
+          "votes": 14474,
+          "pct": 49.62,
+          "elected": true
+        },
+        {
+          "name": "Chris Moore",
+          "party": "BC Conservative",
+          "votes": 10409,
+          "pct": 35.68,
+          "elected": false
+        },
+        {
+          "name": "Chris Hergesheimer",
+          "party": "BC Green",
+          "votes": 3932,
+          "pct": 13.48,
+          "elected": false
+        },
+        {
+          "name": "Greg Reid",
+          "party": "Independent",
+          "votes": 356,
+          "pct": 1.22,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Prince George-Mackenzie",
+      "code": "PRM",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Kiel Giddens\u2020\u2020",
+      "winner_votes": 11307,
+      "winner_share": 60.92,
+      "margin_votes": 6065,
+      "margin_pct": 32.68,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 59.5,
+      "total_votes": 18560,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Shar McCrory",
+      "runner_up_votes": 5242,
+      "candidates": [
+        {
+          "name": "Kiel Giddens\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 11307,
+          "pct": 60.92,
+          "elected": true
+        },
+        {
+          "name": "Shar McCrory",
+          "party": "BC NDP",
+          "votes": 5242,
+          "pct": 28.24,
+          "elected": false
+        },
+        {
+          "name": "James Steidle",
+          "party": "BC Green",
+          "votes": 1576,
+          "pct": 8.49,
+          "elected": false
+        },
+        {
+          "name": "Rachael Weber (Un.)",
+          "party": "Independent",
+          "votes": 435,
+          "pct": 2.34,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Prince George-North Cariboo",
+      "code": "PRO",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Sheldon Clare",
+      "winner_votes": 11430,
+      "winner_share": 56.82,
+      "margin_votes": 7036,
+      "margin_pct": 34.98,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 59.97,
+      "total_votes": 20116,
+      "runner_up_party": "Independent",
+      "runner_up_candidate": "Coralee Oakes(ind.)\u2020\u2020",
+      "runner_up_votes": 4394,
+      "candidates": [
+        {
+          "name": "Sheldon Clare",
+          "party": "BC Conservative",
+          "votes": 11430,
+          "pct": 56.82,
+          "elected": true
+        },
+        {
+          "name": "Coralee Oakes(ind.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 4394,
+          "pct": 21.84,
+          "elected": false
+        },
+        {
+          "name": "Denice Bardua",
+          "party": "BC NDP",
+          "votes": 3426,
+          "pct": 17.03,
+          "elected": false
+        },
+        {
+          "name": "Randy Thompson",
+          "party": "BC Green",
+          "votes": 866,
+          "pct": 4.31,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Prince George-Valemount",
+      "code": "PRV",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Rosalyn Bird",
+      "winner_votes": 9018,
+      "winner_share": 55.19,
+      "margin_votes": 3309,
+      "margin_pct": 20.25,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 53.6,
+      "total_votes": 16339,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Clay Pountney",
+      "runner_up_votes": 5709,
+      "candidates": [
+        {
+          "name": "Rosalyn Bird",
+          "party": "BC Conservative",
+          "votes": 9018,
+          "pct": 55.19,
+          "elected": true
+        },
+        {
+          "name": "Clay Pountney",
+          "party": "BC NDP",
+          "votes": 5709,
+          "pct": 34.94,
+          "elected": false
+        },
+        {
+          "name": "Gwen Johansson",
+          "party": "BC Green",
+          "votes": 1612,
+          "pct": 9.87,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Richmond Centre",
+      "code": "RCC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Hon Chan",
+      "winner_votes": 8426,
+      "winner_share": 51.99,
+      "margin_votes": 2465,
+      "margin_pct": 15.21,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 49.07,
+      "total_votes": 16208,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Henry Yao",
+      "runner_up_votes": 5961,
+      "candidates": [
+        {
+          "name": "Hon Chan",
+          "party": "BC Conservative",
+          "votes": 8426,
+          "pct": 51.99,
+          "elected": true
+        },
+        {
+          "name": "Henry Yao",
+          "party": "BC NDP",
+          "votes": 5961,
+          "pct": 36.78,
+          "elected": false
+        },
+        {
+          "name": "Dickens Cheung (ind.)Sunny Ho (ind.)Wendy Yuan (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 1821,
+          "pct": 11.24,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Richmond-Bridgeport",
+      "code": "RCB",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Teresa Wat",
+      "winner_votes": 9908,
+      "winner_share": 58.19,
+      "margin_votes": 3987,
+      "margin_pct": 23.42,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 48.63,
+      "total_votes": 17027,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Linda Li",
+      "runner_up_votes": 5921,
+      "candidates": [
+        {
+          "name": "Teresa Wat",
+          "party": "BC Conservative",
+          "votes": 9908,
+          "pct": 58.19,
+          "elected": true
+        },
+        {
+          "name": "Linda Li",
+          "party": "BC NDP",
+          "votes": 5921,
+          "pct": 34.77,
+          "elected": false
+        },
+        {
+          "name": "Glynnis Hoi Sum Chan (ind.)Charlie Smith (ind.)",
+          "party": "Independent",
+          "votes": 651,
+          "pct": 3.82,
+          "elected": false
+        },
+        {
+          "name": "Tam\u00e1s Rev\u00f3czi",
+          "party": "BC Green",
+          "votes": 547,
+          "pct": 3.21,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Richmond-Queensborough",
+      "code": "RCQ",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Steve Kooner",
+      "winner_votes": 10052,
+      "winner_share": 50.91,
+      "margin_votes": 1338,
+      "margin_pct": 6.78,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 53.01,
+      "total_votes": 19744,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Aman Singh",
+      "runner_up_votes": 8713,
+      "candidates": [
+        {
+          "name": "Steve Kooner",
+          "party": "BC Conservative",
+          "votes": 10052,
+          "pct": 50.91,
+          "elected": true
+        },
+        {
+          "name": "Aman Singh",
+          "party": "BC NDP",
+          "votes": 8713,
+          "pct": 44.13,
+          "elected": false
+        },
+        {
+          "name": "Errol E. Povah (ind.)Cindy Wu (ind.)",
+          "party": "Independent",
+          "votes": 979,
+          "pct": 4.96,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Richmond-Steveston",
+      "code": "RCS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Kelly Greene",
+      "winner_votes": 10332,
+      "winner_share": 44.27,
+      "margin_votes": 484,
+      "margin_pct": 2.07,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 59.87,
+      "total_votes": 23337,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Michelle Mollineaux",
+      "runner_up_votes": 9848,
+      "candidates": [
+        {
+          "name": "Kelly Greene",
+          "party": "BC NDP",
+          "votes": 10332,
+          "pct": 44.27,
+          "elected": true
+        },
+        {
+          "name": "Michelle Mollineaux",
+          "party": "BC Conservative",
+          "votes": 9848,
+          "pct": 42.2,
+          "elected": false
+        },
+        {
+          "name": "Jackie Lee (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 2354,
+          "pct": 10.09,
+          "elected": false
+        },
+        {
+          "name": "Elodie Vaudandaine",
+          "party": "BC Green",
+          "votes": 803,
+          "pct": 3.44,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Saanich North and the Islands",
+      "code": "SAN",
+      "status": "Declared",
+      "winner_party": "BC Green",
+      "winning_candidate": "Rob Botterell",
+      "winner_votes": 12308,
+      "winner_share": 36.15,
+      "margin_votes": 1349,
+      "margin_pct": 3.96,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC Green Hold",
+      "prev_party": "Green",
+      "turnout_pct": 68.95,
+      "total_votes": 34046,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Sarah Riddell",
+      "runner_up_votes": 10958,
+      "candidates": [
+        {
+          "name": "Rob Botterell",
+          "party": "BC Green",
+          "votes": 12308,
+          "pct": 36.15,
+          "elected": true
+        },
+        {
+          "name": "Sarah Riddell",
+          "party": "BC NDP",
+          "votes": 10958,
+          "pct": 32.19,
+          "elected": false
+        },
+        {
+          "name": "David Busch",
+          "party": "BC Conservative",
+          "votes": 10145,
+          "pct": 29.8,
+          "elected": false
+        },
+        {
+          "name": "Amy Haysom (ind.)",
+          "party": "Independent",
+          "votes": 635,
+          "pct": 1.87,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Saanich South",
+      "code": "SAS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Lana Popham",
+      "winner_votes": 15338,
+      "winner_share": 49.76,
+      "margin_votes": 5335,
+      "margin_pct": 17.31,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 67.62,
+      "total_votes": 30826,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Adam Kubel",
+      "runner_up_votes": 10003,
+      "candidates": [
+        {
+          "name": "Lana Popham",
+          "party": "BC NDP",
+          "votes": 15338,
+          "pct": 49.76,
+          "elected": true
+        },
+        {
+          "name": "Adam Kubel",
+          "party": "BC Conservative",
+          "votes": 10003,
+          "pct": 32.45,
+          "elected": false
+        },
+        {
+          "name": "Ned Taylor",
+          "party": "BC Green",
+          "votes": 5485,
+          "pct": 17.79,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Salmon Arm-Shuswap",
+      "code": "SHU",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "David L. Williams",
+      "winner_votes": 16566,
+      "winner_share": 52.11,
+      "margin_votes": 6888,
+      "margin_pct": 21.67,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 61.42,
+      "total_votes": 31788,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Sylvia Lindgren",
+      "runner_up_votes": 9677,
+      "candidates": [
+        {
+          "name": "David L. Williams",
+          "party": "BC Conservative",
+          "votes": 16566,
+          "pct": 52.11,
+          "elected": true
+        },
+        {
+          "name": "Sylvia Lindgren",
+          "party": "BC NDP",
+          "votes": 9677,
+          "pct": 30.44,
+          "elected": false
+        },
+        {
+          "name": "Greg McCune (ind.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 3295,
+          "pct": 10.37,
+          "elected": false
+        },
+        {
+          "name": "Jed Wiebe",
+          "party": "BC Green",
+          "votes": 2250,
+          "pct": 7.08,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Skeena",
+      "code": "SKE",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Claire Ratt\u00e9e",
+      "winner_votes": 6243,
+      "winner_share": 51.2,
+      "margin_votes": 824,
+      "margin_pct": 6.76,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 55.82,
+      "total_votes": 12194,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Sarah Zimmerman",
+      "runner_up_votes": 5419,
+      "candidates": [
+        {
+          "name": "Claire Ratt\u00e9e",
+          "party": "BC Conservative",
+          "votes": 6243,
+          "pct": 51.2,
+          "elected": true
+        },
+        {
+          "name": "Sarah Zimmerman",
+          "party": "BC NDP",
+          "votes": 5419,
+          "pct": 44.44,
+          "elected": false
+        },
+        {
+          "name": "Teri Young",
+          "party": "BC Green",
+          "votes": 406,
+          "pct": 3.33,
+          "elected": false
+        },
+        {
+          "name": "Irwin Jeffrey (CHP)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey City Centre",
+      "code": "SRC",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Amna Shah",
+      "winner_votes": 6727,
+      "winner_share": 46.71,
+      "margin_votes": 236,
+      "margin_pct": 1.64,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 44.82,
+      "total_votes": 14403,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Zeeshan Wahla",
+      "runner_up_votes": 6491,
+      "candidates": [
+        {
+          "name": "Amna Shah",
+          "party": "BC NDP",
+          "votes": 6727,
+          "pct": 46.71,
+          "elected": true
+        },
+        {
+          "name": "Zeeshan Wahla",
+          "party": "BC Conservative",
+          "votes": 6491,
+          "pct": 45.07,
+          "elected": false
+        },
+        {
+          "name": "Colin Boyd",
+          "party": "BC Green",
+          "votes": 878,
+          "pct": 6.1,
+          "elected": false
+        },
+        {
+          "name": "Ryan Abbott (Comm.)Saeed Naguib (ind.)",
+          "party": "Independent",
+          "votes": 160,
+          "pct": 1.11,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey North",
+      "code": "SUN",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Mandeep Dhaliwal",
+      "winner_votes": 7954,
+      "winner_share": 50.67,
+      "margin_votes": 1160,
+      "margin_pct": 7.39,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 49.92,
+      "total_votes": 15697,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Rachna Singh",
+      "runner_up_votes": 6794,
+      "candidates": [
+        {
+          "name": "Mandeep Dhaliwal",
+          "party": "BC Conservative",
+          "votes": 7954,
+          "pct": 50.67,
+          "elected": true
+        },
+        {
+          "name": "Rachna Singh",
+          "party": "BC NDP",
+          "votes": 6794,
+          "pct": 43.28,
+          "elected": false
+        },
+        {
+          "name": "Sim Sandhu",
+          "party": "BC Green",
+          "votes": 662,
+          "pct": 4.22,
+          "elected": false
+        },
+        {
+          "name": "Kiran Hundal (Freedom)Hobby Nijjar (ind.)",
+          "party": "Independent",
+          "votes": 125,
+          "pct": 0.8,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey South",
+      "code": "SUS",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Brent Chapman",
+      "winner_votes": 13056,
+      "winner_share": 58.83,
+      "margin_votes": 3920,
+      "margin_pct": 17.66,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 56.29,
+      "total_votes": 22192,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Haroon Ghaffar",
+      "runner_up_votes": 9136,
+      "candidates": [
+        {
+          "name": "Brent Chapman",
+          "party": "BC Conservative",
+          "votes": 13056,
+          "pct": 58.83,
+          "elected": true
+        },
+        {
+          "name": "Haroon Ghaffar",
+          "party": "BC NDP",
+          "votes": 9136,
+          "pct": 41.17,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Cloverdale",
+      "code": "SRD",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Elenore Sturko",
+      "winner_votes": 10268,
+      "winner_share": 48.32,
+      "margin_votes": 587,
+      "margin_pct": 2.77,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 55.87,
+      "total_votes": 21252,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Mike Starchuk",
+      "runner_up_votes": 9681,
+      "candidates": [
+        {
+          "name": "Elenore Sturko",
+          "party": "BC Conservative",
+          "votes": 10268,
+          "pct": 48.32,
+          "elected": true
+        },
+        {
+          "name": "Mike Starchuk",
+          "party": "BC NDP",
+          "votes": 9681,
+          "pct": 45.55,
+          "elected": false
+        },
+        {
+          "name": "Pat McCutcheon",
+          "party": "BC Green",
+          "votes": 1150,
+          "pct": 5.41,
+          "elected": false
+        },
+        {
+          "name": "Judy Meilleur (Freedom)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Fleetwood",
+      "code": "SRF",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Jagrup Brar",
+      "winner_votes": 9923,
+      "winner_share": 48.6,
+      "margin_votes": 751,
+      "margin_pct": 3.67,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 54.14,
+      "total_votes": 20416,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Avtar Gill",
+      "runner_up_votes": 9172,
+      "candidates": [
+        {
+          "name": "Jagrup Brar",
+          "party": "BC NDP",
+          "votes": 9923,
+          "pct": 48.6,
+          "elected": true
+        },
+        {
+          "name": "Avtar Gill",
+          "party": "BC Conservative",
+          "votes": 9172,
+          "pct": 44.93,
+          "elected": false
+        },
+        {
+          "name": "Tim Binnema",
+          "party": "BC Green",
+          "votes": 1321,
+          "pct": 6.47,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Guildford",
+      "code": "SRG",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Garry Begg",
+      "winner_votes": 8947,
+      "winner_share": 46.93,
+      "margin_votes": 22,
+      "margin_pct": 0.12,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 50.76,
+      "total_votes": 19066,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Honveer Singh Randhawa",
+      "runner_up_votes": 8925,
+      "candidates": [
+        {
+          "name": "Garry Begg",
+          "party": "BC NDP",
+          "votes": 8947,
+          "pct": 46.93,
+          "elected": true
+        },
+        {
+          "name": "Honveer Singh Randhawa",
+          "party": "BC Conservative",
+          "votes": 8925,
+          "pct": 46.81,
+          "elected": false
+        },
+        {
+          "name": "Manjeet Singh Sahota",
+          "party": "BC Green",
+          "votes": 824,
+          "pct": 4.32,
+          "elected": false
+        },
+        {
+          "name": "Kabir Qurban (ind.)",
+          "party": "Independent",
+          "votes": 370,
+          "pct": 1.94,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Newton",
+      "code": "SRN",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Jessie Sunner",
+      "winner_votes": 7924,
+      "winner_share": 51.17,
+      "margin_votes": 1266,
+      "margin_pct": 8.18,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 50.81,
+      "total_votes": 15486,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Tegjot Bal",
+      "runner_up_votes": 6658,
+      "candidates": [
+        {
+          "name": "Jessie Sunner",
+          "party": "BC NDP",
+          "votes": 7924,
+          "pct": 51.17,
+          "elected": true
+        },
+        {
+          "name": "Tegjot Bal",
+          "party": "BC Conservative",
+          "votes": 6658,
+          "pct": 42.99,
+          "elected": false
+        },
+        {
+          "name": "Amrit Birring(Freedom)Joginder Singh Randhawa (ind.)Japreet Lehal (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 533,
+          "pct": 3.44,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Panorama",
+      "code": "SUP",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Bryan Tepper",
+      "winner_votes": 8735,
+      "winner_share": 49.6,
+      "margin_votes": 263,
+      "margin_pct": 1.49,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC NDP to BC Conservative",
+      "prev_party": "NDP",
+      "turnout_pct": 53.91,
+      "total_votes": 17611,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Jinny Sims",
+      "runner_up_votes": 8472,
+      "candidates": [
+        {
+          "name": "Bryan Tepper",
+          "party": "BC Conservative",
+          "votes": 8735,
+          "pct": 49.6,
+          "elected": true
+        },
+        {
+          "name": "Jinny Sims",
+          "party": "BC NDP",
+          "votes": 8472,
+          "pct": 48.11,
+          "elected": false
+        },
+        {
+          "name": "Paramjit Rai (Freedom)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-Serpentine River",
+      "code": "SUR",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Linda Hepner",
+      "winner_votes": 9782,
+      "winner_share": 49.7,
+      "margin_votes": 435,
+      "margin_pct": 2.21,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 54.49,
+      "total_votes": 19683,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Baltej Singh Dhillon",
+      "runner_up_votes": 9347,
+      "candidates": [
+        {
+          "name": "Linda Hepner",
+          "party": "BC Conservative",
+          "votes": 9782,
+          "pct": 49.7,
+          "elected": true
+        },
+        {
+          "name": "Baltej Singh Dhillon",
+          "party": "BC NDP",
+          "votes": 9347,
+          "pct": 47.49,
+          "elected": false
+        },
+        {
+          "name": "Jim McMurtry (ind.)",
+          "party": "Independent",
+          "votes": 554,
+          "pct": 2.81,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Surrey-White Rock",
+      "code": "SWR",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Trevor Halford\u2020\u2020",
+      "winner_votes": 14667,
+      "winner_share": 52.31,
+      "margin_votes": 1968,
+      "margin_pct": 7.02,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 61.9,
+      "total_votes": 28037,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Darryl Walker",
+      "runner_up_votes": 12699,
+      "candidates": [
+        {
+          "name": "Trevor Halford\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 14667,
+          "pct": 52.31,
+          "elected": true
+        },
+        {
+          "name": "Darryl Walker",
+          "party": "BC NDP",
+          "votes": 12699,
+          "pct": 45.29,
+          "elected": false
+        },
+        {
+          "name": "Damyn Tassie (Ltn.)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Fraserview",
+      "code": "VFV",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "George Chow",
+      "winner_votes": 11896,
+      "winner_share": 57.18,
+      "margin_votes": 4278,
+      "margin_pct": 20.56,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 52.42,
+      "total_votes": 20805,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Jag S. Sanghera",
+      "runner_up_votes": 7618,
+      "candidates": [
+        {
+          "name": "George Chow",
+          "party": "BC NDP",
+          "votes": 11896,
+          "pct": 57.18,
+          "elected": true
+        },
+        {
+          "name": "Jag S. Sanghera",
+          "party": "BC Conservative",
+          "votes": 7618,
+          "pct": 36.62,
+          "elected": false
+        },
+        {
+          "name": "Francoise Raunet",
+          "party": "BC Green",
+          "votes": 1291,
+          "pct": 6.21,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Hastings",
+      "code": "VHA",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Niki Sharma",
+      "winner_votes": 14237,
+      "winner_share": 64.15,
+      "margin_votes": 8846,
+      "margin_pct": 39.86,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 54.01,
+      "total_votes": 22194,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Jacob Burdge",
+      "runner_up_votes": 5391,
+      "candidates": [
+        {
+          "name": "Niki Sharma",
+          "party": "BC NDP",
+          "votes": 14237,
+          "pct": 64.15,
+          "elected": true
+        },
+        {
+          "name": "Jacob Burdge",
+          "party": "BC Conservative",
+          "votes": 5391,
+          "pct": 24.29,
+          "elected": false
+        },
+        {
+          "name": "Bridget Burns",
+          "party": "BC Green",
+          "votes": 2409,
+          "pct": 10.85,
+          "elected": false
+        },
+        {
+          "name": "Zsolt Kiss (ind.)",
+          "party": "Independent",
+          "votes": 157,
+          "pct": 0.71,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Kensington",
+      "code": "VKE",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Mable Elmore",
+      "winner_votes": 11713,
+      "winner_share": 60.9,
+      "margin_votes": 5652,
+      "margin_pct": 29.38,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 51.57,
+      "total_votes": 19232,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Syed Mohsin",
+      "runner_up_votes": 6061,
+      "candidates": [
+        {
+          "name": "Mable Elmore",
+          "party": "BC NDP",
+          "votes": 11713,
+          "pct": 60.9,
+          "elected": true
+        },
+        {
+          "name": "Syed Mohsin",
+          "party": "BC Conservative",
+          "votes": 6061,
+          "pct": 31.52,
+          "elected": false
+        },
+        {
+          "name": "Amy Fox",
+          "party": "BC Green",
+          "votes": 1458,
+          "pct": 7.58,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Langara",
+      "code": "VLA",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Sunita Dhir",
+      "winner_votes": 8506,
+      "winner_share": 48.43,
+      "margin_votes": 419,
+      "margin_pct": 2.38,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC NDP",
+      "prev_party": "Lib",
+      "turnout_pct": 51.83,
+      "total_votes": 17562,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Bryan Breguet",
+      "runner_up_votes": 8087,
+      "candidates": [
+        {
+          "name": "Sunita Dhir",
+          "party": "BC NDP",
+          "votes": 8506,
+          "pct": 48.43,
+          "elected": true
+        },
+        {
+          "name": "Bryan Breguet",
+          "party": "BC Conservative",
+          "votes": 8087,
+          "pct": 46.05,
+          "elected": false
+        },
+        {
+          "name": "Scottford Price",
+          "party": "BC Green",
+          "votes": 969,
+          "pct": 5.52,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Little Mountain",
+      "code": "VLM",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Christine Boyle",
+      "winner_votes": 15636,
+      "winner_share": 62.11,
+      "margin_votes": 7931,
+      "margin_pct": 31.5,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 61.16,
+      "total_votes": 25174,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "John Coupar",
+      "runner_up_votes": 7705,
+      "candidates": [
+        {
+          "name": "Christine Boyle",
+          "party": "BC NDP",
+          "votes": 15636,
+          "pct": 62.11,
+          "elected": true
+        },
+        {
+          "name": "John Coupar",
+          "party": "BC Conservative",
+          "votes": 7705,
+          "pct": 30.61,
+          "elected": false
+        },
+        {
+          "name": "Wendy Hayko",
+          "party": "BC Green",
+          "votes": 1833,
+          "pct": 7.28,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Point Grey",
+      "code": "VNP",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "David Eby",
+      "winner_votes": 12538,
+      "winner_share": 56.77,
+      "margin_votes": 4916,
+      "margin_pct": 22.26,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 63.43,
+      "total_votes": 22085,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Paul Ratchford",
+      "runner_up_votes": 7622,
+      "candidates": [
+        {
+          "name": "David Eby",
+          "party": "BC NDP",
+          "votes": 12538,
+          "pct": 56.77,
+          "elected": true
+        },
+        {
+          "name": "Paul Ratchford",
+          "party": "BC Conservative",
+          "votes": 7622,
+          "pct": 34.51,
+          "elected": false
+        },
+        {
+          "name": "Devyani Singh",
+          "party": "BC Green",
+          "votes": 1925,
+          "pct": 8.72,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Quilchena",
+      "code": "VNQ",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Dallas Brodie",
+      "winner_votes": 11464,
+      "winner_share": 51.58,
+      "margin_votes": 2815,
+      "margin_pct": 12.68,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 58.45,
+      "total_votes": 22227,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Callista Ryan",
+      "runner_up_votes": 8649,
+      "candidates": [
+        {
+          "name": "Dallas Brodie",
+          "party": "BC Conservative",
+          "votes": 11464,
+          "pct": 51.58,
+          "elected": true
+        },
+        {
+          "name": "Callista Ryan",
+          "party": "BC NDP",
+          "votes": 8649,
+          "pct": 38.91,
+          "elected": false
+        },
+        {
+          "name": "Michael Barkusky",
+          "party": "BC Green",
+          "votes": 1729,
+          "pct": 7.78,
+          "elected": false
+        },
+        {
+          "name": "Caroline Ying-Mei Wang (ind.)",
+          "party": "Independent",
+          "votes": 385,
+          "pct": 1.73,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Renfrew",
+      "code": "VNR",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Adrian Dix",
+      "winner_votes": 10983,
+      "winner_share": 63.22,
+      "margin_votes": 5656,
+      "margin_pct": 32.56,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 48.24,
+      "total_votes": 17374,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Tom Ikonomou",
+      "runner_up_votes": 5327,
+      "candidates": [
+        {
+          "name": "Adrian Dix",
+          "party": "BC NDP",
+          "votes": 10983,
+          "pct": 63.22,
+          "elected": true
+        },
+        {
+          "name": "Tom Ikonomou",
+          "party": "BC Conservative",
+          "votes": 5327,
+          "pct": 30.66,
+          "elected": false
+        },
+        {
+          "name": "Lawrence Taylor",
+          "party": "BC Green",
+          "votes": 1064,
+          "pct": 6.12,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-South Granville",
+      "code": "VNS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Brenda Bailey",
+      "winner_votes": 17208,
+      "winner_share": 64.31,
+      "margin_votes": 10530,
+      "margin_pct": 39.35,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 63.82,
+      "total_votes": 26758,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Aron Lageri\u2020\u2020",
+      "runner_up_votes": 6678,
+      "candidates": [
+        {
+          "name": "Brenda Bailey",
+          "party": "BC NDP",
+          "votes": 17208,
+          "pct": 64.31,
+          "elected": true
+        },
+        {
+          "name": "Aron Lageri\u2020\u2020",
+          "party": "BC Conservative",
+          "votes": 6678,
+          "pct": 24.96,
+          "elected": false
+        },
+        {
+          "name": "Adam Hawk",
+          "party": "BC Green",
+          "votes": 2872,
+          "pct": 10.73,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Strathcona",
+      "code": "VNT",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Joan Phillip",
+      "winner_votes": 13563,
+      "winner_share": 67.62,
+      "margin_votes": 10136,
+      "margin_pct": 50.53,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 51.36,
+      "total_votes": 20057,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Scott Muller",
+      "runner_up_votes": 3427,
+      "candidates": [
+        {
+          "name": "Joan Phillip",
+          "party": "BC NDP",
+          "votes": 13563,
+          "pct": 67.62,
+          "elected": true
+        },
+        {
+          "name": "Scott Muller",
+          "party": "BC Conservative",
+          "votes": 3427,
+          "pct": 17.09,
+          "elected": false
+        },
+        {
+          "name": "Simon de Weerdt",
+          "party": "BC Green",
+          "votes": 2731,
+          "pct": 13.62,
+          "elected": false
+        },
+        {
+          "name": "Kimball Cariou(Comm.)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-West End",
+      "code": "VNW",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Spencer Chandra Herbert",
+      "winner_votes": 13143,
+      "winner_share": 63.01,
+      "margin_votes": 7466,
+      "margin_pct": 34.79,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 53.56,
+      "total_votes": 20857,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Jon Ellacott",
+      "runner_up_votes": 5677,
+      "candidates": [
+        {
+          "name": "Spencer Chandra Herbert",
+          "party": "BC NDP",
+          "votes": 13143,
+          "pct": 63.01,
+          "elected": true
+        },
+        {
+          "name": "Jon Ellacott",
+          "party": "BC Conservative",
+          "votes": 5677,
+          "pct": 27.22,
+          "elected": false
+        },
+        {
+          "name": "Eoin O'Dwyer",
+          "party": "BC Green",
+          "votes": 1893,
+          "pct": 9.08,
+          "elected": false
+        },
+        {
+          "name": "Carl Turnbull (ind.)",
+          "party": "Independent",
+          "votes": 144,
+          "pct": 0.69,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vancouver-Yaletown",
+      "code": "VNY",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Terry Yung",
+      "winner_votes": 9018,
+      "winner_share": 49.76,
+      "margin_votes": 1160,
+      "margin_pct": 6.4,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 50.14,
+      "total_votes": 18124,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Melissa De Genova",
+      "runner_up_votes": 7858,
+      "candidates": [
+        {
+          "name": "Terry Yung",
+          "party": "BC NDP",
+          "votes": 9018,
+          "pct": 49.76,
+          "elected": true
+        },
+        {
+          "name": "Melissa De Genova",
+          "party": "BC Conservative",
+          "votes": 7858,
+          "pct": 43.36,
+          "elected": false
+        },
+        {
+          "name": "Dana-Lyn Mackenzie",
+          "party": "BC Green",
+          "votes": 1248,
+          "pct": 6.89,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Vernon-Lumby",
+      "code": "VRL",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Harwinder Sandhu",
+      "winner_votes": 11837,
+      "winner_share": 42.69,
+      "margin_votes": 476,
+      "margin_pct": 1.72,
+      "is_battleground": true,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 60.65,
+      "total_votes": 27729,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Dennis Giesbrecht",
+      "runner_up_votes": 11361,
+      "candidates": [
+        {
+          "name": "Harwinder Sandhu",
+          "party": "BC NDP",
+          "votes": 11837,
+          "pct": 42.69,
+          "elected": true
+        },
+        {
+          "name": "Dennis Giesbrecht",
+          "party": "BC Conservative",
+          "votes": 11361,
+          "pct": 40.97,
+          "elected": false
+        },
+        {
+          "name": "Robert Johnson (Ltn.)",
+          "party": "Independent",
+          "votes": 4266,
+          "pct": 15.38,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Victoria-Beacon Hill",
+      "code": "VTB",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Grace Lore",
+      "winner_votes": 13634,
+      "winner_share": 47.35,
+      "margin_votes": 3989,
+      "margin_pct": 13.85,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 65.77,
+      "total_votes": 28793,
+      "runner_up_party": "BC Green",
+      "runner_up_candidate": "Sonia Furstenau",
+      "runner_up_votes": 9645,
+      "candidates": [
+        {
+          "name": "Grace Lore",
+          "party": "BC NDP",
+          "votes": 13634,
+          "pct": 47.35,
+          "elected": true
+        },
+        {
+          "name": "Sonia Furstenau",
+          "party": "BC Green",
+          "votes": 9645,
+          "pct": 33.5,
+          "elected": false
+        },
+        {
+          "name": "Tim Thielmann",
+          "party": "BC Conservative",
+          "votes": 5514,
+          "pct": 19.15,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "Victoria-Swan Lake",
+      "code": "VTS",
+      "status": "Declared",
+      "winner_party": "BC NDP",
+      "winning_candidate": "Nina Krieger",
+      "winner_votes": 14273,
+      "winner_share": 56.03,
+      "margin_votes": 8373,
+      "margin_pct": 32.87,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "BC NDP Hold",
+      "prev_party": "NDP",
+      "turnout_pct": 62.63,
+      "total_votes": 25475,
+      "runner_up_party": "BC Green",
+      "runner_up_candidate": "Christina Winter",
+      "runner_up_votes": 5900,
+      "candidates": [
+        {
+          "name": "Nina Krieger",
+          "party": "BC NDP",
+          "votes": 14273,
+          "pct": 56.03,
+          "elected": true
+        },
+        {
+          "name": "Christina Winter",
+          "party": "BC Green",
+          "votes": 5900,
+          "pct": 23.16,
+          "elected": false
+        },
+        {
+          "name": "Tim Taylor",
+          "party": "BC Conservative",
+          "votes": 5146,
+          "pct": 20.2,
+          "elected": false
+        },
+        {
+          "name": "Robert Crooks (Comm.)",
+          "party": "Independent",
+          "votes": 0,
+          "pct": 0.0,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "West Kelowna-Peachland",
+      "code": "WKP",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Macklin McCall",
+      "winner_votes": 13475,
+      "winner_share": 50.85,
+      "margin_votes": 6081,
+      "margin_pct": 22.95,
+      "is_battleground": false,
+      "is_flip": false,
+      "flip_description": "New District",
+      "prev_party": "New Riding",
+      "turnout_pct": 58.36,
+      "total_votes": 26499,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Krystal Smith",
+      "runner_up_votes": 7394,
+      "candidates": [
+        {
+          "name": "Macklin McCall",
+          "party": "BC Conservative",
+          "votes": 13475,
+          "pct": 50.85,
+          "elected": true
+        },
+        {
+          "name": "Krystal Smith",
+          "party": "BC NDP",
+          "votes": 7394,
+          "pct": 27.9,
+          "elected": false
+        },
+        {
+          "name": "Stephen Johnston (Un.)\u2020\u2020",
+          "party": "Independent",
+          "votes": 5630,
+          "pct": 21.25,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "West Vancouver-Capilano",
+      "code": "WVC",
+      "status": "Declared",
+      "winner_party": "BC Conservative",
+      "winning_candidate": "Lynne Block",
+      "winner_votes": 12050,
+      "winner_share": 46.68,
+      "margin_votes": 5045,
+      "margin_pct": 19.55,
+      "is_battleground": false,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Conservative",
+      "prev_party": "Lib",
+      "turnout_pct": 58.62,
+      "total_votes": 25816,
+      "runner_up_party": "BC NDP",
+      "runner_up_candidate": "Sara Eftekhar",
+      "runner_up_votes": 7005,
+      "candidates": [
+        {
+          "name": "Lynne Block",
+          "party": "BC Conservative",
+          "votes": 12050,
+          "pct": 46.68,
+          "elected": true
+        },
+        {
+          "name": "Sara Eftekhar",
+          "party": "BC NDP",
+          "votes": 7005,
+          "pct": 27.13,
+          "elected": false
+        },
+        {
+          "name": "Karin Kirkpatrick",
+          "party": "Independent",
+          "votes": 5326,
+          "pct": 20.63,
+          "elected": false
+        },
+        {
+          "name": "Archie Kaario",
+          "party": "BC Green",
+          "votes": 1435,
+          "pct": 5.56,
+          "elected": false
+        }
+      ]
+    },
+    {
+      "name": "West Vancouver-Sea to Sky",
+      "code": "WVS",
+      "status": "Declared",
+      "winner_party": "BC Green",
+      "winning_candidate": "Jeremy Valeriote",
+      "winner_votes": 10438,
+      "winner_share": 38.08,
+      "margin_votes": 676,
+      "margin_pct": 2.47,
+      "is_battleground": true,
+      "is_flip": true,
+      "flip_description": "Flipped from BC Liberal to BC Green",
+      "prev_party": "Lib",
+      "turnout_pct": 61.96,
+      "total_votes": 27412,
+      "runner_up_party": "BC Conservative",
+      "runner_up_candidate": "Yuri Fulmer",
+      "runner_up_votes": 9762,
+      "candidates": [
+        {
+          "name": "Jeremy Valeriote",
+          "party": "BC Green",
+          "votes": 10438,
+          "pct": 38.08,
+          "elected": true
+        },
+        {
+          "name": "Yuri Fulmer",
+          "party": "BC Conservative",
+          "votes": 9762,
+          "pct": 35.61,
+          "elected": false
+        },
+        {
+          "name": "Jen Ford",
+          "party": "BC NDP",
+          "votes": 7212,
+          "pct": 26.31,
+          "elected": false
+        }
+      ]
+    }
+  ]
+}
