@@ -9,12 +9,12 @@
     "majority_threshold": 47,
     "ridings_reporting": 93,
     "total_ridings": 93,
-    "total_votes_cast": 1792235,
-    "total_boxes_reported": 7237,
+    "total_votes_cast": 1793723,
+    "total_boxes_reported": 7250,
     "total_boxes_count": 7268,
-    "overall_poll_progress": 99.6,
-    "last_updated": "2026-10-25T17:08:17.362563+00:00",
-    "status": "Live Preliminary Count (99.6% of ballot boxes reported)"
+    "overall_poll_progress": 99.8,
+    "last_updated": "2026-10-25T19:34:56.554432+00:00",
+    "status": "Live Preliminary Count (99.8% of ballot boxes reported)"
   },
   "parties": {
     "BC NDP": {
@@ -27,8 +27,8 @@
       "seats": 27,
       "net_seat_change": -20,
       "net_seat_change_str": "-20",
-      "votes": 669901,
-      "vote_share_pct": 37.38,
+      "votes": 670285,
+      "vote_share_pct": 37.37,
       "majority": false
     },
     "BC Conservative": {
@@ -41,8 +41,8 @@
       "seats": 64,
       "net_seat_change": 20,
       "net_seat_change_str": "+20",
-      "votes": 861258,
-      "vote_share_pct": 48.05,
+      "votes": 862074,
+      "vote_share_pct": 48.06,
       "majority": true
     },
     "BC Green": {
@@ -55,7 +55,7 @@
       "seats": 2,
       "net_seat_change": 0,
       "net_seat_change_str": "0",
-      "votes": 196593,
+      "votes": 196730,
       "vote_share_pct": 10.97,
       "majority": false
     },
@@ -69,7 +69,7 @@
       "seats": 0,
       "net_seat_change": 0,
       "net_seat_change_str": "0",
-      "votes": 64483,
+      "votes": 64634,
       "vote_share_pct": 3.6,
       "majority": false
     }
@@ -583,10 +583,10 @@
       "poll_progress_pct": 100.0,
       "winner_party": "BC Conservative",
       "winning_candidate": "Simon Chandler",
-      "winner_votes": 8243,
+      "winner_votes": 8244,
       "winner_share": 46.45,
-      "margin_votes": 769,
-      "margin_pct": 4.33,
+      "margin_votes": 770,
+      "margin_pct": 4.34,
       "is_battleground": false,
       "is_flip": true,
       "flip_description": "Flipped from BC NDP to BC Conservative",
@@ -608,7 +608,7 @@
         "cur_grn_pct": 9.11
       },
       "turnout_pct": 46.7,
-      "total_votes": 17747,
+      "total_votes": 17748,
       "rejected_ballots": 50,
       "runner_up_party": "BC NDP",
       "runner_up_candidate": "Janet Routledge",
@@ -618,7 +618,7 @@
           "name": "Simon Chandler",
           "party": "BC Conservative",
           "raw_affiliation": "Conservative Party",
-          "votes": 8243,
+          "votes": 8244,
           "pct": 46.32,
           "elected": true
         },
@@ -627,7 +627,7 @@
           "party": "BC NDP",
           "raw_affiliation": "BC NDP",
           "votes": 7474,
-          "pct": 42.0,
+          "pct": 41.99,
           "elected": false
         },
         {
@@ -4553,16 +4553,16 @@
     {
       "name": "Salmon Arm-Shuswap",
       "code": "SHU",
-      "status": "104/117 Polls",
-      "boxes_reported": 104,
+      "status": "Declared",
+      "boxes_reported": 117,
       "boxes_total": 117,
-      "poll_progress_pct": 88.9,
+      "poll_progress_pct": 100.0,
       "winner_party": "BC Conservative",
       "winning_candidate": "David L Williams",
-      "winner_votes": 14606,
-      "winner_share": 54.87,
-      "margin_votes": 7084,
-      "margin_pct": 26.61,
+      "winner_votes": 15421,
+      "winner_share": 54.86,
+      "margin_votes": 7515,
+      "margin_pct": 26.74,
       "is_battleground": false,
       "is_flip": false,
       "flip_description": "BC Conservative Hold",
@@ -4570,31 +4570,31 @@
       "party_2024": "BC Conservative",
       "prev_party": "BC Conservative",
       "swing": {
-        "net_con_swing": 4.94,
+        "net_con_swing": 5.06,
         "direction": "BC Conservative",
-        "label": "+4.9% to Conservative",
-        "con_shift": 2.76,
-        "ndp_shift": -2.18,
-        "grn_shift": 1.09,
+        "label": "+5.1% to Conservative",
+        "con_shift": 2.75,
+        "ndp_shift": -2.31,
+        "grn_shift": 1.15,
         "base_con_pct": 52.11,
         "base_ndp_pct": 30.44,
         "base_grn_pct": 7.08,
-        "cur_con_pct": 54.87,
-        "cur_ndp_pct": 28.26,
-        "cur_grn_pct": 8.17
+        "cur_con_pct": 54.86,
+        "cur_ndp_pct": 28.13,
+        "cur_grn_pct": 8.23
       },
-      "turnout_pct": 70.1,
-      "total_votes": 26621,
+      "turnout_pct": 74.0,
+      "total_votes": 28108,
       "rejected_ballots": 44,
       "runner_up_party": "BC NDP",
       "runner_up_candidate": "Gloria Morgan",
-      "runner_up_votes": 7522,
+      "runner_up_votes": 7906,
       "candidates": [
         {
           "name": "David L Williams",
           "party": "BC Conservative",
           "raw_affiliation": "Conservative Party",
-          "votes": 14606,
+          "votes": 15421,
           "pct": 54.78,
           "elected": true
         },
@@ -4602,32 +4602,32 @@
           "name": "Gloria Morgan",
           "party": "BC NDP",
           "raw_affiliation": "BC NDP",
-          "votes": 7522,
-          "pct": 28.21,
+          "votes": 7906,
+          "pct": 28.08,
           "elected": false
         },
         {
           "name": "Jed Wiebe",
           "party": "BC Green",
           "raw_affiliation": "BC Green Party",
-          "votes": 2175,
-          "pct": 8.16,
+          "votes": 2312,
+          "pct": 8.21,
           "elected": false
         },
         {
           "name": "Barbara Presch",
           "party": "Independent",
           "raw_affiliation": "OneBC",
-          "votes": 1374,
-          "pct": 5.15,
+          "votes": 1437,
+          "pct": 5.1,
           "elected": false
         },
         {
           "name": "Denise Reimer",
           "party": "Independent",
           "raw_affiliation": "CentreBC",
-          "votes": 944,
-          "pct": 3.54,
+          "votes": 1032,
+          "pct": 3.67,
           "elected": false
         }
       ]
@@ -5069,7 +5069,7 @@
       },
       "turnout_pct": 45.1,
       "total_votes": 17136,
-      "rejected_ballots": 25,
+      "rejected_ballots": 26,
       "runner_up_party": "BC NDP",
       "runner_up_candidate": "Jagrup Brar",
       "runner_up_votes": 6522,
