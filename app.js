@@ -177,6 +177,13 @@
     renderGeoJsonLayer();
     setupMapControls();
     updateMapLegend();
+
+    // Deselect riding and close drawer when clicking on the map background
+    map.on('click', () => {
+      if (ridingDrawer && ridingDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
+    });
   }
 
   function getDistrictResult(nameOrCode) {
@@ -411,7 +418,10 @@
               e.target.setStyle(getDistrictStyle(e.target.feature));
             }
           },
-          click: () => {
+          click: (e) => {
+            if (e && e.originalEvent) {
+              L.DomEvent.stopPropagation(e);
+            }
             selectDistrict(districtName);
           }
         });
@@ -653,6 +663,12 @@
           <div class="drawer-meta-val">${(res.rejected_ballots || 0).toLocaleString()}</div>
         </div>
       </div>
+
+      <div style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border-color);">
+        <button type="button" class="btn btn-secondary" onclick="window.closeDrawer()" style="width:100%; justify-content:center; padding:10px 14px; font-weight:700; font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+          <span>&#10005;</span> Close Riding Details
+        </button>
+      </div>
     `;
 
     contentEl.innerHTML = html;
@@ -670,10 +686,20 @@
     }
   }
 
+  // Expose globally so inline onclick handlers and outside callers can invoke it directly
+  window.closeDrawer = closeDrawer;
+
   function setupDrawer() {
     if (drawerCloseBtn) {
       drawerCloseBtn.addEventListener('click', closeDrawer);
     }
+
+    // Close drawer and deselect riding on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && ridingDrawer && ridingDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
+    });
   }
 
   // =====================================================================

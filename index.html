@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3.1">
+  <link rel="stylesheet" href="styles.css?v=3.2">
 </head>
 <body class="dark-theme">
   <!-- Top Navigation & Live Header -->
@@ -81,30 +81,29 @@
   </header>
 
   <main class="app-main">
-    <!-- Key Metric Overview Cards -->
+    <!-- Key Metric Overview Cards (Slim Layout) -->
     <section class="kpi-cards-grid">
       <!-- BC NDP Card -->
       <div class="kpi-card party-card ndp-card">
         <div class="kpi-card-header">
-          <span class="party-stripe ndp-bg"></span>
-          <div>
-            <div class="kpi-party-name">BC NDP</div>
-            <div class="kpi-party-leader">David Eby</div>
+          <div class="kpi-party-info">
+            <span class="party-stripe-pill ndp-bg"></span>
+            <span class="kpi-party-name">BC NDP</span>
+            <span class="kpi-party-leader">(Eby)</span>
           </div>
           <span class="outcome-tag majority-won">Majority</span>
         </div>
-        <div class="kpi-body">
-          <div class="kpi-seats" id="kpi-ndp-seats">29</div>
-          <div class="kpi-subtext" id="kpi-ndp-subtext">Leading / Elected</div>
-        </div>
-        <div class="kpi-footer">
-          <div class="kpi-stat">
-            <span class="stat-label">Popular Vote</span>
-            <span class="stat-val" id="kpi-ndp-pct">44.86%</span>
+        <div class="kpi-card-content">
+          <div class="kpi-seats-wrapper">
+            <span class="kpi-seats" id="kpi-ndp-seats">47</span>
+            <span class="kpi-seats-sub">seats</span>
           </div>
-          <div class="kpi-stat">
-            <span class="stat-label">Total Votes</span>
-            <span class="stat-val" id="kpi-ndp-votes">944,467</span>
+          <div class="kpi-stats-inline">
+            <div class="kpi-stat-line">
+              <span class="stat-val" id="kpi-ndp-pct">44.86%</span>
+              <span class="stat-votes-count">(<span id="kpi-ndp-votes">944,467</span>)</span>
+            </div>
+            <div class="kpi-subtext" id="kpi-ndp-subtext">+0 vs 2024</div>
           </div>
         </div>
       </div>
@@ -112,25 +111,24 @@
       <!-- BC Conservative Card -->
       <div class="kpi-card party-card con-card">
         <div class="kpi-card-header">
-          <span class="party-stripe con-bg"></span>
-          <div>
-            <div class="kpi-party-name">BC Conservative</div>
-            <div class="kpi-party-leader">John Rustad</div>
+          <div class="kpi-party-info">
+            <span class="party-stripe-pill con-bg"></span>
+            <span class="kpi-party-name">BC Conservative</span>
+            <span class="kpi-party-leader">(Rustad)</span>
           </div>
           <span class="outcome-tag opposition">Official Opp.</span>
         </div>
-        <div class="kpi-body">
-          <div class="kpi-seats" id="kpi-con-seats">62</div>
-          <div class="kpi-subtext" id="kpi-con-subtext">Leading / Elected</div>
-        </div>
-        <div class="kpi-footer">
-          <div class="kpi-stat">
-            <span class="stat-label">Popular Vote</span>
-            <span class="stat-val" id="kpi-con-pct">43.28%</span>
+        <div class="kpi-card-content">
+          <div class="kpi-seats-wrapper">
+            <span class="kpi-seats" id="kpi-con-seats">44</span>
+            <span class="kpi-seats-sub">seats</span>
           </div>
-          <div class="kpi-stat">
-            <span class="stat-label">Total Votes</span>
-            <span class="stat-val" id="kpi-con-votes">911,152</span>
+          <div class="kpi-stats-inline">
+            <div class="kpi-stat-line">
+              <span class="stat-val" id="kpi-con-pct">43.28%</span>
+              <span class="stat-votes-count">(<span id="kpi-con-votes">911,152</span>)</span>
+            </div>
+            <div class="kpi-subtext" id="kpi-con-subtext">+0 vs 2024</div>
           </div>
         </div>
       </div>
@@ -138,25 +136,24 @@
       <!-- BC Green Card -->
       <div class="kpi-card party-card grn-card">
         <div class="kpi-card-header">
-          <span class="party-stripe grn-bg"></span>
-          <div>
-            <div class="kpi-party-name">BC Green Party</div>
-            <div class="kpi-party-leader">Sonia Furstenau</div>
+          <div class="kpi-party-info">
+            <span class="party-stripe-pill grn-bg"></span>
+            <span class="kpi-party-name">BC Green</span>
+            <span class="kpi-party-leader">(Furstenau)</span>
           </div>
           <span class="outcome-tag party-status">Official Party</span>
         </div>
-        <div class="kpi-body">
-          <div class="kpi-seats" id="kpi-grn-seats">2</div>
-          <div class="kpi-subtext" id="kpi-grn-subtext">Leading / Elected</div>
-        </div>
-        <div class="kpi-footer">
-          <div class="kpi-stat">
-            <span class="stat-label">Popular Vote</span>
-            <span class="stat-val" id="kpi-grn-pct">8.24%</span>
+        <div class="kpi-card-content">
+          <div class="kpi-seats-wrapper">
+            <span class="kpi-seats" id="kpi-grn-seats">2</span>
+            <span class="kpi-seats-sub">seats</span>
           </div>
-          <div class="kpi-stat">
-            <span class="stat-label">Total Votes</span>
-            <span class="stat-val" id="kpi-grn-votes">173,494</span>
+          <div class="kpi-stats-inline">
+            <div class="kpi-stat-line">
+              <span class="stat-val" id="kpi-grn-pct">8.24%</span>
+              <span class="stat-votes-count">(<span id="kpi-grn-votes">173,494</span>)</span>
+            </div>
+            <div class="kpi-subtext" id="kpi-grn-subtext">+0 vs 2024</div>
           </div>
         </div>
       </div>
@@ -164,26 +161,27 @@
       <!-- Election Turnout & Key Stats -->
       <div class="kpi-card meta-kpi-card">
         <div class="kpi-card-header">
-          <div>
-            <div class="kpi-party-name">Election Overview</div>
-            <div class="kpi-party-leader">Province of British Columbia</div>
+          <div class="kpi-party-info">
+            <span class="party-stripe-pill meta-bg"></span>
+            <span class="kpi-party-name">Election Overview</span>
           </div>
+          <span class="outcome-tag meta-live-tag">Live Feed</span>
         </div>
-        <div class="kpi-stats-list">
-          <div class="meta-row">
-            <span class="meta-name">Ballot Boxes Counted:</span>
-            <span class="meta-val highlight" id="kpi-turnout-pct">23.2% (1,689 / 7,268)</span>
+        <div class="meta-compact-grid">
+          <div class="meta-compact-item">
+            <span class="meta-lbl">Counted:</span>
+            <span class="meta-val highlight" id="kpi-turnout-pct">23.2% (1,689/7,268)</span>
           </div>
-          <div class="meta-row">
-            <span class="meta-name">Votes Counted:</span>
+          <div class="meta-compact-item">
+            <span class="meta-lbl">Total Votes:</span>
             <span class="meta-val" id="kpi-total-votes">634,900</span>
           </div>
-          <div class="meta-row">
-            <span class="meta-name">Battlegrounds (&lt; 3.5%):</span>
+          <div class="meta-compact-item">
+            <span class="meta-lbl">Close (&lt;3.5%):</span>
             <span class="meta-val highlight-amber" id="kpi-battlegrounds">17</span>
           </div>
-          <div class="meta-row">
-            <span class="meta-name">Seats Changing Hands:</span>
+          <div class="meta-compact-item">
+            <span class="meta-lbl">Flips:</span>
             <span class="meta-val highlight-blue" id="kpi-flips">45</span>
           </div>
         </div>
@@ -316,7 +314,10 @@
           <!-- Sliding Riding Detail Inspector Panel -->
           <aside id="riding-drawer" class="riding-drawer">
             <div class="drawer-header">
-              <button class="drawer-close-btn" id="drawer-close">&times;</button>
+              <button class="drawer-close-btn" id="drawer-close" onclick="window.closeDrawer()" aria-label="Close riding details" title="Close riding details">
+                <span>&#10005;</span>
+                <span>Close</span>
+              </button>
               <div class="drawer-title-group">
                 <span class="drawer-code" id="drawer-code">VAN</span>
                 <h2 id="drawer-title">Select a Riding</h2>
@@ -513,6 +514,6 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js?v=3.1"></script>
+  <script src="app.js?v=3.2"></script>
 </body>
 </html>
