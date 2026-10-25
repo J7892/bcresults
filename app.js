@@ -923,44 +923,172 @@
   }
 
   function renderAnalysisView() {
-    const container = document.getElementById('comparison-bars');
-    if (!container || !electionData?.parties) return;
+    if (!electionData?.parties) return;
 
-    const parties = ['BC Conservative', 'BC NDP', 'BC Green'];
+    const partiesObj = electionData.parties;
     const totalSeats = electionData.metadata?.total_seats || 93;
+    const meta = electionData.metadata || {};
 
-    container.innerHTML = parties.map(pKey => {
-      const p = electionData.parties[pKey];
-      if (!p) return '';
-      const color = PARTY_COLORS[pKey];
-      const seatPct = ((p.seats / totalSeats) * 100).toFixed(1);
-      const votePct = p.vote_share_pct.toFixed(1);
+    // Get sorted parties list by seats descending, then popular vote
+    const partiesList = Object.keys(partiesObj)
+      .map(key => ({ key, ...partiesObj[key] }))
+      .sort((a, b) => b.seats - a.seats || b.votes - a.votes);
 
-      return `
-        <div class="comp-party-item">
-          <div class="comp-party-header">
-            <span style="color:${color};font-weight:700;">${p.name} (${p.net_seat_change_str} vs 2024)</span>
-            <span style="font-family:var(--font-mono);">${p.seats} Seats (${seatPct}%)</span>
-          </div>
-          <div class="comp-bar-container">
-            <div class="comp-bar-row">
-              <span class="comp-bar-label">Seats Share</span>
-              <div class="comp-bar-track">
-                <div class="comp-bar-fill" style="width:${seatPct}%; background-color:${color};"></div>
-              </div>
-              <span class="comp-bar-val" style="color:${color};">${seatPct}%</span>
+    // 1. Comparison Bars
+    const barsContainer = document.getElementById('comparison-bars');
+    if (barsContainer) {
+      barsContainer.innerHTML = partiesList.map(p => {
+        const color = PARTY_COLORS[p.key] || '#8b949e';
+        const seatPct = ((p.seats / totalSeats) * 100).toFixed(1);
+        const votePct = (p.vote_share_pct || 0).toFixed(1);
+
+        return `
+          <div class="comp-party-item">
+            <div class="comp-party-header">
+              <span style="color:${color};font-weight:700;">${p.name || p.key} (${p.net_seat_change_str || '0'} vs 2024)</span>
+              <span style="font-family:var(--font-mono);">${p.seats} Seats (${seatPct}%)</span>
             </div>
-            <div class="comp-bar-row">
-              <span class="comp-bar-label">Popular Vote</span>
-              <div class="comp-bar-track">
-                <div class="comp-bar-fill" style="width:${votePct}%; background-color:${PARTY_LIGHT_COLORS[pKey] || color}; opacity:0.8;"></div>
+            <div class="comp-bar-container">
+              <div class="comp-bar-row">
+                <span class="comp-bar-label">Seats Share</span>
+                <div class="comp-bar-track">
+                  <div class="comp-bar-fill" style="width:${seatPct}%; background-color:${color};"></div>
+                </div>
+                <span class="comp-bar-val" style="color:${color};">${seatPct}%</span>
               </div>
-              <span class="comp-bar-val">${votePct}%</span>
+              <div class="comp-bar-row">
+                <span class="comp-bar-label">Popular Vote</span>
+                <div class="comp-bar-track">
+                  <div class="comp-bar-fill" style="width:${votePct}%; background-color:${PARTY_LIGHT_COLORS[p.key] || color}; opacity:0.85;"></div>
+                </div>
+                <span class="comp-bar-val">${votePct}%</span>
+              </div>
             </div>
           </div>
-        </div>
-      `;
-    }).join('');
+        `;
+      }).join('');
+    }
+
+    // 2. Gallagher Index (Disproportionality Measure)
+    let sumSquares = 0;
+    partiesList.forEach(p => {
+      const seatPct = (p.seats / totalSeats) * 100;
+      const votePct = p.vote_share_pct || 0;
+      const diff = votePct - seatPct;
+      sumSquares += diff * diff;
+    });
+    const gallagherIndex = Math.sqrt(0.5 * sumSquares).toFixed(1);
+    const gallagherEl = document.getElementById('gallagher-val');
+    if (gallagherEl) {
+      gallagherEl.textContent = `${gallagherIndex}%`;
+    }
+
+    // 3. Dynamic Live Electoral Insights
+    const insightsContainer = document.getElementById('analysis-insights-list');
+    if (insightsContainer) {
+      const topParty = partiesList[0] || {};
+      const secondParty = partiesList[1] || {};
+      const grnParty = partiesObj['BC Green'] || {};
+      const topSeatPct = ((topParty.seats / totalSeats) * 100).toFixed(1);
+      const topVotePct = (topParty.vote_share_pct || 0).toFixed(1);
+      const topSeatBonus = (topSeatPct - topVotePct).toFixed(1);
+      const flipsCount = electionData.summary?.total_flips ?? (electionData.ridings ? electionData.ridings.filter(r => r.is_flip).length : 0);
+      const battlegroundsCount = electionData.summary?.total_battlegrounds ?? (electionData.ridings ? electionData.ridings.filter(r => r.is_battleground).length : 0);
+      const progress = meta.overall_poll_progress ?? 0;
+      const reportedBoxes = (meta.total_boxes_reported || 0).toLocaleString();
+      const totalBoxes = (meta.total_boxes_count || 0).toLocaleString();
+      const totalVotesCast = (meta.total_votes_cast || 0).toLocaleString();
+
+      const insights = [];
+
+      // Insight 1: Majority / Assembly Status
+      if (topParty.seats >= 47) {
+        insights.push(`
+          <li>
+            <strong>${topParty.name || topParty.key} Majority Standing:</strong>
+            Currently leading or elected in <strong>${topParty.seats} of 93 seats</strong> (${topSeatPct}% of the assembly), crossing the 47-seat threshold needed for an absolute legislative majority (${topParty.net_seat_change_str} net seats vs. 2024).
+          </li>
+        `);
+      } else {
+        insights.push(`
+          <li>
+            <strong>Minority / Divided Assembly:</strong>
+            No single party currently commands the 47 seats required for an outright majority. <strong>${topParty.name || topParty.key}</strong> leads with <strong>${topParty.seats} seats</strong> (${topSeatPct}%), followed by <strong>${secondParty.name || secondParty.key}</strong> with <strong>${secondParty.seats} seats</strong> (${((secondParty.seats / totalSeats) * 100).toFixed(1)}%).
+          </li>
+        `);
+      }
+
+      // Insight 2: Seat Turnover & Flips
+      insights.push(`
+        <li>
+          <strong>Electoral Map Turnover:</strong>
+          <strong>${flipsCount} seats</strong> are currently flipping hands compared to the 2024 general election baseline (${topParty.key}: ${topParty.net_seat_change_str}, ${secondParty.key}: ${secondParty.net_seat_change_str}).
+        </li>
+      `);
+
+      // Insight 3: First-Past-The-Post Vote Efficiency & Seat Bonus
+      const bonusSign = topSeatBonus >= 0 ? '+' : '';
+      insights.push(`
+        <li>
+          <strong>First-Past-The-Post Seat Bonus:</strong>
+          <strong>${topParty.name || topParty.key}</strong> converted <strong>${topVotePct}% of the provincial popular vote</strong> into <strong>${topSeatPct}% of the seats</strong> (a <strong>${bonusSign}${topSeatBonus}% seat bonus</strong> typical of single-member plurality voting).
+        </li>
+      `);
+
+      // Insight 4: Third-Party & Independent Representation
+      if (grnParty && grnParty.votes) {
+        const grnVotesPerSeat = grnParty.seats > 0 ? Math.round(grnParty.votes / grnParty.seats).toLocaleString() : 'N/A';
+        insights.push(`
+          <li>
+            <strong>Third-Party Representation:</strong>
+            The BC Green Party garnered <strong>${(grnParty.vote_share_pct || 0).toFixed(1)}% of the popular vote</strong> (${(grnParty.votes || 0).toLocaleString()} votes) across British Columbia, yielding <strong>${grnParty.seats} seats</strong> (an average of <strong>~${grnVotesPerSeat} votes per seat won</strong>).
+          </li>
+        `);
+      }
+
+      // Insight 5: Count Progress & Late Battleground Volatility
+      insights.push(`
+        <li>
+          <strong>Reporting Progress & Volatility:</strong>
+          With <strong>${progress}% of ballot boxes reported</strong> (${reportedBoxes} of ${totalBoxes} boxes across 93 ridings, totalling ${totalVotesCast} votes cast), <strong>${battlegroundsCount} ridings</strong> remain razor-thin battlegrounds (margins &lt;3.5%), where late counts may still decide seat allocations.
+        </li>
+      `);
+
+      insightsContainer.innerHTML = insights.join('');
+    }
+
+    // 4. Seat Efficiency Table
+    const tableBody = document.getElementById('analysis-efficiency-tbody');
+    if (tableBody) {
+      tableBody.innerHTML = partiesList.map(p => {
+        const color = PARTY_COLORS[p.key] || '#8b949e';
+        const seatPct = (p.seats / totalSeats) * 100;
+        const votePct = p.vote_share_pct || 0;
+        const bias = seatPct - votePct;
+        const biasSign = bias >= 0 ? '+' : '';
+        const biasColor = bias > 1.0 ? '#4ade80' : (bias < -1.0 ? '#fb923c' : 'var(--text-muted)');
+        const votesPerSeat = p.seats > 0 ? Math.round(p.votes / p.seats).toLocaleString() : '—';
+        const shiftSign = (p.net_seat_change || 0) > 0 ? '+' : '';
+        const shiftColor = (p.net_seat_change || 0) > 0 ? '#60a5fa' : ((p.net_seat_change || 0) < 0 ? '#f87171' : 'var(--text-muted)');
+
+        return `
+          <tr>
+            <td>
+              <span class="party-badge-inline" style="background:${color}22; color:${color}; border:1px solid ${color}55;">
+                ${p.name || p.key}
+              </span>
+            </td>
+            <td style="font-family:var(--font-mono); font-weight:700;">${p.seats}</td>
+            <td style="font-family:var(--font-mono);">${seatPct.toFixed(1)}%</td>
+            <td style="font-family:var(--font-mono);">${(p.votes || 0).toLocaleString()}</td>
+            <td style="font-family:var(--font-mono);">${votePct.toFixed(1)}%</td>
+            <td style="font-family:var(--font-mono); font-weight:700; color:${biasColor};">${biasSign}${bias.toFixed(1)}%</td>
+            <td style="font-family:var(--font-mono); font-weight:700; color:${shiftColor};">${p.net_seat_change_str || `${shiftSign}${p.net_seat_change || 0}`}</td>
+            <td style="font-family:var(--font-mono);">${votesPerSeat}</td>
+          </tr>
+        `;
+      }).join('');
+    }
   }
 
   // =====================================================================

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3.3">
+  <link rel="stylesheet" href="styles.css?v=3.4">
 </head>
 <body class="dark-theme">
   <!-- Top Navigation & Live Header -->
@@ -439,7 +439,11 @@
         <div class="section-header">
           <div>
             <h2>Provincial Vote Share vs. Seats</h2>
-            <p class="subtitle">Disproportionality analysis and electoral seat efficiency.</p>
+            <p class="subtitle">Real-time disproportionality analysis, seat efficiency, and electoral insights.</p>
+          </div>
+          <div class="analysis-meta-badge" id="analysis-gallagher-badge">
+            <span class="meta-label">Gallagher Index (Disproportionality):</span>
+            <span class="meta-val highlight-amber" id="gallagher-val">--%</span>
           </div>
         </div>
 
@@ -452,21 +456,34 @@
           </div>
 
           <div class="analysis-card">
-            <h3>Key Electoral Insights</h3>
-            <ul class="insights-list">
-              <li>
-                <strong>Razor-Thin Majority:</strong> The BC NDP won exactly 47 seats, the minimum required for a majority in the expanded 93-seat assembly.
-              </li>
-              <li>
-                <strong>Conservative Surge:</strong> The Conservative Party surged from 0 elected seats in 2020 to 44 seats, capturing 43.28% of the popular vote.
-              </li>
-              <li>
-                <strong>Vote Efficiency:</strong> The BC NDP gained 47 seats (50.5% of legislature) on 44.86% of the popular vote, while the Conservatives secured 44 seats (47.3% of legislature) on 43.28% of the vote.
-              </li>
-              <li>
-                <strong>2023 Electoral Redistribution:</strong> 6 brand new electoral districts were contested for the first time following the 2023 boundary commission redistribution.
-              </li>
+            <h3>Key Electoral Insights (Live)</h3>
+            <ul class="insights-list" id="analysis-insights-list">
+              <!-- Dynamically populated from live scraping data -->
             </ul>
+          </div>
+        </div>
+
+        <!-- Seat Efficiency & Representation Breakdown Table -->
+        <div class="analysis-card" style="margin-top: 20px;">
+          <h3>Seat Efficiency & Electoral Bias Breakdown</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Party</th>
+                  <th>Seats Leading/Won</th>
+                  <th>Seat Share %</th>
+                  <th>Popular Vote</th>
+                  <th>Popular Vote %</th>
+                  <th>Seat Bias (Seat% − Vote%)</th>
+                  <th>Shift vs. 2024</th>
+                  <th>Avg Votes / Seat</th>
+                </tr>
+              </thead>
+              <tbody id="analysis-efficiency-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -516,6 +533,6 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js?v=3.3"></script>
+  <script src="app.js?v=3.4"></script>
 </body>
 </html>
