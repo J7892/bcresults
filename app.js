@@ -143,12 +143,34 @@
       maxZoom: 14
     }).setView(REGION_BOUNDS.bc.center, REGION_BOUNDS.bc.zoom);
 
-    // CartoDB Dark Matter tile layer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
+    // 1. Esri World Dark Gray Canvas (Default - No API key required)
+    const esriDark = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+      maxZoom: 16
+    });
+
+    // 2. OpenStreetMap Standard (Free, open - No API key required)
+    const osmStandard = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19
-    }).addTo(map);
+    });
+
+    // 3. Esri World Imagery (Satellite - No API key required)
+    const esriSatellite = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+      maxZoom: 18
+    });
+
+    // Add Esri Dark by default
+    esriDark.addTo(map);
+
+    // Optional layer control to switch between free basemaps
+    const baseMaps = {
+      "Dark Canvas (Esri)": esriDark,
+      "Street Map (OSM)": osmStandard,
+      "Satellite (Esri)": esriSatellite
+    };
+    L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 
     renderGeoJsonLayer();
     setupMapControls();

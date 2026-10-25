@@ -697,6 +697,21 @@ a:hover {
   background-color: #0d1420 !important;
 }
 
+.leaflet-control-layers {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-lg) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  padding: 6px 10px !important;
+}
+
+.leaflet-control-layers-toggle {
+  filter: invert(1) brightness(0.8);
+}
+
 .leaflet-popup-content-wrapper {
   background: var(--bg-card) !important;
   color: var(--text-main) !important;
