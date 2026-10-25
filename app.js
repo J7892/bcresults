@@ -252,6 +252,31 @@
       };
     }
 
+    // --- 2024 BASELINE RESULT MODE ---
+    if (mapViewMode === 'baseline') {
+      const party2024 = res.party_2024 || res.prev_party || 'BC NDP';
+      if (currentMapFilter !== 'all') {
+        if (['BC NDP', 'BC Conservative', 'BC Green'].includes(currentMapFilter) && party2024 !== currentMapFilter) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+        if (currentMapFilter === 'flips' && !res.is_flip) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+        if (currentMapFilter === 'battlegrounds' && !res.is_battleground) {
+          return { fillOpacity: 0.08, weight: 0.5, color: '#334155', fillColor: '#1e293b' };
+        }
+      }
+
+      const partyColor = PARTY_COLORS[party2024] || '#8b949e';
+      return {
+        fillColor: partyColor,
+        weight: isSelected ? 3 : 1.2,
+        opacity: 1,
+        color: isSelected ? '#ffffff' : '#0a0e17',
+        fillOpacity: 0.85
+      };
+    }
+
     // --- PARTY WINNER MODE ---
     if (currentMapFilter !== 'all') {
       if (currentMapFilter === 'battlegrounds' && !res.is_battleground) {
@@ -296,6 +321,32 @@
             <div><strong>Con:</strong> ${s.cur_con_pct}% <span style="color:${s.con_shift >= 0 ? '#60a5fa' : '#ef4444'};">(${s.con_shift >= 0 ? '+' : ''}${s.con_shift}%)</span> [2024: ${s.base_con_pct}%]</div>
             <div><strong>NDP:</strong> ${s.cur_ndp_pct}% <span style="color:${s.ndp_shift >= 0 ? '#ffaa5c' : '#ef4444'};">(${s.ndp_shift >= 0 ? '+' : ''}${s.ndp_shift}%)</span> [2024: ${s.base_ndp_pct}%]</div>
             ${s.base_grn_pct > 0 || s.cur_grn_pct > 0 ? `<div><strong>Grn:</strong> ${s.cur_grn_pct}% <span style="color:#86efac;">(${s.grn_shift >= 0 ? '+' : ''}${s.grn_shift}%)</span> [2024: ${s.base_grn_pct}%]</div>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // 2024 Baseline mode tooltip
+    if (mapViewMode === 'baseline') {
+      const party2024 = res.party_2024 || res.prev_party || 'BC NDP';
+      const s = res.swing || {};
+      const partyColor = PARTY_COLORS[party2024] || '#8b949e';
+      const flipStatus = res.is_flip
+        ? `<span style="color:#60a5fa;font-weight:700;">⚡ Currently Flipped to ${res.winner_party}</span>`
+        : `<span style="color:#86efac;font-weight:600;">✓ Held by ${res.winner_party}</span>`;
+
+      return `
+        <div class="map-tooltip-content">
+          <div class="tooltip-title">${res.name} (2024 Result)</div>
+          <div class="tooltip-winner">
+            <span class="legend-chip" style="background:${partyColor};"></span>
+            <span>2024 Winner: ${party2024}</span>
+          </div>
+          <div class="tooltip-margin">
+            ${s.base_con_pct !== undefined ? `2024 Vote: Con ${s.base_con_pct}% • NDP ${s.base_ndp_pct}%${s.base_grn_pct > 0 ? ` • Grn ${s.base_grn_pct}%` : ''}` : `2024 Winner: ${party2024}`}
+          </div>
+          <div style="font-size:0.75rem; margin-top:4px; padding-top:4px; border-top:1px solid rgba(255,255,255,0.08);">
+            ${flipStatus}
           </div>
         </div>
       `;
@@ -353,6 +404,24 @@
         </div>
         <div class="legend-divider"></div>
         <div class="legend-note">Click district for before/after comparison.</div>
+      `;
+    } else if (mapViewMode === 'baseline') {
+      legendEl.innerHTML = `
+        <h4>2024 Election Baseline</h4>
+        <div class="legend-row">
+          <span class="legend-chip ndp-bg"></span>
+          <span>BC NDP (47 seats • Majority)</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-chip con-bg"></span>
+          <span>BC Conservative (44 seats • Opp.)</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-chip grn-bg"></span>
+          <span>BC Green Party (2 seats)</span>
+        </div>
+        <div class="legend-divider"></div>
+        <div class="legend-note">Official 2024 results (identical 93 ridings). Click district to inspect.</div>
       `;
     } else {
       const p = electionData?.parties || {};
@@ -433,7 +502,7 @@
   window.setMapMode = function (mode) {
     mapViewMode = mode;
     document.querySelectorAll('.mode-pill').forEach(b => {
-      const bMode = b.dataset.mode || (b.id === 'btn-mode-party' ? 'party' : 'swing');
+      const bMode = b.dataset.mode || (b.id === 'btn-mode-party' ? 'party' : (b.id === 'btn-mode-baseline' ? 'baseline' : 'swing'));
       b.classList.toggle('active', bMode === mode);
     });
 
@@ -450,6 +519,7 @@
 
     if (geojsonLayer) {
       geojsonLayer.setStyle(getDistrictStyle);
+      updateTooltips();
     }
     updateMapLegend();
   };
@@ -484,7 +554,7 @@
     // Also attach standard event listeners as a secondary trigger
     document.querySelectorAll('.mode-pill').forEach(btn => {
       btn.addEventListener('click', () => {
-        window.setMapMode(btn.dataset.mode || (btn.id === 'btn-mode-party' ? 'party' : 'swing'));
+        window.setMapMode(btn.dataset.mode || (btn.id === 'btn-mode-party' ? 'party' : (btn.id === 'btn-mode-baseline' ? 'baseline' : 'swing')));
       });
     });
   }
