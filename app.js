@@ -415,20 +415,28 @@
 
       <div class="drawer-meta-grid">
         <div class="drawer-meta-item">
-          <div class="drawer-meta-label">Previous Representation (2020)</div>
+          <div class="drawer-meta-label">Ballot Boxes Counted</div>
+          <div class="drawer-meta-val">${res.boxes_reported || 0} / ${res.boxes_total || 0} (${res.poll_progress_pct || 0}%)</div>
+        </div>
+        <div class="drawer-meta-item">
+          <div class="drawer-meta-label">Reporting Status</div>
+          <div class="drawer-meta-val" style="font-size:0.85rem;">${res.status}</div>
+        </div>
+        <div class="drawer-meta-item">
+          <div class="drawer-meta-label">Previous (2020)</div>
           <div class="drawer-meta-val">${res.prev_party}</div>
         </div>
         <div class="drawer-meta-item">
-          <div class="drawer-meta-label">Flip Status</div>
+          <div class="drawer-meta-label">Seat Shift</div>
           <div class="drawer-meta-val" style="font-size:0.8rem;">${res.flip_description}</div>
-        </div>
-        <div class="drawer-meta-item">
-          <div class="drawer-meta-label">Voter Turnout</div>
-          <div class="drawer-meta-val">${res.turnout_pct}%</div>
         </div>
         <div class="drawer-meta-item">
           <div class="drawer-meta-label">Total Valid Votes</div>
           <div class="drawer-meta-val">${res.total_votes.toLocaleString()}</div>
+        </div>
+        <div class="drawer-meta-item">
+          <div class="drawer-meta-label">Rejected Ballots</div>
+          <div class="drawer-meta-val">${(res.rejected_ballots || 0).toLocaleString()}</div>
         </div>
       </div>
     `;
@@ -470,7 +478,17 @@
 
   function renderHeaderMetrics() {
     const p = electionData.parties;
+    const meta = electionData.metadata;
     if (!p) return;
+
+    const statusLabel = document.getElementById('status-label');
+    if (statusLabel && meta) {
+      if (meta.overall_poll_progress !== undefined) {
+        statusLabel.textContent = `LIVE COUNT: ${meta.overall_poll_progress}% REPORTED`;
+      } else {
+        statusLabel.textContent = meta.status || 'LIVE RESULTS';
+      }
+    }
 
     const ndpSeats = p['BC NDP']?.seats || 0;
     const conSeats = p['BC Conservative']?.seats || 0;
@@ -516,7 +534,11 @@
     setText('kpi-grn-pct', `${p['BC Green']?.vote_share_pct || 0}%`);
     setText('kpi-grn-votes', (p['BC Green']?.votes || 0).toLocaleString());
 
-    setText('kpi-turnout-pct', `${meta?.provincial_turnout_pct || 58.45}%`);
+    if (meta?.total_boxes_count) {
+      setText('kpi-turnout-pct', `${meta.overall_poll_progress}% (${(meta.total_boxes_reported || 0).toLocaleString()}/${meta.total_boxes_count.toLocaleString()})`);
+    } else {
+      setText('kpi-turnout-pct', `${meta?.provincial_turnout_pct || 58.45}%`);
+    }
     setText('kpi-total-votes', (meta?.total_votes_cast || 0).toLocaleString());
     setText('kpi-battlegrounds', electionData.summary?.total_battlegrounds || 0);
     setText('kpi-flips', electionData.summary?.total_flips || 0);
