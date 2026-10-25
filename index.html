@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3.1">
 </head>
 <body class="dark-theme">
   <!-- Top Navigation & Live Header -->
@@ -255,36 +255,36 @@
         <div class="map-toolbar">
           <div class="toolbar-group map-mode-group">
             <span class="toolbar-label">Map Mode:</span>
-            <button class="mode-pill active" data-mode="party">🗳️ Leading Party</button>
-            <button class="mode-pill" data-mode="swing">📈 Swing vs. 2024</button>
+            <button class="mode-pill active" id="btn-mode-party" data-mode="party" onclick="window.setMapMode('party')">🗳️ Leading Party</button>
+            <button class="mode-pill" id="btn-mode-swing" data-mode="swing" onclick="window.setMapMode('swing')">📈 Swing vs. 2024</button>
           </div>
 
           <div class="toolbar-group">
             <span class="toolbar-label">Quick Views:</span>
-            <button class="zoom-pill active" data-zoom="bc">All British Columbia</button>
-            <button class="zoom-pill" data-zoom="vancouver">Metro Vancouver</button>
-            <button class="zoom-pill" data-zoom="victoria">Greater Victoria</button>
-            <button class="zoom-pill" data-zoom="interior">Interior / Okanagan</button>
-            <button class="zoom-pill" data-zoom="north">Northern BC</button>
+            <button class="zoom-pill active" onclick="window.zoomToRegion('bc', this)">All BC</button>
+            <button class="zoom-pill" onclick="window.zoomToRegion('vancouver', this)">Metro Vancouver</button>
+            <button class="zoom-pill" onclick="window.zoomToRegion('victoria', this)">Greater Victoria</button>
+            <button class="zoom-pill" onclick="window.zoomToRegion('interior', this)">Interior / Okanagan</button>
+            <button class="zoom-pill" onclick="window.zoomToRegion('north', this)">Northern BC</button>
           </div>
 
           <div class="toolbar-group" id="party-filters-group">
             <span class="toolbar-label">Filter:</span>
-            <button class="filter-pill active" data-filter="all">All (93)</button>
-            <button class="filter-pill filter-ndp" data-filter="BC NDP">NDP</button>
-            <button class="filter-pill filter-con" data-filter="BC Conservative">Con</button>
-            <button class="filter-pill filter-grn" data-filter="BC Green">Green</button>
-            <button class="filter-pill filter-battleground" data-filter="battlegrounds">Close Races (&lt;3.5%)</button>
-            <button class="filter-pill filter-flips" data-filter="flips">Flips</button>
+            <button class="filter-pill active" onclick="window.setPartyFilter('all', this)">All (93)</button>
+            <button class="filter-pill filter-ndp" onclick="window.setPartyFilter('BC NDP', this)">NDP</button>
+            <button class="filter-pill filter-con" onclick="window.setPartyFilter('BC Conservative', this)">Con</button>
+            <button class="filter-pill filter-grn" onclick="window.setPartyFilter('BC Green', this)">Green</button>
+            <button class="filter-pill filter-battleground" onclick="window.setPartyFilter('battlegrounds', this)">Close (&lt;3.5%)</button>
+            <button class="filter-pill filter-flips" onclick="window.setPartyFilter('flips', this)">Flips</button>
           </div>
 
           <div class="toolbar-group hidden" id="swing-filters-group">
             <span class="toolbar-label">Swing Filter:</span>
-            <button class="filter-pill active" data-swing-filter="all">All</button>
-            <button class="filter-pill" data-swing-filter="con-strong">&gt;10% Con Swing</button>
-            <button class="filter-pill" data-swing-filter="con-mod">5-10% Con Swing</button>
-            <button class="filter-pill" data-swing-filter="neutral">Neutral (±2%)</button>
-            <button class="filter-pill" data-swing-filter="ndp-swing">NDP Swing</button>
+            <button class="filter-pill active" onclick="window.setSwingFilter('all', this)">All</button>
+            <button class="filter-pill" onclick="window.setSwingFilter('con-strong', this)">&gt;10% Con Swing</button>
+            <button class="filter-pill" onclick="window.setSwingFilter('con-mod', this)">5-10% Con Swing</button>
+            <button class="filter-pill" onclick="window.setSwingFilter('neutral', this)">Neutral (±1.5%)</button>
+            <button class="filter-pill" onclick="window.setSwingFilter('ndp-swing', this)">NDP Swing</button>
           </div>
         </div>
 
@@ -513,6 +513,6 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=3.1"></script>
 </body>
 </html>

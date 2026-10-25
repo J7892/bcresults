@@ -383,13 +383,14 @@
 
         const res = getDistrictResult(districtName);
 
-        if (res) {
-          layer.bindTooltip(getTooltipHtml(res), {
-            sticky: true,
-            className: 'custom-map-tooltip',
-            direction: 'auto'
-          });
-        }
+        layer.bindTooltip(() => {
+          const r = getDistrictResult(districtName);
+          return getTooltipHtml(r);
+        }, {
+          sticky: true,
+          className: 'custom-map-tooltip',
+          direction: 'auto'
+        });
 
         layer.on({
           mouseover: (e) => {
@@ -407,7 +408,7 @@
           },
           mouseout: (e) => {
             if (!currentActiveDistrict || currentActiveDistrict.name !== districtName) {
-              geojsonLayer.resetStyle(e.target);
+              e.target.setStyle(getDistrictStyle(e.target.feature));
             }
           },
           click: () => {
@@ -418,66 +419,62 @@
     }).addTo(map);
   }
 
+  // Global window functions for map controls (resilient against DOM timing)
+  window.setMapMode = function (mode) {
+    mapViewMode = mode;
+    document.querySelectorAll('.mode-pill').forEach(b => {
+      const bMode = b.dataset.mode || (b.id === 'btn-mode-party' ? 'party' : 'swing');
+      b.classList.toggle('active', bMode === mode);
+    });
+
+    const partyFilters = document.getElementById('party-filters-group');
+    const swingFilters = document.getElementById('swing-filters-group');
+
+    if (mapViewMode === 'swing') {
+      if (partyFilters) partyFilters.classList.add('hidden');
+      if (swingFilters) swingFilters.classList.remove('hidden');
+    } else {
+      if (partyFilters) partyFilters.classList.remove('hidden');
+      if (swingFilters) swingFilters.classList.add('hidden');
+    }
+
+    if (geojsonLayer) {
+      geojsonLayer.setStyle(getDistrictStyle);
+    }
+    updateMapLegend();
+  };
+
+  window.setPartyFilter = function (filter, btnEl) {
+    currentMapFilter = filter;
+    document.querySelectorAll('#party-filters-group .filter-pill').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    if (geojsonLayer) {
+      geojsonLayer.setStyle(getDistrictStyle);
+    }
+  };
+
+  window.setSwingFilter = function (filter, btnEl) {
+    currentSwingFilter = filter;
+    document.querySelectorAll('#swing-filters-group .filter-pill').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    if (geojsonLayer) {
+      geojsonLayer.setStyle(getDistrictStyle);
+    }
+  };
+
+  window.zoomToRegion = function (region, btnEl) {
+    document.querySelectorAll('.zoom-pill').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    if (REGION_BOUNDS[region] && map) {
+      map.flyTo(REGION_BOUNDS[region].center, REGION_BOUNDS[region].zoom, { duration: 1.2 });
+    }
+  };
+
   function setupMapControls() {
-    // Mode toggle (Party vs Swing)
+    // Also attach standard event listeners as a secondary trigger
     document.querySelectorAll('.mode-pill').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.mode-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        mapViewMode = btn.dataset.mode;
-
-        const partyFilters = document.getElementById('party-filters-group');
-        const swingFilters = document.getElementById('swing-filters-group');
-
-        if (mapViewMode === 'swing') {
-          if (partyFilters) partyFilters.classList.add('hidden');
-          if (swingFilters) swingFilters.classList.remove('hidden');
-        } else {
-          if (partyFilters) partyFilters.classList.remove('hidden');
-          if (swingFilters) swingFilters.classList.add('hidden');
-        }
-
-        if (geojsonLayer) {
-          geojsonLayer.setStyle(getDistrictStyle);
-          updateTooltips();
-        }
-        updateMapLegend();
-      });
-    });
-
-    // Zoom region pills
-    document.querySelectorAll('.zoom-pill').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.zoom-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const region = btn.dataset.zoom;
-        if (REGION_BOUNDS[region] && map) {
-          map.flyTo(REGION_BOUNDS[region].center, REGION_BOUNDS[region].zoom, { duration: 1.2 });
-        }
-      });
-    });
-
-    // Party Filter pills
-    document.querySelectorAll('.filter-pill[data-filter]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentMapFilter = btn.dataset.filter;
-        if (geojsonLayer) {
-          geojsonLayer.setStyle(getDistrictStyle);
-        }
-      });
-    });
-
-    // Swing Filter pills
-    document.querySelectorAll('.filter-pill[data-swing-filter]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.filter-pill[data-swing-filter]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentSwingFilter = btn.dataset.swingFilter;
-        if (geojsonLayer) {
-          geojsonLayer.setStyle(getDistrictStyle);
-        }
+      btn.addEventListener('click', () => {
+        window.setMapMode(btn.dataset.mode || (btn.id === 'btn-mode-party' ? 'party' : 'swing'));
       });
     });
   }
