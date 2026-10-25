@@ -1,0 +1,839 @@
+{
+  "abbotsford south": {
+    "name": "Abbotsford South",
+    "code": "ABS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13053,
+    "share_2024": "61.61%",
+    "margin_votes_2024": 5599,
+    "margin_pct_2024": "26.43%"
+  },
+  "abbotsford west": {
+    "name": "Abbotsford West",
+    "code": "ABW",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11483,
+    "share_2024": "58.35%",
+    "margin_votes_2024": 4228,
+    "margin_pct_2024": "21.49%"
+  },
+  "abbotsford-mission": {
+    "name": "Abbotsford-Mission",
+    "code": "ABM",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13523,
+    "share_2024": "55.38%",
+    "margin_votes_2024": 2629,
+    "margin_pct_2024": "10.77%"
+  },
+  "boundary-similkameen": {
+    "name": "Boundary-Similkameen",
+    "code": "BDS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11935,
+    "share_2024": "48.39%",
+    "margin_votes_2024": 1438,
+    "margin_pct_2024": "5.83%"
+  },
+  "bulkley valley-stikine": {
+    "name": "Bulkley Valley-Stikine",
+    "code": "BLS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 4992,
+    "share_2024": "52.31%",
+    "margin_votes_2024": 1283,
+    "margin_pct_2024": "13.44%"
+  },
+  "burnaby centre": {
+    "name": "Burnaby Centre",
+    "code": "BNC",
+    "party_2024": "BC NDP",
+    "votes_2024": 9780,
+    "share_2024": "57.28%",
+    "margin_votes_2024": 2486,
+    "margin_pct_2024": "14.56%"
+  },
+  "burnaby east": {
+    "name": "Burnaby East",
+    "code": "BNE",
+    "party_2024": "BC NDP",
+    "votes_2024": 10490,
+    "share_2024": "51.85%",
+    "margin_votes_2024": 2292,
+    "margin_pct_2024": "11.33%"
+  },
+  "burnaby north": {
+    "name": "Burnaby North",
+    "code": "BNO",
+    "party_2024": "BC NDP",
+    "votes_2024": 10724,
+    "share_2024": "53.26%",
+    "margin_votes_2024": 2066,
+    "margin_pct_2024": "10.26%"
+  },
+  "burnaby south-metrotown": {
+    "name": "Burnaby South-Metrotown",
+    "code": "BNS",
+    "party_2024": "BC NDP",
+    "votes_2024": 7560,
+    "share_2024": "49.33%",
+    "margin_votes_2024": 1182,
+    "margin_pct_2024": "7.74%"
+  },
+  "burnaby-new westminster": {
+    "name": "Burnaby-New Westminster",
+    "code": "BNN",
+    "party_2024": "BC NDP",
+    "votes_2024": 10647,
+    "share_2024": "59.99%",
+    "margin_votes_2024": 4486,
+    "margin_pct_2024": "25.28%"
+  },
+  "cariboo-chilcotin": {
+    "name": "Cariboo-Chilcotin",
+    "code": "CBC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13714,
+    "share_2024": "69.59%",
+    "margin_votes_2024": 7722,
+    "margin_pct_2024": "39.19%"
+  },
+  "chilliwack north": {
+    "name": "Chilliwack North",
+    "code": "CHN",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11776,
+    "share_2024": "54.58%",
+    "margin_votes_2024": 3651,
+    "margin_pct_2024": "16.92%"
+  },
+  "chilliwack-cultus lake": {
+    "name": "Chilliwack-Cultus Lake",
+    "code": "CHC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13656,
+    "share_2024": "54.58%",
+    "margin_votes_2024": 2290,
+    "margin_pct_2024": "9.15%"
+  },
+  "columbia river-revelstoke": {
+    "name": "Columbia River-Revelstoke",
+    "code": "CLR",
+    "party_2024": "BC Conservative",
+    "votes_2024": 8768,
+    "share_2024": "47.92%",
+    "margin_votes_2024": 670,
+    "margin_pct_2024": "3.66%"
+  },
+  "coquitlam-burke mountain": {
+    "name": "Coquitlam-Burke Mountain",
+    "code": "CQB",
+    "party_2024": "BC NDP",
+    "votes_2024": 11020,
+    "share_2024": "50.85%",
+    "margin_votes_2024": 368,
+    "margin_pct_2024": "1.70%"
+  },
+  "coquitlam-maillardville": {
+    "name": "Coquitlam-Maillardville",
+    "code": "CQM",
+    "party_2024": "BC NDP",
+    "votes_2024": 11972,
+    "share_2024": "51.80%",
+    "margin_votes_2024": 2826,
+    "margin_pct_2024": "12.23%"
+  },
+  "courtenay-comox": {
+    "name": "Courtenay-Comox",
+    "code": "CRC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13481,
+    "share_2024": "38.83%",
+    "margin_votes_2024": 93,
+    "margin_pct_2024": "0.27%"
+  },
+  "cowichan valley": {
+    "name": "Cowichan Valley",
+    "code": "CWV",
+    "party_2024": "BC NDP",
+    "votes_2024": 11795,
+    "share_2024": "40.51%",
+    "margin_votes_2024": 849,
+    "margin_pct_2024": "2.92%"
+  },
+  "delta north": {
+    "name": "Delta North",
+    "code": "DLN",
+    "party_2024": "BC NDP",
+    "votes_2024": 10988,
+    "share_2024": "52.73%",
+    "margin_votes_2024": 2607,
+    "margin_pct_2024": "12.51%"
+  },
+  "delta south": {
+    "name": "Delta South",
+    "code": "DLS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14491,
+    "share_2024": "55.07%",
+    "margin_votes_2024": 2669,
+    "margin_pct_2024": "10.14%"
+  },
+  "esquimalt-colwood": {
+    "name": "Esquimalt-Colwood",
+    "code": "ESC",
+    "party_2024": "BC NDP",
+    "votes_2024": 15238,
+    "share_2024": "51.47%",
+    "margin_votes_2024": 6586,
+    "margin_pct_2024": "22.25%"
+  },
+  "fraser-nicola": {
+    "name": "Fraser-Nicola",
+    "code": "FRN",
+    "party_2024": "BC Conservative",
+    "votes_2024": 10326,
+    "share_2024": "54.34%",
+    "margin_votes_2024": 3409,
+    "margin_pct_2024": "17.94%"
+  },
+  "juan de fuca-malahat": {
+    "name": "Juan de Fuca-Malahat",
+    "code": "JFM",
+    "party_2024": "BC NDP",
+    "votes_2024": 9308,
+    "share_2024": "38.79%",
+    "margin_votes_2024": 141,
+    "margin_pct_2024": "0.59%"
+  },
+  "kamloops centre": {
+    "name": "Kamloops Centre",
+    "code": "KAC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 12372,
+    "share_2024": "48.83%",
+    "margin_votes_2024": 2003,
+    "margin_pct_2024": "7.91%"
+  },
+  "kamloops-north thompson": {
+    "name": "Kamloops-North Thompson",
+    "code": "KAN",
+    "party_2024": "BC Conservative",
+    "votes_2024": 17930,
+    "share_2024": "59.74%",
+    "margin_votes_2024": 8056,
+    "margin_pct_2024": "26.84%"
+  },
+  "kelowna centre": {
+    "name": "Kelowna Centre",
+    "code": "KEC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11033,
+    "share_2024": "42.85%",
+    "margin_votes_2024": 40,
+    "margin_pct_2024": "0.16%"
+  },
+  "kelowna-lake country-coldstream": {
+    "name": "Kelowna-Lake Country-Coldstream",
+    "code": "KLC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14303,
+    "share_2024": "53.92%",
+    "margin_votes_2024": 4953,
+    "margin_pct_2024": "18.67%"
+  },
+  "kelowna-mission": {
+    "name": "Kelowna-Mission",
+    "code": "KLM",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14071,
+    "share_2024": "51.49%",
+    "margin_votes_2024": 5158,
+    "margin_pct_2024": "18.87%"
+  },
+  "kootenay central": {
+    "name": "Kootenay Central",
+    "code": "KOC",
+    "party_2024": "BC NDP",
+    "votes_2024": 8716,
+    "share_2024": "39.63%",
+    "margin_votes_2024": 1749,
+    "margin_pct_2024": "7.95%"
+  },
+  "kootenay-monashee": {
+    "name": "Kootenay-Monashee",
+    "code": "KOM",
+    "party_2024": "BC NDP",
+    "votes_2024": 10202,
+    "share_2024": "52.04%",
+    "margin_votes_2024": 2586,
+    "margin_pct_2024": "13.19%"
+  },
+  "kootenay-rockies": {
+    "name": "Kootenay-Rockies",
+    "code": "KOR",
+    "party_2024": "BC Conservative",
+    "votes_2024": 8217,
+    "share_2024": "42.71%",
+    "margin_votes_2024": 2373,
+    "margin_pct_2024": "12.34%"
+  },
+  "ladysmith-oceanside": {
+    "name": "Ladysmith-Oceanside",
+    "code": "LAO",
+    "party_2024": "BC NDP",
+    "votes_2024": 14144,
+    "share_2024": "41.49%",
+    "margin_votes_2024": 2047,
+    "margin_pct_2024": "6.00%"
+  },
+  "langford-highlands": {
+    "name": "Langford-Highlands",
+    "code": "LFH",
+    "party_2024": "BC NDP",
+    "votes_2024": 11444,
+    "share_2024": "51.87%",
+    "margin_votes_2024": 3193,
+    "margin_pct_2024": "14.47%"
+  },
+  "langley-abbotsford": {
+    "name": "Langley-Abbotsford",
+    "code": "LLA",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14341,
+    "share_2024": "55.65%",
+    "margin_votes_2024": 5650,
+    "margin_pct_2024": "21.92%"
+  },
+  "langley-walnut grove": {
+    "name": "Langley-Walnut Grove",
+    "code": "LWG",
+    "party_2024": "BC Conservative",
+    "votes_2024": 12121,
+    "share_2024": "49.56%",
+    "margin_votes_2024": 1172,
+    "margin_pct_2024": "4.79%"
+  },
+  "langley-willowbrook": {
+    "name": "Langley-Willowbrook",
+    "code": "LWI",
+    "party_2024": "BC Conservative",
+    "votes_2024": 10979,
+    "share_2024": "48.24%",
+    "margin_votes_2024": 867,
+    "margin_pct_2024": "3.81%"
+  },
+  "maple ridge east": {
+    "name": "Maple Ridge East",
+    "code": "MAE",
+    "party_2024": "BC Conservative",
+    "votes_2024": 12058,
+    "share_2024": "47.02%",
+    "margin_votes_2024": 97,
+    "margin_pct_2024": "0.38%"
+  },
+  "maple ridge-pitt meadows": {
+    "name": "Maple Ridge-Pitt Meadows",
+    "code": "MAP",
+    "party_2024": "BC NDP",
+    "votes_2024": 14480,
+    "share_2024": "54.89%",
+    "margin_votes_2024": 2579,
+    "margin_pct_2024": "9.78%"
+  },
+  "mid island-pacific rim": {
+    "name": "Mid Island-Pacific Rim",
+    "code": "MPR",
+    "party_2024": "BC NDP",
+    "votes_2024": 14042,
+    "share_2024": "48.74%",
+    "margin_votes_2024": 2676,
+    "margin_pct_2024": "9.29%"
+  },
+  "nanaimo-gabriola island": {
+    "name": "Nanaimo-Gabriola Island",
+    "code": "NAI",
+    "party_2024": "BC NDP",
+    "votes_2024": 14663,
+    "share_2024": "52.75%",
+    "margin_votes_2024": 5030,
+    "margin_pct_2024": "18.09%"
+  },
+  "nanaimo-lantzville": {
+    "name": "Nanaimo-Lantzville",
+    "code": "NAL",
+    "party_2024": "BC NDP",
+    "votes_2024": 15307,
+    "share_2024": "51.75%",
+    "margin_votes_2024": 3620,
+    "margin_pct_2024": "12.24%"
+  },
+  "nechako lakes": {
+    "name": "Nechako Lakes",
+    "code": "NEC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 7851,
+    "share_2024": "67.45%",
+    "margin_votes_2024": 4684,
+    "margin_pct_2024": "40.24%"
+  },
+  "new westminster-coquitlam": {
+    "name": "New Westminster-Coquitlam",
+    "code": "NMC",
+    "party_2024": "BC NDP",
+    "votes_2024": 12757,
+    "share_2024": "59.13%",
+    "margin_votes_2024": 6319,
+    "margin_pct_2024": "29.29%"
+  },
+  "north coast-haida gwaii": {
+    "name": "North Coast-Haida Gwaii",
+    "code": "NOH",
+    "party_2024": "BC NDP",
+    "votes_2024": 4863,
+    "share_2024": "64.92%",
+    "margin_votes_2024": 2235,
+    "margin_pct_2024": "29.84%"
+  },
+  "north island": {
+    "name": "North Island",
+    "code": "NOI",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14100,
+    "share_2024": "47.07%",
+    "margin_votes_2024": 639,
+    "margin_pct_2024": "2.14%"
+  },
+  "north vancouver-lonsdale": {
+    "name": "North Vancouver-Lonsdale",
+    "code": "NVL",
+    "party_2024": "BC NDP",
+    "votes_2024": 16759,
+    "share_2024": "64.88%",
+    "margin_votes_2024": 7686,
+    "margin_pct_2024": "29.75%"
+  },
+  "north vancouver-seymour": {
+    "name": "North Vancouver-Seymour",
+    "code": "NVS",
+    "party_2024": "BC NDP",
+    "votes_2024": 16210,
+    "share_2024": "52.77%",
+    "margin_votes_2024": 5215,
+    "margin_pct_2024": "16.98%"
+  },
+  "oak bay-gordon head": {
+    "name": "Oak Bay-Gordon Head",
+    "code": "OBG",
+    "party_2024": "BC NDP",
+    "votes_2024": 14519,
+    "share_2024": "49.10%",
+    "margin_votes_2024": 5977,
+    "margin_pct_2024": "20.21%"
+  },
+  "peace river north": {
+    "name": "Peace River North",
+    "code": "PCN",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11213,
+    "share_2024": "74.36%",
+    "margin_votes_2024": 8175,
+    "margin_pct_2024": "54.21%"
+  },
+  "peace river south": {
+    "name": "Peace River South",
+    "code": "PCS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 7182,
+    "share_2024": "69.84%",
+    "margin_votes_2024": 4657,
+    "margin_pct_2024": "45.29%"
+  },
+  "penticton-summerland": {
+    "name": "Penticton-Summerland",
+    "code": "PES",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11615,
+    "share_2024": "41.37%",
+    "margin_votes_2024": 317,
+    "margin_pct_2024": "1.13%"
+  },
+  "port coquitlam": {
+    "name": "Port Coquitlam",
+    "code": "POC",
+    "party_2024": "BC NDP",
+    "votes_2024": 13843,
+    "share_2024": "53.87%",
+    "margin_votes_2024": 3876,
+    "margin_pct_2024": "15.08%"
+  },
+  "port moody-burquitlam": {
+    "name": "Port Moody-Burquitlam",
+    "code": "POM",
+    "party_2024": "BC NDP",
+    "votes_2024": 13488,
+    "share_2024": "52.06%",
+    "margin_votes_2024": 2995,
+    "margin_pct_2024": "11.56%"
+  },
+  "powell river-sunshine coast": {
+    "name": "Powell River-Sunshine Coast",
+    "code": "POR",
+    "party_2024": "BC NDP",
+    "votes_2024": 14474,
+    "share_2024": "49.62%",
+    "margin_votes_2024": 4065,
+    "margin_pct_2024": "13.94%"
+  },
+  "prince george-mackenzie": {
+    "name": "Prince George-Mackenzie",
+    "code": "PRM",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11307,
+    "share_2024": "60.92%",
+    "margin_votes_2024": 6065,
+    "margin_pct_2024": "32.68%"
+  },
+  "prince george-north cariboo": {
+    "name": "Prince George-North Cariboo",
+    "code": "PRO",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11430,
+    "share_2024": "56.82%",
+    "margin_votes_2024": 7036,
+    "margin_pct_2024": "34.98%"
+  },
+  "prince george-valemount": {
+    "name": "Prince George-Valemount",
+    "code": "PRV",
+    "party_2024": "BC Conservative",
+    "votes_2024": 9018,
+    "share_2024": "55.19%",
+    "margin_votes_2024": 3309,
+    "margin_pct_2024": "20.25%"
+  },
+  "richmond centre": {
+    "name": "Richmond Centre",
+    "code": "RCC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 8426,
+    "share_2024": "51.99%",
+    "margin_votes_2024": 2465,
+    "margin_pct_2024": "15.21%"
+  },
+  "richmond-bridgeport": {
+    "name": "Richmond-Bridgeport",
+    "code": "RCB",
+    "party_2024": "BC Conservative",
+    "votes_2024": 9908,
+    "share_2024": "58.19%",
+    "margin_votes_2024": 3987,
+    "margin_pct_2024": "23.42%"
+  },
+  "richmond-queensborough": {
+    "name": "Richmond-Queensborough",
+    "code": "RCQ",
+    "party_2024": "BC Conservative",
+    "votes_2024": 10052,
+    "share_2024": "50.91%",
+    "margin_votes_2024": 1338,
+    "margin_pct_2024": "6.78%"
+  },
+  "richmond-steveston": {
+    "name": "Richmond-Steveston",
+    "code": "RCS",
+    "party_2024": "BC NDP",
+    "votes_2024": 10332,
+    "share_2024": "44.27%",
+    "margin_votes_2024": 484,
+    "margin_pct_2024": "2.07%"
+  },
+  "saanich north and the islands": {
+    "name": "Saanich North and the Islands",
+    "code": "SAN",
+    "party_2024": "BC Green",
+    "votes_2024": 12308,
+    "share_2024": "36.15%",
+    "margin_votes_2024": 1349,
+    "margin_pct_2024": "3.96%"
+  },
+  "saanich south": {
+    "name": "Saanich South",
+    "code": "SAS",
+    "party_2024": "BC NDP",
+    "votes_2024": 15338,
+    "share_2024": "49.76%",
+    "margin_votes_2024": 5335,
+    "margin_pct_2024": "17.31%"
+  },
+  "salmon arm-shuswap": {
+    "name": "Salmon Arm-Shuswap",
+    "code": "SHU",
+    "party_2024": "BC Conservative",
+    "votes_2024": 16566,
+    "share_2024": "52.11%",
+    "margin_votes_2024": 6888,
+    "margin_pct_2024": "21.67%"
+  },
+  "skeena": {
+    "name": "Skeena",
+    "code": "SKE",
+    "party_2024": "BC Conservative",
+    "votes_2024": 6243,
+    "share_2024": "51.20%",
+    "margin_votes_2024": 824,
+    "margin_pct_2024": "6.76%"
+  },
+  "surrey city centre": {
+    "name": "Surrey City Centre",
+    "code": "SRC",
+    "party_2024": "BC NDP",
+    "votes_2024": 6727,
+    "share_2024": "46.71%",
+    "margin_votes_2024": 236,
+    "margin_pct_2024": "1.64%"
+  },
+  "surrey north": {
+    "name": "Surrey North",
+    "code": "SUN",
+    "party_2024": "BC Conservative",
+    "votes_2024": 7954,
+    "share_2024": "50.67%",
+    "margin_votes_2024": 1160,
+    "margin_pct_2024": "7.39%"
+  },
+  "surrey south": {
+    "name": "Surrey South",
+    "code": "SUS",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13056,
+    "share_2024": "58.83%",
+    "margin_votes_2024": 3920,
+    "margin_pct_2024": "17.66%"
+  },
+  "surrey-cloverdale": {
+    "name": "Surrey-Cloverdale",
+    "code": "SRD",
+    "party_2024": "BC Conservative",
+    "votes_2024": 10268,
+    "share_2024": "48.32%",
+    "margin_votes_2024": 587,
+    "margin_pct_2024": "2.77%"
+  },
+  "surrey-fleetwood": {
+    "name": "Surrey-Fleetwood",
+    "code": "SRF",
+    "party_2024": "BC NDP",
+    "votes_2024": 9923,
+    "share_2024": "48.60%",
+    "margin_votes_2024": 751,
+    "margin_pct_2024": "3.67%"
+  },
+  "surrey-guildford": {
+    "name": "Surrey-Guildford",
+    "code": "SRG",
+    "party_2024": "BC NDP",
+    "votes_2024": 8947,
+    "share_2024": "46.93%",
+    "margin_votes_2024": 22,
+    "margin_pct_2024": "0.12%"
+  },
+  "surrey-newton": {
+    "name": "Surrey-Newton",
+    "code": "SRN",
+    "party_2024": "BC NDP",
+    "votes_2024": 7924,
+    "share_2024": "51.17%",
+    "margin_votes_2024": 1266,
+    "margin_pct_2024": "8.18%"
+  },
+  "surrey-panorama": {
+    "name": "Surrey-Panorama",
+    "code": "SUP",
+    "party_2024": "BC Conservative",
+    "votes_2024": 8735,
+    "share_2024": "49.60%",
+    "margin_votes_2024": 263,
+    "margin_pct_2024": "1.49%"
+  },
+  "surrey-serpentine river": {
+    "name": "Surrey-Serpentine River",
+    "code": "SUR",
+    "party_2024": "BC Conservative",
+    "votes_2024": 9782,
+    "share_2024": "49.70%",
+    "margin_votes_2024": 435,
+    "margin_pct_2024": "2.21%"
+  },
+  "surrey-white rock": {
+    "name": "Surrey-White Rock",
+    "code": "SWR",
+    "party_2024": "BC Conservative",
+    "votes_2024": 14667,
+    "share_2024": "52.31%",
+    "margin_votes_2024": 1968,
+    "margin_pct_2024": "7.02%"
+  },
+  "vancouver-fraserview": {
+    "name": "Vancouver-Fraserview",
+    "code": "VFV",
+    "party_2024": "BC NDP",
+    "votes_2024": 11896,
+    "share_2024": "57.18%",
+    "margin_votes_2024": 4278,
+    "margin_pct_2024": "20.56%"
+  },
+  "vancouver-hastings": {
+    "name": "Vancouver-Hastings",
+    "code": "VHA",
+    "party_2024": "BC NDP",
+    "votes_2024": 14237,
+    "share_2024": "64.15%",
+    "margin_votes_2024": 8846,
+    "margin_pct_2024": "39.86%"
+  },
+  "vancouver-kensington": {
+    "name": "Vancouver-Kensington",
+    "code": "VKE",
+    "party_2024": "BC NDP",
+    "votes_2024": 11713,
+    "share_2024": "60.90%",
+    "margin_votes_2024": 5652,
+    "margin_pct_2024": "29.38%"
+  },
+  "vancouver-langara": {
+    "name": "Vancouver-Langara",
+    "code": "VLA",
+    "party_2024": "BC NDP",
+    "votes_2024": 8506,
+    "share_2024": "48.43%",
+    "margin_votes_2024": 419,
+    "margin_pct_2024": "2.38%"
+  },
+  "vancouver-little mountain": {
+    "name": "Vancouver-Little Mountain",
+    "code": "VLM",
+    "party_2024": "BC NDP",
+    "votes_2024": 15636,
+    "share_2024": "62.11%",
+    "margin_votes_2024": 7931,
+    "margin_pct_2024": "31.50%"
+  },
+  "vancouver-point grey": {
+    "name": "Vancouver-Point Grey",
+    "code": "VNP",
+    "party_2024": "BC NDP",
+    "votes_2024": 12538,
+    "share_2024": "56.77%",
+    "margin_votes_2024": 4916,
+    "margin_pct_2024": "22.26%"
+  },
+  "vancouver-quilchena": {
+    "name": "Vancouver-Quilchena",
+    "code": "VNQ",
+    "party_2024": "BC Conservative",
+    "votes_2024": 11464,
+    "share_2024": "51.58%",
+    "margin_votes_2024": 2815,
+    "margin_pct_2024": "12.68%"
+  },
+  "vancouver-renfrew": {
+    "name": "Vancouver-Renfrew",
+    "code": "VNR",
+    "party_2024": "BC NDP",
+    "votes_2024": 10983,
+    "share_2024": "63.22%",
+    "margin_votes_2024": 5656,
+    "margin_pct_2024": "32.56%"
+  },
+  "vancouver-south granville": {
+    "name": "Vancouver-South Granville",
+    "code": "VNS",
+    "party_2024": "BC NDP",
+    "votes_2024": 17208,
+    "share_2024": "64.31%",
+    "margin_votes_2024": 10530,
+    "margin_pct_2024": "39.35%"
+  },
+  "vancouver-strathcona": {
+    "name": "Vancouver-Strathcona",
+    "code": "VNT",
+    "party_2024": "BC NDP",
+    "votes_2024": 13563,
+    "share_2024": "67.62%",
+    "margin_votes_2024": 10136,
+    "margin_pct_2024": "50.53%"
+  },
+  "vancouver-west end": {
+    "name": "Vancouver-West End",
+    "code": "VNW",
+    "party_2024": "BC NDP",
+    "votes_2024": 13143,
+    "share_2024": "63.01%",
+    "margin_votes_2024": 7466,
+    "margin_pct_2024": "34.79%"
+  },
+  "vancouver-yaletown": {
+    "name": "Vancouver-Yaletown",
+    "code": "VNY",
+    "party_2024": "BC NDP",
+    "votes_2024": 9018,
+    "share_2024": "49.76%",
+    "margin_votes_2024": 1160,
+    "margin_pct_2024": "6.40%"
+  },
+  "vernon-lumby": {
+    "name": "Vernon-Lumby",
+    "code": "VRL",
+    "party_2024": "BC NDP",
+    "votes_2024": 11837,
+    "share_2024": "42.69%",
+    "margin_votes_2024": 476,
+    "margin_pct_2024": "1.72%"
+  },
+  "victoria-beacon hill": {
+    "name": "Victoria-Beacon Hill",
+    "code": "VTB",
+    "party_2024": "BC NDP",
+    "votes_2024": 13634,
+    "share_2024": "47.35%",
+    "margin_votes_2024": 3989,
+    "margin_pct_2024": "13.85%"
+  },
+  "victoria-swan lake": {
+    "name": "Victoria-Swan Lake",
+    "code": "VTS",
+    "party_2024": "BC NDP",
+    "votes_2024": 14273,
+    "share_2024": "56.03%",
+    "margin_votes_2024": 8373,
+    "margin_pct_2024": "32.87%"
+  },
+  "west kelowna-peachland": {
+    "name": "West Kelowna-Peachland",
+    "code": "WKP",
+    "party_2024": "BC Conservative",
+    "votes_2024": 13475,
+    "share_2024": "50.85%",
+    "margin_votes_2024": 6081,
+    "margin_pct_2024": "22.95%"
+  },
+  "west vancouver-capilano": {
+    "name": "West Vancouver-Capilano",
+    "code": "WVC",
+    "party_2024": "BC Conservative",
+    "votes_2024": 12050,
+    "share_2024": "46.68%",
+    "margin_votes_2024": 5045,
+    "margin_pct_2024": "19.55%"
+  },
+  "west vancouver-sea to sky": {
+    "name": "West Vancouver-Sea to Sky",
+    "code": "WVS",
+    "party_2024": "BC Green",
+    "votes_2024": 10438,
+    "share_2024": "38.08%",
+    "margin_votes_2024": 676,
+    "margin_pct_2024": "2.47%"
+  }
+}

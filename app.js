@@ -423,8 +423,8 @@
           <div class="drawer-meta-val" style="font-size:0.85rem;">${res.status}</div>
         </div>
         <div class="drawer-meta-item">
-          <div class="drawer-meta-label">Previous (2020)</div>
-          <div class="drawer-meta-val">${res.prev_party}</div>
+          <div class="drawer-meta-label">2024 Election Baseline</div>
+          <div class="drawer-meta-val">${res.party_2024 || res.prev_party}</div>
         </div>
         <div class="drawer-meta-item">
           <div class="drawer-meta-label">Seat Shift</div>
@@ -523,14 +523,17 @@
     };
 
     setText('kpi-ndp-seats', p['BC NDP']?.seats || 0);
+    setText('kpi-ndp-subtext', `${p['BC NDP']?.net_seat_change_str || '0'} net change vs 2024 (47)`);
     setText('kpi-ndp-pct', `${p['BC NDP']?.vote_share_pct || 0}%`);
     setText('kpi-ndp-votes', (p['BC NDP']?.votes || 0).toLocaleString());
 
     setText('kpi-con-seats', p['BC Conservative']?.seats || 0);
+    setText('kpi-con-subtext', `${p['BC Conservative']?.net_seat_change_str || '0'} net change vs 2024 (44)`);
     setText('kpi-con-pct', `${p['BC Conservative']?.vote_share_pct || 0}%`);
     setText('kpi-con-votes', (p['BC Conservative']?.votes || 0).toLocaleString());
 
     setText('kpi-grn-seats', p['BC Green']?.seats || 0);
+    setText('kpi-grn-subtext', `${p['BC Green']?.net_seat_change_str || '0'} net change vs 2024 (2)`);
     setText('kpi-grn-pct', `${p['BC Green']?.vote_share_pct || 0}%`);
     setText('kpi-grn-votes', (p['BC Green']?.votes || 0).toLocaleString());
 

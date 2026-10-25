@@ -4,6 +4,7 @@ Elections BC Live Scraper & Updater
 Scrapes real-time election night reporting directly from:
 https://results.elections.bc.ca/
 and its dynamic Results_..._Candidate.html breakdown.
+Uses the 2024 General Election standings (on the exact same 93-district map) as the baseline for flips and net seat changes.
 """
 
 import os
@@ -19,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 OUTPUT_PATH = os.path.join(DATA_DIR, "results.json")
 GEOJSON_PATH = os.path.join(DATA_DIR, "bc_districts.geojson")
+BASELINE_2024_PATH = os.path.join(DATA_DIR, "baseline_2024.json")
 
 EBC_RESULTS_URL = "https://results.elections.bc.ca/"
 
@@ -28,128 +30,33 @@ PARTY_INFO = {
         "short": "NDP",
         "leader": "David Eby",
         "color": "#f58220",
-        "secondary_color": "#ffb066"
+        "secondary_color": "#ffb066",
+        "seats_2024": 47
     },
     "BC Conservative": {
         "name": "Conservative Party of BC",
         "short": "CON",
         "leader": "John Rustad",
         "color": "#0c499c",
-        "secondary_color": "#4d82cb"
+        "secondary_color": "#4d82cb",
+        "seats_2024": 44
     },
     "BC Green": {
         "name": "BC Green Party",
         "short": "GRN",
         "leader": "Sonia Furstenau",
         "color": "#2e8b57",
-        "secondary_color": "#66bb6a"
+        "secondary_color": "#66bb6a",
+        "seats_2024": 2
     },
     "Independent": {
         "name": "Independent / Other",
         "short": "IND",
         "leader": "Various",
         "color": "#78909c",
-        "secondary_color": "#b0bec5"
+        "secondary_color": "#b0bec5",
+        "seats_2024": 0
     }
-}
-
-# 2020 Historical Reference for Hold/Flip calculation
-HISTORICAL_2020 = {
-    "abbotsford-mission": "NDP",
-    "abbotsford south": "Lib",
-    "abbotsford west": "Lib",
-    "boundary-similkameen": "NDP",
-    "bulkley valley-stikine": "NDP",
-    "burnaby centre": "New",
-    "burnaby east": "NDP",
-    "burnaby north": "NDP",
-    "burnaby south-metrotown": "New",
-    "burnaby-new westminster": "New",
-    "cariboo-chilcotin": "Lib",
-    "chilliwack-cultus lake": "NDP",
-    "chilliwack north": "NDP",
-    "columbia river-revelstoke": "Lib",
-    "coquitlam-burke mountain": "NDP",
-    "coquitlam-maillardville": "NDP",
-    "courtenay-comox": "NDP",
-    "cowichan valley": "Green",
-    "delta north": "NDP",
-    "delta south": "Lib",
-    "esquimalt-colwood": "NDP",
-    "fraser-nicola": "Lib",
-    "kamloops centre": "Lib",
-    "kamloops-north thompson": "Lib",
-    "kelowna centre": "New",
-    "kelowna-lake country-coldstream": "Lib",
-    "kelowna-mission": "Lib",
-    "kootenay central": "NDP",
-    "kootenay-monashee": "NDP",
-    "kootenay rockies": "Lib",
-    "ladysmith-oceanside": "NDP",
-    "langford-highlands": "NDP",
-    "langley-abbotsford": "New",
-    "langley walnut grove": "NDP",
-    "langley willowbrook": "NDP",
-    "maple ridge east": "NDP",
-    "maple ridge-pitt meadows": "NDP",
-    "mid island-pacific rim": "NDP",
-    "nanaimo-gabriola island": "NDP",
-    "nanaimo-ladoo": "NDP",
-    "nechako lakes": "Lib",
-    "nelson-creston": "NDP",
-    "new westminster-coquitlam": "NDP",
-    "north coast-haida gwaii": "NDP",
-    "north island": "NDP",
-    "north vancouver-lonsdale": "NDP",
-    "north vancouver-seymour": "NDP",
-    "oak bay-gordon head": "NDP",
-    "parksville-qualicum": "NDP",
-    "peace river north": "Lib",
-    "peace river south": "Lib",
-    "penticton-summerland": "Lib",
-    "port coquitlam": "NDP",
-    "port moody-burquitlam": "NDP",
-    "prince george-mackenzie": "Lib",
-    "prince george-north cariboo": "Lib",
-    "prince george-valemount": "Lib",
-    "richmond-bridgeport": "New",
-    "richmond centre": "NDP",
-    "richmond-queensborough": "NDP",
-    "richmond-steveston": "NDP",
-    "saanich north and the islands": "Green",
-    "saanich south": "NDP",
-    "shuswap-enderby": "Lib",
-    "skeena": "Lib",
-    "south cariboo": "Lib",
-    "south okanagan-west kootenay": "NDP",
-    "surrey city centre": "NDP",
-    "surrey-cloverdale": "NDP",
-    "surrey-fleetwood": "NDP",
-    "surrey-green timbers": "NDP",
-    "surrey-guildford": "NDP",
-    "surrey-newton": "NDP",
-    "surrey north": "NDP",
-    "surrey-panorama": "NDP",
-    "surrey-serpentine river": "New",
-    "surrey south": "Lib",
-    "surrey-white rock": "Lib",
-    "vancouver-fraserview": "NDP",
-    "vancouver-hastings": "NDP",
-    "vancouver-kensington": "NDP",
-    "vancouver-langara": "Lib",
-    "vancouver-little mountain": "NDP",
-    "vancouver-point grey": "NDP",
-    "vancouver-renfrew": "NDP",
-    "vancouver-south granville": "NDP",
-    "vancouver-strathcona": "NDP",
-    "vancouver-west end": "NDP",
-    "vancouver-yaletown": "New",
-    "vernon-lumby": "NDP",
-    "victoria-beacon hill": "NDP",
-    "victoria-swan lake": "NDP",
-    "west kelowna-peachland": "Lib",
-    "west vancouver-capilano": "Lib",
-    "west vancouver-sea to sky": "Lib"
 }
 
 def clean_num(val):
@@ -197,6 +104,15 @@ def load_district_geo_mapping():
         except Exception as e:
             print(f"Warning: could not read {GEOJSON_PATH}: {e}")
     return mapping
+
+def load_2024_baseline():
+    if os.path.exists(BASELINE_2024_PATH):
+        try:
+            with open(BASELINE_2024_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Warning: could not read {BASELINE_2024_PATH}: {e}")
+    return {}
 
 def scrape_elections_bc():
     print(f"Fetching official live reporting from {EBC_RESULTS_URL}...")
@@ -252,6 +168,7 @@ def scrape_elections_bc():
         raise ValueError("Could not find table id='tblReport' on results.elections.bc.ca")
 
     geo_map = load_district_geo_mapping()
+    baseline_2024 = load_2024_baseline()
 
     ridings = []
     total_valid_votes = 0
@@ -310,7 +227,6 @@ def scrape_elections_bc():
         # Determine Candidates
         cands = candidates_by_district.get(norm_key, [])
         if not cands:
-            # Fallback using party votes from main table
             if ndp_votes > 0:
                 cands.append({"name": "BC NDP Candidate", "party": "BC NDP", "raw_affiliation": "BC NDP", "votes": ndp_votes, "pct": round(ndp_votes/tot_valid*100, 2) if tot_valid > 0 else 0})
             if con_votes > 0:
@@ -347,26 +263,22 @@ def scrape_elections_bc():
 
         is_battleground = (margin_pct <= 3.5 and winner_votes > 0)
 
-        # Historical comparison
-        prev_party = HISTORICAL_2020.get(norm_key, "Unknown")
-        if prev_party == "New":
+        # Baseline 2024 comparison on the exact same 93 maps
+        b_info = baseline_2024.get(norm_key, {})
+        party_2024 = b_info.get("party_2024", "Unknown")
+
+        if winner_votes > 0 and party_2024 != "Unknown" and winner_party != party_2024:
+            is_flip = True
+            flip_description = f"Flipped from {party_2024} to {winner_party}"
+            flip_badge = f"{winner_party} Gain from {party_2024}"
+        elif winner_votes > 0 and party_2024 != "Unknown" and winner_party == party_2024:
             is_flip = False
-            flip_text = "New District (2023 Redistribution)"
-        elif prev_party == "Lib" and winner_party != "BC Liberal":
-            is_flip = True
-            flip_text = f"Shifted from BC Liberal to {winner_party}"
-        elif prev_party == "NDP" and winner_party != "BC NDP":
-            is_flip = True
-            flip_text = f"Flipped from NDP to {winner_party}"
-        elif prev_party == "Green" and winner_party != "BC Green":
-            is_flip = True
-            flip_text = f"Flipped from Green to {winner_party}"
-        elif winner_party == "Independent":
-            is_flip = False
-            flip_text = "Pending"
+            flip_description = f"{winner_party} Hold"
+            flip_badge = f"{winner_party} Hold"
         else:
             is_flip = False
-            flip_text = f"{winner_party} Hold"
+            flip_description = "Pending Counts"
+            flip_badge = "Pending"
 
         # Mark elected flag
         for c in cands:
@@ -389,9 +301,11 @@ def scrape_elections_bc():
             "margin_pct": margin_pct,
             "is_battleground": is_battleground,
             "is_flip": is_flip,
-            "flip_description": flip_text,
-            "prev_party": prev_party,
-            "turnout_pct": round((tot_valid / 38000 * 100), 1),  # preliminary estimate against avg registered
+            "flip_description": flip_description,
+            "flip_badge": flip_badge,
+            "party_2024": party_2024,
+            "prev_party": party_2024,
+            "turnout_pct": round((tot_valid / 38000 * 100), 1),
             "total_votes": tot_valid,
             "rejected_ballots": rejected,
             "runner_up_party": runner_up["party"] if runner_up else None,
@@ -402,27 +316,38 @@ def scrape_elections_bc():
 
     ridings.sort(key=lambda r: r["name"])
 
-    # Party Summaries
+    # Party Summaries with 2024 Comparison Net Change
     parties_summary = {}
     for p_key, meta in PARTY_INFO.items():
         votes = party_votes.get(p_key, 0)
         seats = party_seats.get(p_key, 0)
+        baseline_seats = meta.get("seats_2024", 0)
+        net_change = seats - baseline_seats
         pct = round((votes / total_valid_votes * 100), 2) if total_valid_votes > 0 else 0
+
+        sign = "+" if net_change > 0 else ""
+        net_str = f"{sign}{net_change}" if net_change != 0 else "0"
+
         parties_summary[p_key] = {
             **meta,
             "seats": seats,
+            "seats_2024": baseline_seats,
+            "net_seat_change": net_change,
+            "net_seat_change_str": net_str,
             "votes": votes,
             "vote_share_pct": pct,
             "majority": seats >= 47
         }
 
     overall_poll_progress = round((total_boxes_reported / total_boxes_count * 100), 1) if total_boxes_count > 0 else 0
+    flips_list = [r for r in ridings if r["is_flip"]]
 
     return {
         "metadata": {
             "title": "British Columbia General Election - Live Night Reporting",
             "source": "Elections BC (results.elections.bc.ca)",
             "source_url": EBC_RESULTS_URL,
+            "baseline_election": "2024 General Election (identical 93 boundaries)",
             "legislature": "43rd Parliament of British Columbia",
             "total_seats": 93,
             "majority_threshold": 47,
@@ -438,7 +363,7 @@ def scrape_elections_bc():
         "parties": parties_summary,
         "summary": {
             "total_battlegrounds": len([r for r in ridings if r["is_battleground"]]),
-            "total_flips": len([r for r in ridings if r["is_flip"]]),
+            "total_flips": len(flips_list),
             "leading_party": max(parties_summary.items(), key=lambda x: x[1]["seats"])[0]
         },
         "ridings": ridings
@@ -452,7 +377,10 @@ def main():
             json.dump(data, f, indent=2)
         print(f"Successfully scraped live results from Elections BC into {OUTPUT_PATH}")
         print(f"Poll progress: {data['metadata']['overall_poll_progress']}% ({data['metadata']['total_boxes_reported']}/{data['metadata']['total_boxes_count']} ballot boxes)")
-        print(f"Seats: NDP {data['parties']['BC NDP']['seats']} | CON {data['parties']['BC Conservative']['seats']} | GRN {data['parties']['BC Green']['seats']}")
+        print(f"Standings vs 2024 Baseline:")
+        for p, d in data['parties'].items():
+            print(f"  {p}: {d['seats']} seats ({d['net_seat_change_str']} net change vs 2024 baseline {d['seats_2024']})")
+        print(f"Total seat flips: {data['summary']['total_flips']}")
     except Exception as e:
         print(f"Error scraping live results: {e}", file=sys.stderr)
         if not os.path.exists(OUTPUT_PATH):
