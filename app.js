@@ -51,8 +51,69 @@
   const searchDropdown = document.getElementById('search-dropdown');
   const partyTableFilter = document.getElementById('party-table-filter');
 
+  // =====================================================================
+  // THEME MANAGEMENT (LIGHT / DARK / AUTO - DEFAULT AUTO)
+  // =====================================================================
+  let baseMapsDict = {};
+
+  function getThemePreference() {
+    return localStorage.getItem('bcresults-theme') || 'auto';
+  }
+
+  function resolveEffectiveTheme(pref) {
+    if (pref === 'auto') {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return pref;
+  }
+
+  function applyTheme(pref) {
+    const effective = resolveEffectiveTheme(pref);
+
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(effective === 'light' ? 'light-theme' : 'dark-theme');
+    document.documentElement.setAttribute('data-theme', effective);
+    document.documentElement.setAttribute('data-theme-preference', pref);
+
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.theme === pref);
+    });
+
+    if (map && baseMapsDict.esriDark && baseMapsDict.osmStandard) {
+      if (effective === 'light') {
+        if (map.hasLayer(baseMapsDict.esriDark)) {
+          map.removeLayer(baseMapsDict.esriDark);
+          baseMapsDict.osmStandard.addTo(map);
+        }
+      } else {
+        if (map.hasLayer(baseMapsDict.osmStandard)) {
+          map.removeLayer(baseMapsDict.osmStandard);
+          baseMapsDict.esriDark.addTo(map);
+        }
+      }
+    }
+
+    if (geojsonLayer) {
+      geojsonLayer.setStyle(getDistrictStyle);
+    }
+  }
+
+  window.setTheme = function(pref) {
+    localStorage.setItem('bcresults-theme', pref);
+    applyTheme(pref);
+  };
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (getThemePreference() === 'auto') {
+        applyTheme('auto');
+      }
+    });
+  }
+
   // Initialize
   async function init() {
+    applyTheme(getThemePreference());
     setupTabNavigation();
     setupModal();
     setupDrawer();
@@ -165,13 +226,20 @@
       maxZoom: 18
     });
 
-    esriDark.addTo(map);
-
     const baseMaps = {
       "Dark Canvas (Esri)": esriDark,
       "Street Map (OSM)": osmStandard,
       "Satellite (Esri)": esriSatellite
     };
+    baseMapsDict = { esriDark, osmStandard, esriSatellite };
+
+    const initialEffective = resolveEffectiveTheme(getThemePreference());
+    if (initialEffective === 'light') {
+      osmStandard.addTo(map);
+    } else {
+      esriDark.addTo(map);
+    }
+
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 
     renderGeoJsonLayer();
@@ -221,6 +289,8 @@
     }
 
     const isSelected = currentActiveDistrict && currentActiveDistrict.name === res.name;
+    const isLight = document.body.classList.contains('light-theme');
+    const borderColor = isSelected ? (isLight ? '#0f172a' : '#ffffff') : (isLight ? '#ffffff' : '#0a0e17');
 
     // --- SWING MODE ---
     if (mapViewMode === 'swing') {
@@ -247,7 +317,7 @@
         fillColor: fillColor,
         weight: isSelected ? 3 : 1.2,
         opacity: 1,
-        color: isSelected ? '#ffffff' : '#0a0e17',
+        color: borderColor,
         fillOpacity: 0.85
       };
     }
@@ -272,7 +342,7 @@
         fillColor: partyColor,
         weight: isSelected ? 3 : 1.2,
         opacity: 1,
-        color: isSelected ? '#ffffff' : '#0a0e17',
+        color: borderColor,
         fillOpacity: 0.85
       };
     }
@@ -296,7 +366,7 @@
       fillColor: partyColor,
       weight: isSelected ? 3 : 1.2,
       opacity: 1,
-      color: isSelected ? '#ffffff' : '#0a0e17',
+      color: borderColor,
       fillOpacity: res.is_battleground && currentMapFilter === 'all' ? 0.95 : 0.82
     };
   }

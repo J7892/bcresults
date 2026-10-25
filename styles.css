@@ -53,6 +53,27 @@
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
 }
 
+/* Light Theme Variables */
+body.light-theme {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-drawer: #ffffff;
+  --border-color: #cbd5e1;
+  --border-focus: #2563eb;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+
+  --ndp-bg-subtle: rgba(245, 130, 32, 0.1);
+  --con-bg-subtle: rgba(30, 96, 184, 0.1);
+  --grn-bg-subtle: rgba(46, 160, 67, 0.1);
+
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -1652,6 +1673,270 @@ a:hover {
   color: #fff;
   display: block;
   margin-bottom: 4px;
+}
+
+/* =====================================================================
+   THEME TOGGLE & LIGHT THEME OVERRIDES
+   ===================================================================== */
+.theme-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+body.light-theme .theme-toggle-group {
+  background-color: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.theme-btn:hover {
+  color: var(--text-main);
+}
+
+.theme-btn.active {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.light-theme .theme-btn.active {
+  background-color: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme full UI adaptations */
+body.light-theme .app-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-theme .brand-text h1,
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme .kpi-party-name,
+body.light-theme .kpi-seats,
+body.light-theme .stat-val,
+body.light-theme .riding-table-name,
+body.light-theme .data-table td strong,
+body.light-theme .drawer-title-group h2,
+body.light-theme .winner-candidate-name,
+body.light-theme .cand-name,
+body.light-theme .cand-votes,
+body.light-theme .insights-list strong {
+  color: #0f172a;
+}
+
+body.light-theme .majority-tracker-wrapper {
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+}
+
+body.light-theme .tabs-nav-bar {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+body.light-theme .tab-btn {
+  color: #475569;
+}
+
+body.light-theme .tab-btn:hover {
+  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme .tab-btn.active {
+  background-color: #ffffff;
+  color: #2563eb;
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme #global-riding-search {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .search-results-dropdown {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .search-item:hover {
+  background-color: #f1f5f9;
+}
+
+body.light-theme .map-mode-group {
+  background-color: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .zoom-pill,
+body.light-theme .filter-pill,
+body.light-theme .mode-pill {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+body.light-theme .zoom-pill:hover,
+body.light-theme .filter-pill:hover,
+body.light-theme .mode-pill:hover {
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+body.light-theme .zoom-pill.active,
+body.light-theme .mode-pill.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+body.light-theme .data-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+body.light-theme .data-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+body.light-theme .map-canvas {
+  background-color: #e2e8f0;
+}
+
+body.light-theme .map-legend {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.light-theme .map-legend h4 {
+  color: #0f172a;
+}
+
+body.light-theme .legend-row {
+  color: #334155;
+}
+
+body.light-theme .custom-map-tooltip {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+body.light-theme .tooltip-title {
+  color: #0f172a;
+}
+
+body.light-theme .riding-drawer {
+  background-color: #ffffff;
+  border-left-color: #cbd5e1;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .drawer-header {
+  background-color: #f8fafc;
+  border-bottom-color: #cbd5e1;
+}
+
+body.light-theme .drawer-close-btn {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+body.light-theme .drawer-close-btn:hover {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+body.light-theme .winner-spotlight {
+  background-color: #f8fafc;
+}
+
+body.light-theme .cand-bar-bg {
+  background-color: #e2e8f0;
+}
+
+body.light-theme .drawer-meta-grid {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .modal-dialog {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.light-theme .modal-header {
+  background-color: #f8fafc;
+  border-bottom-color: #cbd5e1;
+}
+
+body.light-theme .modal-header h3 {
+  color: #0f172a;
+}
+
+body.light-theme .modal-close-btn {
+  color: #64748b;
+}
+
+body.light-theme .modal-close-btn:hover {
+  color: #0f172a;
+}
+
+body.light-theme .arch-step {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .arch-step strong {
+  color: #0f172a;
+}
+
+body.light-theme .step-num {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+body.light-theme .battleground-card {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .bg-riding-name {
+  color: #0f172a;
 }
 
 /* =====================================================================
